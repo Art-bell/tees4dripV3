@@ -1,0 +1,286 @@
+@font-face {
+    font-family: drip;
+    src: url("/assets/fonts/Drip.ttf")
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.carousel-indicators {
+    margin-inline: auto !important;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.add-to-cart-button-wrapper {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.add-to-cart-button-wrapper > button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+app-header {
+    z-index: 20;
+    width: 100%;
+}
+
+.carousel-caption {
+    bottom: 40%;
+    font-weight: 900;
+    font-family: drip;
+    
+}
+
+.carousel-caption > h1
+{
+    font-size: 0px;
+    font-family: drip;
+
+}
+
+.drip > img {
+    width: 400px;
+    margin-top: -32px;
+}
+
+.img-wrapper > img {
+    width: 100%;
+}
+
+.main-content {
+    margin-top: 30px;
+}
+
+.header-carousel-wrapper {
+    height: 500px;
+}
+
+.tee-category {
+    height: 500px;
+    margin: 10px;
+}
+
+.tee-category:hover .overlay {
+    opacity: 1;
+}
+
+.cat-1 {
+    background: url("/assets/images/home_images/tye_dye_poster.PNG") no-repeat center;
+    background-size: cover;
+}
+
+.cat-2 {
+    background: url("/assets/images/home_images/graphic_poster.PNG") no-repeat center;
+    background-size: cover;
+}
+
+.new-arrivals {
+    margin: 20px 0;
+    --button-height:50px;
+}
+
+.new-arrivals  > div {
+    overflow-y: hidden;
+    /* cursor: pointer; */
+    margin-top: 15px;
+    /* transition: 0.1s; */
+}
+
+.new-arrivals > div > div {
+    height: 300px;
+    transition: 0.2s;
+}
+
+.new-arrivals > div > div > div:first-child {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+.new-arrivals > div:hover > div {
+    --pseudo-transform: -50%;
+    transform: translateY(calc(var(--pseudo-transform)));
+}
+
+.new-arrivals-button, .new-arrivals-header, .new-arrivals-header > h1 {
+    width: 100%;
+}
+
+.newsletter-image {
+    background: url(/assets/images/home_images/newsletter.PNG) no-repeat center;
+    background-size: cover;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.newsletter-wrapper {
+    margin: 100px 0;
+}
+
+.new-arrivals-header > h1 {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+    margin: 100px 0;
+    font-size: 25px;
+}
+
+.new-arrivals-wrapper {
+    margin-bottom: 100px;
+}
+
+.newsletter-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.newsletter-text input {
+    outline: none;
+    border: none;
+    transition: 0.2s;
+    padding: 10px 30px;
+}
+
+.newsletter-text input:focus {
+    
+    outline: 1px solid silver;
+}
+.newsletter-image-overlay {
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+.new-arrivals-button {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.new-arrivals-button > button {
+    width: 160px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+    color: black;
+    transition: 0.2s;
+}
+
+.new-arrivals-button > button:hover {
+    color: white;
+    background-color: black;
+}
+
+.overlay {
+    opacity: 0;
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.overlay p {
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+}
+
+.page-split {
+    text-align: center;
+}
+
+.page-split > h6 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.page-split > p {
+    color: rgb(117 116 116);
+}
+
+.page-split > img {
+    width: 35px;
+}
+
+.page-split-wrapper {
+    min-height: 220px;
+    margin: 30px 0;
+    background: rgb(37,36,36);
+    background: linear-gradient(36deg, rgba(37,36,36,1) 0%, rgba(52,51,51,1) 100%);
+    padding: 45px 0;
+}
+
+.product-description-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0;
+    font-weight: 700;
+}
+
+.subscription-header > p {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.subscription-button {
+    margin-top: 20px;
+}
+
+.subscription-button > button {
+    width: 160px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 20px;
+    color: black;
+    transition: 0.2s;
+}
+
+.subscription-button > button:hover {
+    color: white;
+    background-color: black;
+}
+
+.text-and-input{ 
+    flex-direction: column;
+}
+@media screen and (max-width: 992px) {
+    .subscription-button {
+        justify-content: center;
+    }
+
+    .subscription-header,  .text-and-input{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Hide Desktop header and show mobile */
+    .page-split {
+        padding-top: 45px;
+    }
+}

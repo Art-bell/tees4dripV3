@@ -1,0 +1,75 @@
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.cards > img {
+    width: 200px;
+}
+
+.content-and-links h6{
+    color: white;
+    text-align: left;
+}
+
+.content-and-links {
+    padding: 60px 0;
+    border-bottom: 1px solid #575a57;
+    margin-bottom: 20px;
+}
+
+.content-and-links p, a{
+    display: block;
+    text-decoration: none;
+    color: #575a57;
+    text-align: left;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.content-and-links a:hover{
+    color: #25ca52;
+}
+
+.container-wrapper{
+    background-color: #252424;
+    min-height: 120px;
+    text-align: center;
+}
+
+.copyright > p {
+    color: #575a57;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.logo > img {
+    width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content-and-links > div:first-child > h6, .content-and-links > div:first-child > p {
+        text-align: center;
+    }
+
+    .content-and-links > div:first-child > p {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-and-links > div {
+        margin-bottom: 30px;
+    }
+
+    .content-and-links > div > h6, .content-and-links > div > a {
+        text-align: center;
+    }
+    
+}

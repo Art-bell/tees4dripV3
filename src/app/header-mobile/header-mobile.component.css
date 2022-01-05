@@ -1,0 +1,17 @@
+.logo > img {
+    width: 180px;
+}
+
+.menu-icon {
+    background-color:  rgb(134, 133, 133);
+    -webkit-mask: url(/assets/images/icons/menu.svg) no-repeat center;
+    mask: url(/assets/images/icons/menu.svg) no-repeat center;
+    width: 60px;
+    height: 60px;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+.menu-wrapper {
+    display: none;
+}
