@@ -209,6 +209,10 @@
     display: inline-block;
 }
 
+li > fa-icon, li > a > fa-icon {
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 992px) {
     .template-statement {
         justify-content: center;

@@ -1,0 +1,299 @@
+<app-header #fixedHeader [fixed]="true"></app-header>
+<app-header #relativeHeader></app-header>
+<!-- <app-header-mobile></app-header-mobile> -->
+
+<mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+    <mdb-carousel-item>
+      <img
+        src="../assets/images/home_images/slide1.png"
+        class="d-block w-100"
+        alt="Sunset Over the City"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>A1 <span class="slime">APPAREL</span></h5>
+        <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
+      </div>
+    </mdb-carousel-item>
+  
+    <mdb-carousel-item>
+      <img
+        src="../assets/images/home_images/slide2.png"
+        class="d-block w-100"
+        alt="Canyon at Night"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </mdb-carousel-item>
+  
+    <mdb-carousel-item>
+      <img
+        src="../assets/images/home_images/slide3.png"
+        class="d-block w-100"
+        alt="Cliff Above a Stormy Sea"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+<div class="container main-content">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="tee-category cat-1">
+                <div class="overlay">
+                    <div>
+                        <div class="row">
+                            <h3>
+                                TIE DYE TEES
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p>
+                                SHOP NOW
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="tee-category cat-2">
+                <div class="overlay">
+                    <div>
+                        <div class="row">
+                            <h3>
+                                GRAPHIC TEES
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <p>
+                                SHOP NOW
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row new-arrivals-wrapper">
+        <div class="row new-arrivals-header">
+            <h1>
+                NEW ARRIVALS
+            </h1>
+        </div>
+        <div class="row new-arrivals new-arrivals-top">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival1.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', '23']">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival2.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>PURPLE REIGN TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival3.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>LIGHTNING TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival4.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>METALLICA TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival5.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>LIGHTNING TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival6.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>METALLICA TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival7.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>CRASH BANDICOOT TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/home_images/t_new_arrival8.PNG);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>SPICE GIRLS TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row new-arrivals-button">
+            <button>
+                VIEW MORE
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row no-gutters page-split-wrapper">
+        <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
+            <div class="page-split delivery-message">
+                <img src="/assets/images/icons/truck.svg">
+                <h6>
+                    Delivery
+                </h6>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
+            <div class="page-split security-message">
+                <img src="/assets/images/icons/lock.svg">
+                <h6>
+                    Secure Payment
+                </h6>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12 page-split-parent">
+            <div class="page-split quality-message">
+                <img src="/assets/images/icons/quality.svg">
+                <h6>
+                    Quality Guaranteed
+                </h6>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters drip">
+        <img src="/assets/images/home_images/drip.png">
+    </div>
+
+    <div class="container">
+        <div class="row newsletter-wrapper">
+            <div class="col-lg-6 col-mg-6">
+                <div class="newsletter-image">
+                    <div class="newsletter-image-overlay">
+
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-6 col-mg-6 newsletter-text">
+                <div>
+                    <div class="row subscription-header">
+                        <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+                    </div>
+                    <form>
+                        <div class="row text-and-input">
+                            <p>
+                                Sign up now for lorem ipsum
+                            </p>
+                            <input placeholder="Email Address">
+                        </div>
+                        <div class="row subscription-button">
+                            <button>
+                                SUBSCRIBE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row lookbook-wrapper">
+            
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,15 +1,12 @@
-import { ChangeDetectionStrategy, ElementRef, Component, HostListener, ViewChild } from '@angular/core';
-import { isConstructorDeclaration } from 'typescript';
-import { HeaderComponent } from './header/header.component';
-import { MatCarousel, MatCarouselComponent } from '@ngbmodule/material-carousel';
-
+import { ElementRef, Component, HostListener, ViewChild } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class AppComponent{
+export class HomeComponent{
   @ViewChild('relativeHeader', {static: true}) relativeHeader?: HeaderComponent;
   @ViewChild('fixedHeader', {static: true}) fixedHeader?: HeaderComponent;
 

@@ -28,11 +28,6 @@
     color: white;
 }
 
-app-header {
-    z-index: 20;
-    width: 100%;
-}
-
 .carousel-caption {
     bottom: 40%;
     font-weight: 900;
@@ -40,9 +35,9 @@ app-header {
     
 }
 
-.carousel-caption > h1
+.carousel-caption > h5
 {
-    font-size: 0px;
+    font-size: 90px;
     font-family: drip;
 
 }
@@ -100,7 +95,7 @@ app-header {
     transition: 0.2s;
 }
 
-.new-arrivals > div > div > div:first-child {
+.new-arrivals > div > div > a > div:first-child {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -114,6 +109,11 @@ app-header {
 
 .new-arrivals-button, .new-arrivals-header, .new-arrivals-header > h1 {
     width: 100%;
+}
+
+.slime {
+    font-family: 'Drip';
+    color: #9CFF57
 }
 
 .newsletter-image {
@@ -205,12 +205,19 @@ app-header {
     border-bottom: 3px solid white;
 }
 
+.page-split-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .page-split {
     text-align: center;
 }
 
 .page-split > h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Drip', sans-serif;
+    font-size: 28px;
     margin-top: 15px;
     margin-bottom: 15px;
     color: white;
@@ -218,11 +225,11 @@ app-header {
 }
 
 .page-split > p {
-    color: rgb(117 116 116);
+    color: #9b9c9c;
 }
 
 .page-split > img {
-    width: 35px;
+    width: 55px;
 }
 
 .page-split-wrapper {

@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding, Input, ViewChild, ElementRef } from '@angular/core';
+import { faHome, faTags, faBookOpen, faBolt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -14,10 +15,11 @@ export class HeaderComponent implements OnInit{
   @HostBinding("style.box-sizing") boxSizing: string = "";
   @Input() fixed: boolean = false;
   @ViewChild("topHeader", {static: true}) topHeader?: ElementRef;
-
-  constructor() {
-    
-  }
+  faHome = faHome;
+  faTags = faTags;
+  faBookOpen = faBookOpen;
+  faBolt = faBolt;
+  faPhoneAlt = faPhoneAlt;
 
   ngOnInit(): void {
     if (this.fixed) {

@@ -1,0 +1,122 @@
+<app-header #fixedHeader [fixed]="true"></app-header>
+<app-header #relativeHeader></app-header>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row relative-path">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                    <span>Drip Tees</span>
+                </li>
+                <li>
+                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                    <span>Purple Reign Tee</span>
+                </li>
+            </ul>
+        </div>
+        <div class="row product-content">
+            <div class="col-md-6 col-lg-6 col-xl-6">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                        <div class="alt-image">
+                            <img src="/assets/images/product_images/test2.png" />
+                        </div>
+                        <div class="alt-image">
+                            <img src="/assets/images/product_images/test3.png" />
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-9 col-xl-9 main-image">
+                        <img #imageRef src="/assets/images/product_images/test1.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-6 product-description">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                        <span class="product-name">
+                            PURPLE REIGN TEE
+                        </span>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                        <span class="product-price">
+                            &#8358; 2,000
+                        </span>
+                    </div>
+                    <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat.
+                        </span>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-3 col-xl-3 product-quantity">
+                                <div class="product-quantity-box">
+                                    <div class="product-quantity-change quantity-decrease">
+                                        <span>
+                                            <fa-icon [icon]="faMinus"></fa-icon>
+                                        </span>
+                                    </div>
+                                    <div class="product-quantity-input-box">
+                                        <input value="1" type="text" maxlength="1"/>
+                                    </div>
+                                    <div class="product-quantity-change quantity-increase">
+                                        <span>
+                                            <fa-icon [icon]="faPlus"></fa-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
+                                <button>
+                                    <fa-icon [icon]="faCartPlus"></fa-icon>
+                                    <span>ADD TO CART</span>
+                                </button>
+                            </div>
+                            <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
+                                <hr>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-xl-12 share-product">
+                                <div>
+                                    <span>
+                                        Share On
+                                    </span>
+                                    <fa-icon [icon]="faTwitter"></fa-icon>
+                                    <fa-icon [icon]="faInstagram"></fa-icon>
+                                </div>
+                            </div> -->
+                            <div class="col-md-12 col-lg-12 col-xl-12 secured-checkout">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
+                                        <hr>
+                                    </div>
+                                    <div class="col-md-4 col-lg-4 col-xl-4 secure-checkout-text">
+                                        <span>Secure Checkout</span>
+                                    </div>
+                                    <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-12 col-xl-12">
+                                <div class="checkout-cards">
+                                    <fa-icon [icon]="faMasterCard"></fa-icon>
+                                    <fa-icon [icon]="faDiscover"></fa-icon>
+                                    <fa-icon [icon]="faVisa"></fa-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
