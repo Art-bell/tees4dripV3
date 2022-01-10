@@ -29,6 +29,7 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ItemPageComponent } from './item-page/item-page.component';
+import { SwiperModule } from 'swiper/angular';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -67,6 +68,7 @@ const appRoutes: Routes = [
     MdbTooltipModule,
     MdbValidationModule,
     RouterModule.forRoot(appRoutes),
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

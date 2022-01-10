@@ -21,10 +21,13 @@
             <div class="col-md-6 col-lg-6 col-xl-6">
                 <div class="row">
                     <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div class="alt-image">
+                        <div (click)="clickedProductImage($event)" class="alt-image active-product-image">
+                            <img src="/assets/images/product_images/test1.png" />
+                        </div>
+                        <div (click)="clickedProductImage($event)" class="alt-image">
                             <img src="/assets/images/product_images/test2.png" />
                         </div>
-                        <div class="alt-image">
+                        <div (click)="clickedProductImage($event)" class="alt-image">
                             <img src="/assets/images/product_images/test3.png" />
                         </div>
                     </div>
@@ -115,6 +118,181 @@
                 </div>
             </div>
         </div>
+        <div class="separator">
+            <hr>
+        </div>
+        
+    </div>
+    <div class="recommended-products">
+        <h4>
+            YOU MAY ALSO LIKE
+        </h4>
+        <swiper
+            [slidesPerView]="5"
+            [spaceBetween]="5"
+            [slidesPerGroup]="5"
+            [loop]="true"
+            [loopFillGroupWithBlank]="true"
+            [pagination]="{
+            clickable: true
+            }"
+            [navigation]="true"
+            class="mySwiper"
+        >
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test1.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test2.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test3.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test4.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test5.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test6.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test7.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test8.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test9.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+        </swiper>
     </div>
 </div>
 

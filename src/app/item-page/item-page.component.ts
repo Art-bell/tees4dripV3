@@ -1,14 +1,17 @@
-import { AfterViewInit, Component, OnInit, ViewChild, HostListener, ElementRef  } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation, HostListener, ElementRef  } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { NgZoom } from 'ng-zoom';
+import SwiperCore, { Pagination, Navigation } from "swiper";
 
 import { faChevronRight, faPlus, faMinus, faCartPlus, } from '@fortawesome/free-solid-svg-icons';
 import { faTwitterSquare, faInstagramSquare, faCcDiscover, faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons'
+SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'app-item-page',
   templateUrl: './item-page.component.html',
-  styleUrls: ['./item-page.component.css']
+  styleUrls: ['./item-page.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ItemPageComponent implements OnInit {
   faChevronRight = faChevronRight;
@@ -42,6 +45,12 @@ export class ItemPageComponent implements OnInit {
 
   ngAfterViewInit() {
     this.ngz.listen(this.imageRef);
+  }
+
+  clickedProductImage(el: Event) {
+    this.elementRef.nativeElement.querySelector('.active-product-image').classList.remove('active-product-image');
+    (<Element> el.target).parentElement!.classList.add('active-product-image');
+    (<Element> this.imageRef.nativeElement).setAttribute("src", (<Element> el.target)!.getAttribute("src")!);
   }
 
 }

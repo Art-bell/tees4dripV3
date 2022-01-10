@@ -26,6 +26,11 @@
     border: none;
     background-color: black;
     color: white;
+    transition: 0.2s;
+}
+
+.add-to-cart-button-wrapper > button:hover {
+    background-color: #25CA52;
 }
 
 .carousel-caption {
@@ -113,7 +118,7 @@
 
 .slime {
     font-family: 'Drip';
-    color: #9CFF57
+    color: #9CFF57;
 }
 
 .newsletter-image {
@@ -246,6 +251,10 @@
     padding: 20px;
     padding-bottom: 0;
     font-weight: 700;
+}
+
+.product-description-wrapper > h5 {
+    white-space: nowrap;
 }
 
 .subscription-header > p {
