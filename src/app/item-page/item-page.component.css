@@ -238,9 +238,12 @@ button > * {
     height: 300px;
 }
 
-.swiper > div > div:hover > div {
-    --pseudo-transform: -50%;
-    transform: translateY(calc(var(--pseudo-transform)));
+.swiper > div > div > div > a > div:nth-child(2) {
+    transition: 0.4s;
+}
+
+.swiper > div > div:hover > div > a > div:nth-child(2) {
+    transform: translateY(-110%);
 }
 
 .add-to-cart-button-wrapper > button {
