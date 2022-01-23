@@ -2,176 +2,106 @@
 @import "~swiper/modules/pagination/pagination.min.css";
 @import "~swiper/modules/navigation/navigation.min.css";
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.section-identifier {
+    background-image: url("/assets/images/background_images/cart_background.png");
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+.cart-summary {
+    background-color: #f8f8f8;
+    padding: 20px 25px;
+    font-family: 'Lato';
 }
 
-.content-wrapper {
-    padding: 100px;
-    padding-top: 0;
+.cart-summary * {
+    font-size: 18px;
 }
 
-.container {
-    padding: 50px;
-    padding-top: 0;
+.cart-total-header {
+    border-bottom: 1px solid silver;
+    padding-bottom: 10px;
 }
 
-.main-image img, .alt-image img {
-    width: 100%;
-}
-
-.active-product-image {
-    border: 3px solid #383838;
-}
-
-.alt-image {
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-.product-description {
-    padding: 35px;
-    padding-top: 75px;
-}
-
-.product-full-column {
-    padding: 8px 0;
-}
-
-.product-quantity-box {
+.cart-sub-total-wrapper, .total-wrapper {
     display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.product-price {
-    font-size: 24px;
+.total-wrapper {
+    padding-top: 20px;
 }
 
-.product-content > div:first-child {
-    min-height: 500px;
-    /* background-color: red; */
-}
-
-.product-content > div:nth-child(2) {
-    min-height: 500px;
-    /* background-color: green; */
-}
-
-.product-name {
+.total-wrapper * {
+    font-size: 20px;
+    color: #51ab13;
     font-weight: 700;
-    font-size: 34px;
 }
 
-.product-quantity-box {
-    border: 1px solid #d1d1d1;
-    padding: 4px 10px;
+.cart-sub-total-wrapper {
+    border-bottom: 1px solid rgb(219, 219, 219);
 }
 
-.product-quantity-input-box {
-    display: inline-block;
-    text-align: center;
-}
- 
-.product-quantity-input-box > input {
-    text-align: center;
-    border: none;
-    outline: none;
-    width: 50%;
+.cart-sub-total-wrapper h2:first-child {
+    font-weight: 100;
 }
 
-.product-quantity-change > span > fa-icon {
-    cursor: pointer;
-}
-
-.add-to-cart > button {
+.proceed-to-checkout > button {
     width: clamp(120px, 80%, 400px);
     background-color: #383838;
     color: white;
     border: none;
     height: 100%;
     transition: 0.2s;
-
+    padding: 8px;
 }
 
-.add-to-cart > button:hover {
+.proceed-to-checkout > button:hover {
     background-color: #51AB13;
 }
 
-.separator {
-    margin: 30px 0;
-}
-
-button > * {
+.proceed-to-checkout > button * {
     margin: 0 5px;
-    font-size: 14px;
+    font-weight: 100;
 }
 
-.share-product {
+.proceed-to-checkout {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 
-.share-product > div > span {
-    font-size: 18px;
-}
-
-.share-product > div > fa-icon {
-    font-size: 28px;
-    margin: 0 4px;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.share-product > div > fa-icon:hover {
-    color: #51AB13;
-}
-
-.share-product > div > span {
-    color: #757474;
-}
-
-.secured-checkout {
-    margin: 15px 0;
-}
-
-.secure-checkout-break > hr {
-    height: 3px;
-    background-color: #383838;
-}
-
-.secure-checkout-text {
+.secondary-column {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.secure-checkout-text > span {
-    font-weight: 700;
-    font-size: 95%;
+.cart-content {
+    padding: 20px;
 }
 
-.checkout-cards {
-    display: flex;
-    justify-content: center;
+.cart-content > .row:first-child {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 5px;
+    font-weight: 100;
 }
-.checkout-cards > fa-icon {
-    font-size: 30px;
-    margin: 0 15px;
+
+.cart-content > .row:not(:first-child) {
+    padding: 20px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.cart-item-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .recommended-products {
     min-height: 300px;
     text-align: center;
-}
-
-.recommended-product > h4  {
-    font-weight: 400;
 }
 
 .swiper {

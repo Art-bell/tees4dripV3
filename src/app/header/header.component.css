@@ -67,11 +67,11 @@
     color: white;
     cursor: pointer;
     transition: 0.2s;
-    font-weight: 700;
+    font-weight: 300;
 } 
 
 .menu-items > ul > li:hover {
-    color: #25ca52;
+    color: #9cff57;
 } 
 .mid-header {
     border-bottom: 1px solid silver;

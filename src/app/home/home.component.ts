@@ -1,5 +1,6 @@
 import { ElementRef, Component, HostListener, ViewChild } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'home',
@@ -9,6 +10,7 @@ import { HeaderComponent } from '../header/header.component';
 export class HomeComponent{
   @ViewChild('relativeHeader', {static: true}) relativeHeader?: HeaderComponent;
   @ViewChild('fixedHeader', {static: true}) fixedHeader?: HeaderComponent;
+  faCartPlus = faCartPlus;
 
   constructor(private elementRef: ElementRef) {
 

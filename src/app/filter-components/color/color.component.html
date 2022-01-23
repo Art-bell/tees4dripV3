@@ -1,0 +1,26 @@
+<div class="container-fluid px-0">
+    <mdb-accordion [flush]="true" [multiple]="true">
+        <mdb-accordion-item>
+            <ng-template mdbAccordionItemHeader>
+              <span class="filter-header">
+                {{filterName}}
+              </span>
+              <span class="filter-expansion">
+                <fa-icon [icon]="faChevronDown"></fa-icon>
+              </span>
+            </ng-template>
+          <ng-template mdbAccordionItemBody>
+              <div class="row colors-wrapper">
+                <div *ngFor="let item of colors" class="col-xl-2 col-lg-2 col-md-2">
+                    <input hidden="true" type="checkbox" [id]="item" (click)="buttonTouched($event)"/>
+                    <label [for]="item">
+                        <div class="color-circle" [style.backgroundColor]="item">
+
+                        </div>
+                    </label>
+                </div>
+              </div>
+          </ng-template>
+        </mdb-accordion-item>
+      </mdb-accordion>
+</div>

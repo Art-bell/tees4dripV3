@@ -30,20 +30,33 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { SwiperModule } from 'swiper/angular';
+import { ItemGridComponent } from './item-grid/item-grid.component';
+import { AllProductListingsComponent } from './all-product-listings/all-product-listings.component';
+import { CategoryComponent } from './filter-components/category/category.component';
+import { ColorComponent } from './filter-components/color/color.component';
+import { CartComponent } from './cart/cart.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'products/:productId', component: ItemPageComponent}
+  { path: 'products/:productId', component: ItemPageComponent},
+  { path: 'colors-test', component: ColorComponent},
+  {path: 'products', component: AllProductListingsComponent},
+  {path: 'cart', component: CartComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
+    CategoryComponent,
+    ColorComponent,
     HeaderComponent,
     HomeComponent,
     FooterComponent,
     HeaderMobileComponent,
     ItemPageComponent,
+    ItemGridComponent,
+    AllProductListingsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserAnimationsModule,

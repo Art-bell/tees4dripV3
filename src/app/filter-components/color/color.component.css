@@ -1,0 +1,22 @@
+.color-circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+
+input[type="checkbox"]:checked + label > div {
+    border: 3px solid #383838;
+}
+
+.color-circle:hover {
+    border: 3px solid silver;
+    cursor: pointer;
+}
+
+.colors-wrapper {
+    width: 90%;
+    margin-top: 18px;
+}

@@ -1,0 +1,348 @@
+<app-header #fixedHeader [fixed]="true"></app-header>
+<app-header #relativeHeader></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="section-identifier">
+            <p>
+                SHOPPING CART
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row relative-path">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                    <span>Shopping Cart</span>
+                </li>
+            </ul>
+        </div>
+        <div class="row main-content">
+            <div class="col-xl-9 col-lg-9 col-md-9 cart-content">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        Item
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
+                        Price
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
+                        Quantity
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
+                        Total
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test8.png);">
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                                 <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        COSMIC TEE
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Color: Black
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Size: Small
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
+                        &#8358;90.00
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
+                        1
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
+                        &#8358;90.00
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test1.png);">
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                                 <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        PURPLE REIGN TEE
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Color: Black
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Size: Small
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
+                        &#8358;90.00
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
+                        1
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
+                        &#8358;90.00
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-7 col-md-7">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test2.png);">
+                            </div>
+                            <div class="col-xl-10 col-lg-10 col-md-10">
+                                 <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        CRASH BANDICOOT TEE
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Color: Black
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        Size: Small
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
+                        &#8358;100.00
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
+                        4
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
+                        &#8358;400.00
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="row cart-summary">
+                    <div class="col-xl-12 col-lg-12 col-md-12 cart-total-header-wrapper">
+                        <h2 class="cart-total-header">
+                            Cart Total
+                        </h2>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 cart-sub-total-wrapper">
+                        <h2 class="cart-sub-total-header">
+                            Subtotal
+                        </h2>
+                        <h2>
+                            &#8358;580.00
+                        </h2>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 total-wrapper">
+                        <h2 class="total-header">
+                            TOTAL:
+                        </h2>
+                        <h2 class="total-header">
+                            &#8358;580.00
+                        </h2>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 proceed-to-checkout">
+                        <button>
+                            <fa-icon [icon]="faCreditCard"></fa-icon>
+                            <span>CHECKOUT</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="recommended-products">
+        <h4>
+            YOU MAY ALSO LIKE
+        </h4>
+        <swiper
+            [slidesPerView]="5"
+            [spaceBetween]="5"
+            [slidesPerGroup]="5"
+            [loop]="true"
+            [loopFillGroupWithBlank]="true"
+            [pagination]="{
+            clickable: true
+            }"
+            [navigation]="true"
+            class="mySwiper"
+        >
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test1.png);">
+                        </div>
+                        <div>
+                            <div class="product-description-wrapper">
+                                <h5>WALKING DEAD TEE</h5>
+                                <p>&#x20a6;2000.00</p>
+                            </div>
+                            <div class="add-to-cart-button-wrapper">
+                                <button>
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test2.png);">
+                        </div>
+                        <div>
+                            <div class="product-description-wrapper">
+                                <h5>WALKING DEAD TEE</h5>
+                                <p>&#x20a6;2000.00</p>
+                            </div>
+                            <div class="add-to-cart-button-wrapper">
+                                <button>
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test3.png);">
+                        </div>
+                        <div>
+                            <div class="product-description-wrapper">
+                                <h5>WALKING DEAD TEE</h5>
+                                <p>&#x20a6;2000.00</p>
+                            </div>
+                            <div class="add-to-cart-button-wrapper">
+                                <button>
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test4.png);">
+                        </div>
+                        <div>
+                            <div class="product-description-wrapper">
+                                <h5>WALKING DEAD TEE</h5>
+                                <p>&#x20a6;2000.00</p>
+                            </div>
+                            <div class="add-to-cart-button-wrapper">
+                                <button>
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test5.png);">
+                        </div>
+                        <div>
+                            <div class="product-description-wrapper">
+                                <h5>WALKING DEAD TEE</h5>
+                                <p>&#x20a6;2000.00</p>
+                            </div>
+                            <div class="add-to-cart-button-wrapper">
+                                <button>
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test6.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test7.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test8.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div>
+                    <a [routerLink]="['/products', 23]">
+                        <div style="background-image: url(/assets/images/product_images/test9.png);">
+                        </div>
+                        <div class="product-description-wrapper">
+                            <h5>WALKING DEAD TEE</h5>
+                            <p>&#x20a6;2000.00</p>
+                        </div>
+                        <div class="add-to-cart-button-wrapper">
+                            <button>
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -47,10 +47,10 @@ export class ItemPageComponent implements OnInit {
     this.ngz.listen(this.imageRef);
   }
 
-  clickedProductImage(el: Event) {
+  clickedProductImage(event: Event) {
     this.elementRef.nativeElement.querySelector('.active-product-image').classList.remove('active-product-image');
-    (<Element> el.target).parentElement!.classList.add('active-product-image');
-    (<Element> this.imageRef.nativeElement).setAttribute("src", (<Element> el.target)!.getAttribute("src")!);
+    (<Element> event.target).parentElement!.classList.add('active-product-image');
+    (<Element> this.imageRef.nativeElement).setAttribute("src", (<Element> event.target)!.getAttribute("src")!);
   }
 
 }

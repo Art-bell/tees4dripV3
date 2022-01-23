@@ -1,0 +1,31 @@
+<div class="container-fluid px-0">
+    <mdb-accordion [flush]="true" [multiple]="true">
+        <mdb-accordion-item>
+            <ng-template mdbAccordionItemHeader>
+              <span class="filter-header">
+                {{filterName}}
+              </span>
+              <span class="filter-expansion">
+                <fa-icon [icon]="faChevronDown"></fa-icon>
+              </span>
+            </ng-template>
+          <ng-template mdbAccordionItemBody>
+            <div *ngFor="let item of dataValues" class="item-row">
+                <div class="form-check">
+                    <input
+                      mdbCheckbox
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      [id]="item"
+                    />
+                    <label class="form-check-label" [for]="item">
+                        {{item}}
+                    </label>
+                </div>
+            </div>
+          </ng-template>
+        </mdb-accordion-item>
+      </mdb-accordion>
+    
+</div>

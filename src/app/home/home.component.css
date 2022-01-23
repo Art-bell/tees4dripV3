@@ -30,7 +30,12 @@
 }
 
 .add-to-cart-button-wrapper > button:hover {
-    background-color: #25CA52;
+    background-color: #51AB13;
+}
+
+.add-to-cart-button-wrapper > button > * {
+    margin: 0 5px;
+    font-size: 14px;
 }
 
 .carousel-caption {
@@ -240,8 +245,9 @@
 .page-split-wrapper {
     min-height: 220px;
     margin: 30px 0;
-    background: rgb(37,36,36);
-    background: linear-gradient(36deg, rgba(37,36,36,1) 0%, rgba(52,51,51,1) 100%);
+    background-color: rgb(37,36,36);
+    background-color: linear-gradient(36deg, rgba(37,36,36,1) 0%, rgba(52,51,51,1) 100%);
+    background-image: url(/assets/images/background_images/home_middle_background.png);
     padding: 45px 0;
 }
 
