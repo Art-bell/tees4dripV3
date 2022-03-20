@@ -1,0 +1,41 @@
+@import "~swiper/swiper.min.css";
+@import "~swiper/modules/pagination/pagination.min.css";
+@import "~swiper/modules/navigation/navigation.min.css";
+
+.section-identifier {
+    background-image: url("/assets/images/background_images/order_complete_background.jpg");
+}
+
+.section-header { 
+    font-size: 18px;
+    text-align: center;
+ }
+
+ .order-placed-header {
+    font-size: 30px;
+    font-weight: 200;
+    font-family: 'Lato';
+    text-align: center;
+    color: #51ab13;
+ }
+
+ .truck-gif-parent {
+     text-align: center;
+ }
+
+ .truck-gif-parent img {
+     width: 150px;
+     margin: 40px 0;
+ }
+
+ .order-text p {
+     width: 60%;
+     margin-inline: auto;
+     font-family: 'Lato';
+     margin-bottom: 100px;
+ }
+
+ .order-text {
+    text-align: center;
+
+ }

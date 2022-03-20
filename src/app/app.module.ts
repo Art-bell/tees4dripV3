@@ -35,13 +35,19 @@ import { AllProductListingsComponent } from './all-product-listings/all-product-
 import { CategoryComponent } from './filter-components/category/category.component';
 import { ColorComponent } from './filter-components/color/color.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderCompleteComponent } from './order-complete/order-complete.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'products/:productId', component: ItemPageComponent},
   { path: 'colors-test', component: ColorComponent},
   {path: 'products', component: AllProductListingsComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'cart', component: CartComponent},
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'order-complete', component: OrderCompleteComponent}
 ]
 
 @NgModule({
@@ -57,6 +63,9 @@ const appRoutes: Routes = [
     ItemGridComponent,
     AllProductListingsComponent,
     CartComponent,
+    LoginComponent,
+    CheckoutComponent,
+    OrderCompleteComponent,
   ],
   imports: [
     BrowserAnimationsModule,

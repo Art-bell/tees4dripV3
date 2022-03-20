@@ -1,0 +1,86 @@
+/* .back {
+    background-image: url(/assets/images/background_images/login_background.png);
+    min-height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+.form-notch-trailing {
+    border-color: red !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.main-content {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-flow-container {
+    background-color: white;
+    padding: 60px;
+    width: clamp(500px, 30%, 800px);
+    min-height: 200px;
+    font-family: 'Lato';
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.auth-header {
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 20px;
+}
+
+.user-auth-group {
+    margin: 0 0 18px 0;
+}
+
+.button-parent {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.form-text {
+    font-weight: 100;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-text span:nth-child(2) {
+    color: #51ab13;
+    font-weight: 800;
+}
+
+.form-text span {
+    cursor: pointer;
+}
+
+.form-outline .form-control:focus ~ .form-label {
+    color: #383838;
+}
+
+.form-control:focus {
+    border-color: #383838 !important;
+}
+
+.form-label {
+    font-weight: 100;
+}
+
+.form-notch {
+    display: none !important;
+}
+

@@ -9,7 +9,8 @@
 
 .bottom-header {
     min-height: 60px;
-    background-color: black;
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,11,11,1) 49%, rgba(29,29,29,1) 100%);
 }
 
 .cart-icon {

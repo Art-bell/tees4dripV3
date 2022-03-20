@@ -1,0 +1,47 @@
+<app-header #fixedHeader [fixed]="true"></app-header>
+<app-header #relativeHeader></app-header>
+<div class="container-fluid back">
+    <div class="main-content">
+        <div class="row">
+            
+        </div>
+        <div class="row user-flow-container justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 page-title">
+                LOGIN
+            </div>
+            <div class="col-xl-11 col-lg-11 col-md-11">
+                <!-- <div class="form-text">
+                    Email
+                </div> -->
+                <mdb-form-control class="user-auth-group">
+                    <input mdbInput type="text" id="form1" class="form-control" />
+                    <label mdbLabel class="form-label" for="form1">Email</label>
+                </mdb-form-control>
+                <!-- <div class="form-text">
+                    Password
+                </div> -->
+                <mdb-form-control class="user-auth-group">
+                    <input mdbInput type="text" id="form1" class="form-control" />
+                    <label mdbLabel class="form-label" for="form1">Password</label>
+                </mdb-form-control>
+                <div class="button-parent">
+                    <button type="button" class="btn btn-dark">LOGIN</button>
+                </div>
+                <div class="form-text">
+                    <span>Forgot Password?</span>
+                    <span>Create An Account</span>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 auth-header">
+                        <span>SIGN IN</span>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 auth-header">
+                        <span>REGISTER</span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

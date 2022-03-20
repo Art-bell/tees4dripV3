@@ -1,0 +1,51 @@
+<app-header #fixedHeader [fixed]="true"></app-header>
+<app-header #relativeHeader></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="section-identifier">
+            <p>
+                Order complete
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row relative-path">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                    <span>Order Placed</span>
+                </li>
+            </ul>
+        </div>
+        <div class="row main-content">
+            <div class="truck-gif-parent">
+                <img src="assets/images/icons/truck_driving.gif" />
+            </div>
+            <div class="order-text">
+                <p style="    margin-bottom: 0;
+                font-size: 25px;
+                font-weight: 300;">
+                    ORDER NUMBER
+                </p>
+            </div>
+            <div class="order-text">
+                <p style="    margin-bottom: 10px;
+                color: #51ab13;
+                font-weight: 600;
+                font-size: 22px;">
+                    #43DVJDU6575
+                </p>
+            </div>
+            <div class="order-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla aliquet. Vitae congue eu consequat ac felis donec. Nunc sed velit dignissim sodales ut eu sem integer. Sit amet nisl suscipit adipiscing bibendum.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
