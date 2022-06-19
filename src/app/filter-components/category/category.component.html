@@ -18,6 +18,8 @@
                       type="checkbox"
                       value=""
                       [id]="item"
+                      [checked]="activated(filterName,item)"
+                      (change)="addFilter($event, filterName, item)"
                     />
                     <label class="form-check-label" [for]="item">
                         {{item}}
@@ -27,5 +29,4 @@
           </ng-template>
         </mdb-accordion-item>
       </mdb-accordion>
-    
 </div>

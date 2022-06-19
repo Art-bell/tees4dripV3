@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding, Input, ViewChild, ElementRef } from '@angular/core';
 import { faHome, faTags, faBookOpen, faBolt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -20,8 +21,22 @@ export class HeaderComponent implements OnInit{
   faBookOpen = faBookOpen;
   faBolt = faBolt;
   faPhoneAlt = faPhoneAlt;
+  cartSize = 0;
+  cartTotal = 0;
+
+  constructor(private userService: UserService) {
+    
+  }
 
   ngOnInit(): void {
+    this.cartSize = this.userService.getCartSize();
+    this.userService.cartSizeSubject.subscribe((newSize) => {
+      this.cartSize = newSize;
+    });
+    this.cartTotal = this.userService.getCartTotal();
+    this.userService.cartTotalSubject.subscribe((newTotal) => {
+      this.cartTotal = newTotal;
+    });
     if (this.fixed) {
       this.position = "fixed";
       this.top = "-250px";
@@ -30,7 +45,6 @@ export class HeaderComponent implements OnInit{
       this.boxSizing = "border-box";
       this.topHeader!.nativeElement.style.display = "none";
     }
-    console.log(this.topHeader);
   }
 
   slideFixedHeaderDown(): void {

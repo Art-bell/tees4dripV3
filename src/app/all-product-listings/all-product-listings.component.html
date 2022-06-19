@@ -1,10 +1,13 @@
-<app-header #fixedHeader [fixed]="true"></app-header>
-<app-header #relativeHeader></app-header>
+<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+<app-header class="desktop" #relativeHeader></app-header>
+<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+
 <div class="container-fluid">
     <div class="row">
         <div class="section-identifier">
             <p>
-                ALL PRODUCTS
+                PRODUCTS
             </p>
         </div>
     </div>
@@ -27,16 +30,16 @@
                         Filter
                     </div>
                     <div>
-                        <category-filter filterName="Category" [dataValues]="categories"></category-filter>
+                        <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
                     </div>
                     <div>
-                        <category-filter filterName="Size" [dataValues]="sizes"></category-filter>
+                        <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
                     </div>
                     <div>
                         <color-filter></color-filter>
                     </div>
                     <div class="col-xl-12 col-lg-12 col-md-12 filter-update-wrapper">
-                        <button type="button" class="btn btn-outline-success btn-rounded">
+                        <button type="button" [disabled]="loading" class="btn btn-outline-success btn-rounded" (click)="sendUpdateFilterRequest()">
                             update
                           </button>
                     </div>
@@ -46,95 +49,51 @@
                  <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 results-information">
                         <div>
-                            Showing 24 of 345 results
+                            Showing all results
                         </div>
                         <div>
                             <div mdbDropdown class="dropdown">
                                 <button
-                                  class="btn btn-light dropdown-toggle"
+                                  class="btn btn-light dropdown-toggle active-sort-dropdown"
                                   type="button"
                                   id="dropdownMenuButton"
                                   aria-expanded="false"
                                   mdbDropdownToggle
                                 >
-                                  A - Z
+                                  {{activeSort}}
                                 </button>
                                 <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <li><a class="dropdown-item" href="#">Z - A</a></li>
-                                  <li><a class="dropdown-item" href="#">Price Ascending</a></li>
-                                  <li><a class="dropdown-item" href="#">Price Descending</a></li>                                
-                                  <li><a class="dropdown-item" href="#">Newest</a></li>                                
-                                  <li><a class="dropdown-item" href="#">Oldest</a></li>                                
+                                  <li><a class="dropdown-item" (click)="setSortingMethod($event)" *ngFor="let item of sortingOptions" [attr.data-sort]="item">{{ item }}</a></li>                              
                                 </ul>
                               </div>
                         </div>
                     </div>
-                    <div class="row gx-3">
-                        <div class="product-cell col-xl-4 col-lg-4 col-md-4">
-                            <div class="product-image" style="background-image: url(/assets/images/product_images/test1.png);"></div>
-                            <div class="product-information">
-                                <p>WALKING DEAD TEE</p>
-                                <p>&#8358; 2,000</p>
-                                <div class="cart-outer-wrapper">
-                                    <div class="cart-wrapper">
-                                        <fa-icon [icon]="faCartPlus"></fa-icon>
-                                        <span>
-                                            ADD TO CART
-                                        </span>
+
+                    <div *ngIf="loading" class="loader-container">
+                        <img src="/assets/loading/{{loader}}"/>
+                    </div>
+                    <div class="row gx-3" *ngIf="!loading">
+                        <a class="col-xl-4 col-lg-4 col-md-4" (click)="navigateToProduct(item.id)" *ngFor="let item of productsToDisplay">
+                            <div class="product-cell" >
+                                <div class="product-image" style="background-image: url({{ item.productImages[0] }});"></div>
+                                <div class="product-information">
+                                    <p>{{ item.name }}</p>
+                                    <p>&#8358;{{ item.ngn | currency:'NGN':'' }}</p>
+                                    <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
+                                        <div class="cart-wrapper">
+                                            <fa-icon [icon]="faCartPlus"></fa-icon>
+                                            <span>
+                                                ADD TO CART
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-cell col-xl-4 col-lg-4 col-md-4">
-                            <div class="product-image" style="background-image: url(/assets/images/product_images/test2.png);"></div>
-                            <div class="product-information">
-                                <p>WALKING DEAD TEE</p>
-                                <p>&#8358; 2,000</p>
-                                <div class="cart-outer-wrapper">
-                                    <div class="cart-wrapper">
-                                        <fa-icon [icon]="faCartPlus"></fa-icon>
-                                        <span>
-                                            ADD TO CART
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-cell col-xl-4 col-lg-4 col-md-4">
-                            <div class="product-image" style="background-image: url(/assets/images/product_images/test3.png);"></div>
-                            <div class="product-information">
-                                <p>WALKING DEAD TEE</p>
-                                <p>&#8358; 2,000</p>
-                                <div class="cart-outer-wrapper">
-                                    <div class="cart-wrapper">
-                                        <fa-icon [icon]="faCartPlus"></fa-icon>
-                                        <span>
-                                            ADD TO CART
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-cell col-xl-4 col-lg-4 col-md-4">
-                            <div class="product-image" style="background-image: url(/assets/images/product_images/test4.png);"></div>
-                            <div class="product-information">
-                                <p>WALKING DEAD TEE</p>
-                                <p>&#8358; 2,000</p>
-                                <div class="cart-outer-wrapper">
-                                    <div class="cart-wrapper">
-                                        <fa-icon [icon]="faCartPlus"></fa-icon>
-                                        <span>
-                                            ADD TO CART
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
+                        </a>
                     </div>
                  </div>
             </div>
-
         </div>
     </div>
 </div>
+<app-footer></app-footer>

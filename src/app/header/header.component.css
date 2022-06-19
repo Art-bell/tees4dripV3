@@ -29,6 +29,29 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,11,11,1) 49%, rgba(
     color: rgb(124, 124, 124);
 }
 
+.cart-container {
+    position: relative;
+}
+
+.cart-container span {
+    position: absolute;
+    background: #ffffff;
+    color: black;
+    border: 1px solid #a7a8a6;
+    padding: 0px 8px;
+    border-radius: 23px;
+    z-index: 10;
+    top: -10px;
+    left: -14px;
+    font-weight: 100;
+}
+
+.cart-content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .header-wrapper {
     background-color: white;
 }
@@ -68,7 +91,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,11,11,1) 49%, rgba(
     color: white;
     cursor: pointer;
     transition: 0.2s;
-    font-weight: 300;
+    font-weight: 600;
 } 
 
 .menu-items > ul > li:hover {
@@ -180,7 +203,7 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(11,11,11,1) 49%, rgba(
 
 .template-statement > * {
     margin: 0 10px;
-    font-weight: 100;
+    font-weight: 600;
 }
 
 .template-statement-diamond {

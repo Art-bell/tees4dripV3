@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <header class="comp-description">
+        <span>
+            All Products
+        </span>
+        <span>
+            - Manage all the products currently available on the site
+        </span>
+    </header>
+    <div class="existing-products-holder">
+        <div class="existing-product">
+            <div class="row">
+                <form class="delete-product-form" (ngSubmit)="onDeleteFormSubmit()">
+                    <input hidden value="product id">
+                </form>
+                <button class="delete-button">DELETE</button>
+            </div>
+            <div class="row product-image-holder">
+                <img style="width: 300px;" src="/assets/images/home_images/tye_dye_poster.PNG" />
+            </div>
+            <div class="row update-product-form-holder">
+                <form class="update-product-form">
+                    <fieldset>
+                        <input type="text" value="Purple Reign Tee"/>
+                        <input type="text" value="http://palazzo.com"/>
+                        <input type="text" value="http://palazzo.com"/>
+                        <input type="text" value="http://palazzo.com"/>
+                    </fieldset>
+                    <fieldset>
+
+                    </fieldset>
+                    <button class="save-changes-button">
+                        SAVE CHANGES
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="existing-product">
+            <div class="row">
+                <form class="delete-product-form" (ngSubmit)="onDeleteFormSubmit()">
+                    <input hidden value="product id">
+                </form>
+                <button class="delete-button">DELETE</button>
+            </div>
+            <div class="row product-image-holder">
+                <img style="width: 300px;" src="/assets/images/home_images/tye_dye_poster.PNG" />
+            </div>
+            <div class="row update-product-form-holder">
+                <form class="update-product-form">
+                    <fieldset>
+                        <input type="text" value="Purple Reign Tee"/>
+                        <input type="text" value="http://palazzo.com"/>
+                        <input type="text" value="http://palazzo.com"/>
+                        <input type="text" value="http://palazzo.com"/>
+                    </fieldset>
+                    <fieldset>
+
+                    </fieldset>
+                    <button class="save-changes-button">
+                        SAVE CHANGES
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

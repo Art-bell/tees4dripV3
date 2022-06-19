@@ -12,10 +12,9 @@
           <ng-template mdbAccordionItemBody>
               <div class="row colors-wrapper">
                 <div *ngFor="let item of colors" class="col-xl-2 col-lg-2 col-md-2">
-                    <input hidden="true" type="checkbox" [id]="item" (click)="buttonTouched($event)"/>
+                    <input hidden="true" type="checkbox" value="" [id]="item" [checked]="activated(filterName, item)" (change)="addFilter($event, filterName, item)"/>
                     <label [for]="item">
-                        <div class="color-circle" [style.backgroundColor]="item">
-
+                        <div class="color-circle" [ngClass]="{'invert': item==='black'}" [style.backgroundColor]="item">
                         </div>
                     </label>
                 </div>

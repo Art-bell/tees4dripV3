@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
@@ -38,6 +39,11 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderCompleteComponent } from './order-complete/order-complete.component';
+import { LookbookComponent } from './lookbook/lookbook.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AllProductsComponent } from './admin-panel/inner-admin-components/all-products/all-products.component';
+import { AdminOrdersComponent } from './admin-panel/inner-admin-components/admin-orders/admin-orders.component';
+import { AdminAddProductsComponent } from './admin-panel/inner-admin-components/admin-add-products/admin-add-products.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -47,7 +53,9 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'order-complete', component: OrderCompleteComponent}
+  {path: 'order-complete', component: OrderCompleteComponent},
+  {path: 'lookbook', component: LookbookComponent},
+  {path: 'admin', component: AdminPanelComponent},
 ]
 
 @NgModule({
@@ -66,12 +74,18 @@ const appRoutes: Routes = [
     LoginComponent,
     CheckoutComponent,
     OrderCompleteComponent,
+    LookbookComponent,
+    AdminPanelComponent,
+    AllProductsComponent,
+    AdminOrdersComponent,
+    AdminAddProductsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     FontAwesomeModule,
+    HttpClientModule,
     AppRoutingModule,
     MatCarouselModule.forRoot(),
     MdbAccordionModule,
@@ -89,7 +103,7 @@ const appRoutes: Routes = [
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     SwiperModule
   ],
   providers: [],

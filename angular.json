@@ -49,13 +49,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "8mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "15kb",
+                  "maximumError": "30kb"
                 }
               ],
               "fileReplacements": [
@@ -86,6 +86,10 @@
             "development": {
               "browserTarget": "tees4dripV3:build:development"
             }
+          },
+          "options": {
+            "browserTarget": "angular-nodejs-example:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "defaultConfiguration": "development"
         },

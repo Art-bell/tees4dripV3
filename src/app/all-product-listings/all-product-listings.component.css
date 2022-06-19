@@ -50,6 +50,10 @@
     box-shadow: -1px 1px 15px #c2c4c0;
 }
 
+.dropdown-item {
+    cursor: pointer;
+}
+
 .product-cell:hover  .cart-outer-wrapper{
     opacity: 1;
 }
@@ -95,9 +99,15 @@
 .cart-outer-wrapper:hover {
     background-color: #383838;
     border: 1px solid #383838;
-
 }
 
 .cart-outer-wrapper:hover span, .cart-outer-wrapper:hover fa-icon {
     color: #fff;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
 }

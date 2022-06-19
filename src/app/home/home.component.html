@@ -1,6 +1,7 @@
-<app-header #fixedHeader [fixed]="true"></app-header>
-<app-header #relativeHeader></app-header>
-<!-- <app-header-mobile></app-header-mobile> -->
+<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+<app-header class="desktop" #relativeHeader></app-header>
+<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
 
 <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
     <mdb-carousel-item>
@@ -9,7 +10,7 @@
         class="d-block w-100"
         alt="Sunset Over the City"
       />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h5>A1 <span class="slime">APPAREL</span></h5>
         <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
       </div>
@@ -21,7 +22,7 @@
         class="d-block w-100"
         alt="Canyon at Night"
       />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h5>Second <span class="slime">slide label</span></h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -33,7 +34,7 @@
         class="d-block w-100"
         alt="Cliff Above a Stormy Sea"
       />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-md-block">
         <h5>Third <span class="slime">slide label</span></h5>
         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
       </div>
@@ -85,155 +86,35 @@
             </h1>
         </div>
         <div class="row new-arrivals new-arrivals-top">
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="col-xl-3 col-lg-4 col-md-6 new-product-wrapper" *ngFor="let item of newestItems">
                 <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival1.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>WALKING DEAD TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', '23']">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival2.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>PURPLE REIGN TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival3.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>LIGHTNING TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival4.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>METALLICA TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival5.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>LIGHTNING TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival6.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>METALLICA TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival7.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>CRASH BANDICOOT TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div>
-                    <a [routerLink]="['/products', 23]">
-                        <div style="background-image: url(/assets/images/home_images/t_new_arrival8.PNG);">
-                        </div>
-                        <div class="product-description-wrapper">
-                            <h5>SPICE GIRLS TEE</h5>
-                            <p>&#x20a6;2000.00</p>
-                        </div>
-                        <div class="add-to-cart-button-wrapper">
-                            <button>
-                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                ADD TO CART
-                            </button>
+                    <a (click)="navigateToProduct(item.id)">
+                        <div class="product-cell">
+                            <div class="product-image" style="background-image: url({{ item.productImages[0].url }});"></div>
+                            <div class="product-information">
+                                <p>{{ item.name | uppercase }}</p>
+                                <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
+                                    <div class="cart-wrapper">
+                                        <fa-icon [icon]="faCartPlus"></fa-icon>
+                                        <span>
+                                            ADD TO CART
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row new-arrivals-button">
-            <button>
-                VIEW MORE
-            </button>
+            <a routerLink="/products">
+                <!-- Add the filter in the url for ordering by newest -->
+                <button>
+                    VIEW MORE
+                </button>
+            </a>
         </div>
     </div>
 </div>

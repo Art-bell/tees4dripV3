@@ -27,11 +27,21 @@
         <div class="col-lg-4 col-md-4 logo">
             <img src="assets/images/home_images/tees4drip_redesign.png">
         </div>
-        <div class="col-lg-4 col-md-4 cart-wrapper">
-            <div class="cart-icon"></div>
-            <div class="cart-amount">
-                $0.00
-            </div>
+
+        <div class="col-lg-4 col-md-4 cart-content">
+            <a routerLink="/cart">
+                <div class="cart-wrapper">
+                    <div class="cart-container">
+                        <span>
+                            {{ cartSize }}
+                        </span>
+                        <div class="cart-icon"></div>
+                    </div>
+                    <div class="cart-amount">
+                        &#8358;{{ cartTotal | currency:'NGN':'' }}
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
     <div class="row bottom-header">
@@ -44,11 +54,15 @@
                     </a>
                 </li>
                 <li>
-                    <fa-icon [icon]="faTags"></fa-icon>
-                    SHOP
+                    <a routerLink="/products">
+                        <fa-icon [icon]="faTags"></fa-icon>
+                        SHOP
+                    </a>
                 </li>
                 <li>
-                    LOOKBOOK
+                    <a routerLink="/lookbook">
+                        LOOKBOOK
+                    </a>
                 </li>
                 <li>
                     ABOUT
@@ -62,7 +76,7 @@
             <div class="template-statement-diamond">
 
             </div>
-            <p>LOREM IPSUM SOME TEXT</p>
+            <p>RESTOCK NOW AVAILABLE</p>
         </div>
     </div>
 </div>

@@ -1,0 +1,47 @@
+.section-identifier {
+    background-image: url("/assets/images/background_images/lookbook_background.png");    
+}
+
+.container {
+    position: relative;
+    min-height: 1200px;
+}
+
+.sectionA {
+    top: 350px;
+    left: 4vw;
+    width: 600px;
+    height: 100px;
+    background: #9cfe57;
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 24px;
+    z-index: 1;
+}
+
+.sectionB {
+    top: 100px;
+    left: 35vw;
+    width: 450px;
+    height: 700px;
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/images/lookbook_images/lookbook1.PNG");
+    z-index: 0;
+}
+
+.sectionC {
+    top: 700px;
+    left: 25vw;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/images/lookbook_images/lookbook2.PNG");
+    z-index: 0;
+}

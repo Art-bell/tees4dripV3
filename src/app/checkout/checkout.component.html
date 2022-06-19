@@ -38,15 +38,15 @@
                             Total
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" *ngFor="let cartItem of cartItems">
                         <div class="col-xl-7 col-lg-7 col-md-7">
                             <div class="row">
-                                <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test8.png);">
+                                <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url({{ cartItem.image }});">
                                 </div>
                                 <div class="col-xl-10 col-lg-10 col-md-10">
                                      <div class="row">
                                         <div class="col-xl-12 col-lg-12 col-md-12">
-                                            COSMIC TEE
+                                            {{ cartItem.name }}
                                         </div>
                                         <div class="col-xl-12 col-lg-12 col-md-12">
                                             Color: Black
@@ -59,73 +59,13 @@
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
-                            &#8358;90.00
+                            &#8358;{{ cartItem.price | currency:'NGN':'' }}
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
                             1
                         </div>
                         <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
-                            &#8358;90.00
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-7 col-md-7">
-                            <div class="row">
-                                <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test1.png);">
-                                </div>
-                                <div class="col-xl-10 col-lg-10 col-md-10">
-                                     <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            PURPLE REIGN TEE
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Color: Black
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Size: Small
-                                        </div>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
-                            &#8358;90.00
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
-                            1
-                        </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
-                            &#8358;90.00
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-7 col-md-7">
-                            <div class="row">
-                                <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url(/assets/images/product_images/test2.png);">
-                                </div>
-                                <div class="col-xl-10 col-lg-10 col-md-10">
-                                     <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            CRASH BANDICOOT TEE
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Color: Black
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Size: Small
-                                        </div>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
-                            &#8358;100.00
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
-                            4
-                        </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
-                            &#8358;400.00
+                            &#8358;{{ cartItem.price | currency:'NGN':'' }}
                         </div>
                     </div>
                 </div>

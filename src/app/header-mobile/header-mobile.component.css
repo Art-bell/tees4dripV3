@@ -1,5 +1,5 @@
 .logo > img {
-    width: 180px;
+    width: 124px;
 }
 
 .menu-icon {
@@ -14,4 +14,8 @@
 
 .menu-wrapper {
     display: none;
+}
+
+.top-header {
+    padding-right: 0px;
 }

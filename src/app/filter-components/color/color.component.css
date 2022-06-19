@@ -6,9 +6,12 @@
     border: 1px solid black;
 }
 
-
 input[type="checkbox"]:checked + label > div {
     border: 3px solid #383838;
+}
+
+input[type="checkbox"]:checked + label > div.invert {
+    border: 3px solid navajowhite;
 }
 
 .color-circle:hover {

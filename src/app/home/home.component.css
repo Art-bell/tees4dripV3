@@ -11,10 +11,6 @@
     margin-inline: auto !important;
 }
 
-.container-fluid {
-    padding: 0;
-}
-
 .add-to-cart-button-wrapper {
     margin: 0 auto;
     width: 85%;
@@ -27,6 +23,8 @@
     background-color: black;
     color: white;
     transition: 0.2s;
+    font-family: sans-serif;
+    font-weight: 600;
 }
 
 .add-to-cart-button-wrapper > button:hover {
@@ -101,7 +99,7 @@
 }
 
 .new-arrivals > div > div {
-    height: 300px;
+    height: 460px;
     transition: 0.2s;
 }
 
@@ -109,13 +107,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 300px;
+    height: 420px;
+    padding: 20px;
 }
 
-.new-arrivals > div:hover > div {
+/* .new-arrivals > div:hover > div {
     --pseudo-transform: -50%;
     transform: translateY(calc(var(--pseudo-transform)));
-}
+} */
 
 .new-arrivals-button, .new-arrivals-header, .new-arrivals-header > h1 {
     width: 100%;
@@ -142,8 +141,10 @@
     color: black;
     text-align: center;
     padding: 20px 0;
-    margin: 100px 0;
+    margin: 100px auto;
     font-size: 25px;
+    width: 30%;
+    border-bottom: 1px solid #51ab13;
 }
 
 .new-arrivals-wrapper {
@@ -176,12 +177,16 @@
 }
 
 .new-arrivals-button {
-    margin-top: 70px;
     display: flex;
     justify-content: center;
 }
 
-.new-arrivals-button > button {
+.new-arrivals-button a{
+    display: flex;
+    justify-content: center;
+}
+
+.new-arrivals-button button {
     width: 160px;
     background-color: transparent;
     border: none;
@@ -191,9 +196,13 @@
     transition: 0.2s;
 }
 
-.new-arrivals-button > button:hover {
+.new-arrivals-button button:hover {
     color: white;
     background-color: black;
+}
+
+.new-product-wrapper {
+    cursor: pointer;
 }
 
 .overlay {
@@ -261,6 +270,8 @@
 
 .product-description-wrapper > h5 {
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .subscription-header > p {
@@ -290,6 +301,92 @@
 .text-and-input{ 
     flex-direction: column;
 }
+
+.product-cell > img {
+    height: 100%;
+}
+
+.product-image {
+    height: 280px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-cell {
+    height: 420px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: pointer;
+    /* padding: 0; */
+}
+
+.product-cell:hover {
+    box-shadow: -1px 1px 15px #c2c4c0;
+}
+
+.product-cell:hover  .cart-outer-wrapper{
+    opacity: 1;
+}
+.product-information > p:first-child {
+    margin-top: 8px;
+    font-family: 'Lato';
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 30ch;
+    overflow: hidden;
+    margin: 8px auto 0 auto;
+}
+.product-information > p {
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+
+.results-information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.results-information div:first-child {
+    font-family: 'Lato';
+    font-weight: 200;
+}
+
+.cart-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 180px;
+}
+
+.cart-outer-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #313131;
+    padding: 6px;
+    margin: 0 18px;
+    margin-top: 5px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.cart-outer-wrapper:hover {
+    background-color: #383838;
+    border: 1px solid #383838;
+}
+
+.cart-outer-wrapper:hover span, .cart-outer-wrapper:hover fa-icon {
+    color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+    .container-fluid {
+        padding: 0;
+    }
+}
 @media screen and (max-width: 992px) {
     .subscription-button {
         justify-content: center;
@@ -304,5 +401,25 @@
     /* Hide Desktop header and show mobile */
     .page-split {
         padding-top: 45px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .carousel-caption h5 {
+        font-size: 18px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .carousel-caption {
+        bottom: 0;
     }
 }

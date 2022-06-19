@@ -1,0 +1,14 @@
+.comp-description {
+    font-family: 'Lato';
+    font-weight: 200;
+    background-color: white;
+    padding: 20px;
+}
+
+.comp-description span:first-child {
+    font-weight: 500;
+}
+
+header {
+    border: 2px solid black;
+}
