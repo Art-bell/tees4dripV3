@@ -12,19 +12,21 @@
                                 Orders
                             </li>
                             <li>
-                                All Products
+                                <a routerLink="/admin/">All Products</a>
                             </li>
                             <li>
-                                Add New Product
+                                <a routerLink="/admin/addProduct">Add New Product</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="lower-sections">
                     <!-- put a line break here -->
-                    <button type="button" class="btn btn-dark place-order">
-                        Back To Store
-                    </button>
+                    <a routerLink="/">
+                        <button type="button" class="btn btn-dark place-order">
+                                Back To Store 
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -33,9 +35,9 @@
                 Tees4Drip
             </div>
             <div class="inner-comp-holder">
-                <app-all-products>
+                <router-outlet>
 
-                </app-all-products>
+                </router-outlet>
             </div>
         </main>
     </div>

@@ -1,158 +1,180 @@
-<app-header #fixedHeader [fixed]="true"></app-header>
-<app-header #relativeHeader></app-header>
-<div class="content-wrapper">
-    <div class="container">
-        <div class="row relative-path">
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                    <span>Drip Tees</span>
-                </li>
-                <li>
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                    <span>Purple Reign Tee</span>
-                </li>
-            </ul>
-        </div>
-        <div class="row product-content">
-            <div class="col-md-6 col-lg-6 col-xl-6">
-                <div class="row">
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                        <div *ngFor="let image of currentProduct.productImages; let i = index" (click)="clickedProductImage($event)" class="alt-image" [ngClass]="{'active-product-image': i == 0}">
-                            <img src="{{ image.url }}" />
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-lg-9 col-xl-9 main-image">
-                        <img #imageRef [src]="getDefaultImage()" />
-                    </div>
-                </div>
+<div>
+    <app-header #fixedHeader [fixed]="true"></app-header>
+    <app-header #relativeHeader></app-header>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row relative-path">
+                <ul>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                        <span>Drip Tees</span>
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                        <span>Purple Reign Tee</span>
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-6 col-lg-6 col-xl-6 product-description">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
-                        <span class="product-name">
-                            {{ currentProduct.name | uppercase }}
-                        </span>
-                    </div>
-                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
-                        <span class="product-price">
-                            &#8358;{{ currentProduct.ngn | currency:'NGN':'' }}
-                        </span>
-                    </div>
-                    <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
-                        <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat.
-                        </span>
-                    </div>
-                    <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
-                        <div class="row">
-                            <div class="col-md-3 col-lg-3 col-xl-3 product-quantity">
-                                <div class="product-quantity-box">
-                                    <div class="product-quantity-change quantity-decrease">
-                                        <span>
-                                            <fa-icon [icon]="faMinus"></fa-icon>
-                                        </span>
-                                    </div>
-                                    <div class="product-quantity-input-box">
-                                        <input value="1" type="text" maxlength="1"/>
-                                    </div>
-                                    <div class="product-quantity-change quantity-increase">
-                                        <span>
-                                            <fa-icon [icon]="faPlus"></fa-icon>
-                                        </span>
-                                    </div>
-                                </div>
+            <div class="row product-content">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                            <div *ngFor="let image of currentProduct.productImages; let i = index" (click)="clickedProductImage($event)" class="alt-image" [ngClass]="{'active-product-image': i == 0}">
+                                <img src="{{ image.url }}" />
                             </div>
-                            <div (click)="addToCart($event, currentProduct.id, currentProduct.ngn)" class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
-                                <button>
-                                    <fa-icon [icon]="faCartPlus"></fa-icon>
-                                    <span>ADD TO CART</span>
-                                </button>
-                            </div>
-                            <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
-                                <hr>
-                            </div>
-                            <div class="col-md-12 col-lg-12 col-xl-12 share-product">
-                                <div>
-                                    <span>
-                                        Share On
-                                    </span>
-                                    <fa-icon [icon]="faTwitter"></fa-icon>
-                                    <fa-icon [icon]="faInstagram"></fa-icon>
-                                </div>
-                            </div> -->
-                            <div class="col-md-12 col-lg-12 col-xl-12 secured-checkout">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
-                                        <hr>
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 col-xl-4 secure-checkout-text">
-                                        <span>Secure Checkout</span>
-                                    </div>
-                                    <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-lg-12 col-xl-12">
-                                <div class="checkout-cards">
-                                    <fa-icon [icon]="faMasterCard"></fa-icon>
-                                    <fa-icon [icon]="faDiscover"></fa-icon>
-                                    <fa-icon [icon]="faVisa"></fa-icon>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="col-md-9 col-lg-9 col-xl-9 main-image">
+                            <img #imageRef [src]="getDefaultImage()" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="separator">
-            <hr>
-        </div>
-        
-    </div>
-    <div class="recommended-products">
-        <h6>
-            YOU MAY ALSO LIKE
-        </h6>
-        <swiper
-            [slidesPerView]="5"
-            [spaceBetween]="5"
-            [slidesPerGroup]="5"
-            [loop]="false"
-            [loopFillGroupWithBlank]="true"
-            [pagination]="{
-            clickable: true
-            }"
-            [navigation]="true"
-            class="mySwiper"
-        >
-            <ng-template swiperSlide *ngFor="let item of productSuggestions">
-                <div>
-                    <a [routerLink]="['/products', item.id]">
-                        <div style="background-image: url({{ item.productImages[0] }});">
+                <div class="col-md-6 col-lg-6 col-xl-6 product-description">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                            <span class="product-name">
+                                {{ currentProduct.name | uppercase }}
+                            </span>
                         </div>
+                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                            <span class="product-price">
+                                &#8358;{{ currentProduct.ngn | currency:'NGN':'' }}
+                            </span>
+                        </div>
+                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
+                            <span>
+                                {{ currentProduct.description }} 
+                            </span>
+                        </div>
+                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
+                            <span *ngIf="currentProduct?.sizes?.length" style="border-right: 3px solid black;
+                            margin-right: 10px;
+                            padding-right: 9px;">
+                                Size: {{ currentProduct.sizes[0]['name'] | uppercase }}
+                            </span>
+                            <span *ngIf="currentProduct?.colors?.length">
+                                Color: {{ currentProduct.colors[0]['name'] }} 
+                            </span>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 col-xl-3 product-quantity">
+                                    <div class="product-quantity-box">
+                                        <div class="product-quantity-change quantity-decrease">
+                                            <span>
+                                                <fa-icon [icon]="faMinus"></fa-icon>
+                                            </span>
+                                        </div>
+                                        <div class="product-quantity-input-box">
+                                            <input value="1" type="text" maxlength="1"/>
+                                        </div>
+                                        <div class="product-quantity-change quantity-increase">
+                                            <span>
+                                                <fa-icon [icon]="faPlus"></fa-icon>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div (click)="addToCart($event, currentProduct.id, currentProduct.ngn)" class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
+                                    <button>
+                                        <fa-icon [icon]="faCartPlus"></fa-icon>
+                                        <span>ADD TO CART</span>
+                                    </button>
+                                </div>
+                                <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
+                                    <hr>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-12 share-product">
+                                    <div>
+                                        <span>
+                                            Share On
+                                        </span>
+                                        <fa-icon [icon]="faTwitter"></fa-icon>
+                                        <fa-icon [icon]="faInstagram"></fa-icon>
+                                    </div>
+                                </div> -->
+                                <div class="col-md-12 col-lg-12 col-xl-12 secured-checkout">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-4 col-lg-4 col-xl-4 secure-checkout-text">
+                                            <span>Secure Checkout</span>
+                                        </div>
+                                        <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-12">
+                                    <div class="checkout-cards">
+                                        <fa-icon [icon]="faMasterCard"></fa-icon>
+                                        <fa-icon [icon]="faDiscover"></fa-icon>
+                                        <fa-icon [icon]="faVisa"></fa-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <hr>
+            </div>
+            
+        </div>
+        <div class="recommended-products">
+            <h6>
+                YOU MAY ALSO LIKE
+            </h6>
+            <swiper
+                [slidesPerView]="5"
+                [spaceBetween]="5"
+                [slidesPerGroup]="5"
+                [loop]="false"
+                [loopFillGroupWithBlank]="true"
+                [pagination]="{
+                clickable: true
+                }"
+                [navigation]="true"
+                class="mySwiper"
+            >
+                <ng-template swiperSlide *ngFor="let item of productSuggestions">
+                    <div>
                         <div>
-                            <div class="product-description-wrapper">
-                                <h5>{{ item.name | uppercase }}</h5>
-                                <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
-                            </div>
-                            <div class="add-to-cart-button-wrapper">
-                                <button>
-                                    ADD TO CART
-                                </button>
+                            <a [routerLink]="['/products', item.id]">
+                                <div style="background-image: url({{ item.productImages[0] }});">
+                                </div>
+                            </a>
+                            <div>
+                                <a [routerLink]="['/products', item.id]">
+                                    <div class="product-description-wrapper">
+                                        <h5>{{ item.name | uppercase }}</h5>
+                                        <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                    </div>
+                                </a>
+                                <div class="add-to-cart-button-wrapper" (click)="addToCart($event, item.id, item.ngn)">
+                                    <button>
+                                        ADD TO CART
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </ng-template>
-        </swiper>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
+
+<div class="coming-soon">
+    <div class="col-lg-4 col-md-4 logo">
+        <img src="assets/images/home_images/tees4drip_redesign.png">
+    </div>
+    <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
+        Coming to mobile soon
     </div>
 </div>
-<app-footer></app-footer>

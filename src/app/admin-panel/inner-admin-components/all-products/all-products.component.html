@@ -8,58 +8,64 @@
         </span>
     </header>
     <div class="existing-products-holder">
-        <div class="existing-product">
-            <div class="row">
-                <form class="delete-product-form" (ngSubmit)="onDeleteFormSubmit()">
-                    <input hidden value="product id">
-                </form>
-                <button class="delete-button">DELETE</button>
-            </div>
-            <div class="row product-image-holder">
-                <img style="width: 300px;" src="/assets/images/home_images/tye_dye_poster.PNG" />
-            </div>
-            <div class="row update-product-form-holder">
-                <form class="update-product-form">
-                    <fieldset>
-                        <input type="text" value="Purple Reign Tee"/>
-                        <input type="text" value="http://palazzo.com"/>
-                        <input type="text" value="http://palazzo.com"/>
-                        <input type="text" value="http://palazzo.com"/>
-                    </fieldset>
-                    <fieldset>
-
-                    </fieldset>
-                    <button class="save-changes-button">
-                        SAVE CHANGES
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="existing-product">
-            <div class="row">
-                <form class="delete-product-form" (ngSubmit)="onDeleteFormSubmit()">
-                    <input hidden value="product id">
-                </form>
-                <button class="delete-button">DELETE</button>
-            </div>
-            <div class="row product-image-holder">
-                <img style="width: 300px;" src="/assets/images/home_images/tye_dye_poster.PNG" />
-            </div>
-            <div class="row update-product-form-holder">
-                <form class="update-product-form">
-                    <fieldset>
-                        <input type="text" value="Purple Reign Tee"/>
-                        <input type="text" value="http://palazzo.com"/>
-                        <input type="text" value="http://palazzo.com"/>
-                        <input type="text" value="http://palazzo.com"/>
-                    </fieldset>
-                    <fieldset>
-
-                    </fieldset>
-                    <button class="save-changes-button">
-                        SAVE CHANGES
-                    </button>
-                </form>
+        <div class="row" style="justify-content: space-between!important;">
+            <div class="existing-product col-5" *ngFor="let product of allAvailableProducts">
+                <div class="row">
+                    <form class="delete-product-form" (ngSubmit)="onDeleteFormSubmit()">
+                        <input hidden value="{{product.id}}">
+                    </form>
+                    <button class="delete-button">DELETE</button>
+                </div>
+                <div class="row product-image-holder">
+                    <img style="width: 300px;" src="{{product.mainImage}}" />
+                </div>
+                <div class="row update-product-form-holder">
+                    <form class="update-product-form">
+                        <fieldset class="centered">
+                            <input type="text" value="{{product.productName}}"/>
+                            <input type="text" *ngFor="let image of product.images" value="{{image}}"/>
+                        </fieldset>
+                        <fieldset>
+                            <div class="cat-label">
+                                Category
+                            </div>
+                            <select>
+                                <option *ngFor="let category of availableCategories" [selected]="category.toLowerCase() === product.category.toLowerCase()">
+                                    {{ category }}
+                                </option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <div class="cat-label">
+                                Colors
+                            </div>
+                            <ng-container *ngFor="let color of availableColors">
+                                <div style="display: inline-block; width: clamp(60px, 25%, 200px);">
+                                    <input name="color" id="{{color}}-{{product.productName | turnIntoIdentifier}}" type="radio" value="{{color}}" [checked]="isChecked(color, product.colors)">
+                                    <label for="{{color}}-{{product.productName | turnIntoIdentifier}}" style="margin-left: 10px;">
+                                        {{ color }}
+                                    </label>
+                                </div>
+                            </ng-container>
+                        </fieldset>
+                        <fieldset>
+                            <div class="cat-label">
+                                Sizes
+                            </div>
+                            <ng-container *ngFor="let size of availableSizes">
+                                <div style="display: inline-block; width: clamp(30px, 15%, 80px);">
+                                    <input name="size" id="{{size}}-{{product.productName | turnIntoIdentifier}}" type="radio" value="{{size}}" [checked]="isChecked(size, product.sizes)">
+                                    <label for="{{size}}-{{product.productName | turnIntoIdentifier}}" style="margin-left: 10px;">
+                                        {{ size }}
+                                    </label>
+                                </div>
+                            </ng-container>
+                        </fieldset>
+                        <button class="save-changes-button">
+                            SAVE CHANGES
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

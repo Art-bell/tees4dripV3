@@ -1,7 +1,6 @@
 .existing-product {
-    width: 40%;
     padding: 30px;
-    margin: 70px;
+    margin: 50px;
     margin-top: 20px;
     border: 2px solid;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -13,6 +12,7 @@
     background-color: #FCA5A5;
     border-radius: 3px;
     transition: 0.2s;
+    border: none;
 }
 
 .delete-button:hover {
@@ -26,28 +26,46 @@
 
 .update-product-form, .update-product-form fieldset {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
-.update-product-form input {
+.update-product-form, .update-product-form fieldset.centered {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cat-label {
+    color: #827f7f;
+    font-weight: 200;
+}
+
+.update-product-form fieldset:not(.centered) {
+    width: 90%;
+    border: 2px solid #d5d4d4;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+.update-product-form input[type="text"] {
     margin: 10px;
-    border: 2px solid;
     padding: 5px;
     padding-left: 10px;
-    width: 340px;
+    width: 90%;
     outline: yellowgreen;
+}
+
+.update-product-form-holder {
+    justify-content: center;
 }
 
 .save-changes-button {
     background-color: #5EA5F8;
     color: white;
-    padding: 6px 30px;
-    border: 2px solid black;
-    border-radius: 3px;
+    padding: 10px 30px;
+    border-radius: 6px;
     margin-top: 18px;
     transition: 0.2s;
+    border: none;
 }
 
 .save-changes-button:hover {
@@ -60,5 +78,13 @@
     min-height: 500px;
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+form fieldset {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+}
+form fieldset div {
+    width: 100%;
 }

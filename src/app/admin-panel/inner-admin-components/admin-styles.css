@@ -12,3 +12,8 @@
 header {
     border: 2px solid black;
 }
+
+.cat-label {
+    color: #827f7f;
+    font-weight: 200;
+}

@@ -1,0 +1,56 @@
+.new-product-holder {
+    margin: 40px 0;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.new-product-holder > div {
+    box-shadow: 0 2px 12px 3px #f1f4f1;
+    padding: 30px;
+    border-radius: 4px;
+    width: 900px;
+}
+
+.new-product-form {
+    margin: 0 45px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.restart-button {
+    width: 100px;
+    color: white;
+    background-color: #FCA5A5;
+    border-radius: 3px;
+    transition: 0.2s;
+    border: none;
+}
+
+.restart-button:hover {
+    background-color: #ec7d7d;
+}
+
+.save-product-button {
+    background-color: #5EA5F8;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin-top: 18px;
+    transition: 0.2s;
+    border: none;
+}
+
+.save-product-button:hover {
+    background-color: #4898f3;
+}
+
+input[type="text"], input[type="number"], textarea {
+    margin: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    width: 100%;
+    outline: yellowgreen;
+}

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,18 +45,21 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AllProductsComponent } from './admin-panel/inner-admin-components/all-products/all-products.component';
 import { AdminOrdersComponent } from './admin-panel/inner-admin-components/admin-orders/admin-orders.component';
 import { AdminAddProductsComponent } from './admin-panel/inner-admin-components/admin-add-products/admin-add-products.component';
+import { TurnIntoIdentifierPipe } from './transformers/turn-to-identifier.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'products/:productId', component: ItemPageComponent},
-  { path: 'colors-test', component: ColorComponent},
   {path: 'products', component: AllProductListingsComponent},
-  {path: 'login', component: LoginComponent},
+  // {path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'order-complete', component: OrderCompleteComponent},
+  // {path: 'order-complete', component: OrderCompleteComponent},
   {path: 'lookbook', component: LookbookComponent},
-  {path: 'admin', component: AdminPanelComponent},
+  // {path: 'admin', component: AdminPanelComponent, children: [
+  //   {path: '', component: AllProductsComponent},
+  //   {path: 'addProduct', component: AdminAddProductsComponent}
+  // ]},
 ]
 
 @NgModule({
@@ -79,6 +83,7 @@ const appRoutes: Routes = [
     AllProductsComponent,
     AdminOrdersComponent,
     AdminAddProductsComponent,
+    TurnIntoIdentifierPipe,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -103,6 +108,7 @@ const appRoutes: Routes = [
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     SwiperModule
   ],

@@ -8,6 +8,7 @@
     width: 240px;
     float: left;
     border-right: 2px solid;
+    position: fixed;
 }
 
 .main-content {
@@ -71,13 +72,16 @@
     font-weight: 100;
     font-size: 27px;
     border-bottom: 1px solid;
+    margin-left: 225px;
 }
 
 .inner-comp-holder {
     display: flex;
     padding: 70px;
+    margin-left: 240px;
+
 }
 
-.inner-comp-holder > * {
+.inner-comp-holder > *:nth-child(2) {
     width: 100%;
 }

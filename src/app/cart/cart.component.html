@@ -1,183 +1,197 @@
-<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
-<app-header class="desktop" #relativeHeader></app-header>
-<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
-<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+<div class="full-site">
+    <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+    <app-header class="desktop" #relativeHeader></app-header>
+    <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+    <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="section-identifier">
-            <p>
-                SHOPPING CART
-            </p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="section-identifier">
+                <p>
+                    SHOPPING CART
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row relative-path">
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                    <span>Shopping Cart</span>
-                </li>
-            </ul>
-        </div>
-        <div class="row main-content">
-            <div class="col-xl-9 col-lg-9 col-md-9 cart-content">
-                <div class="row">
-                    <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        Item
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
-                        Price
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
-                        Quantity
-                    </div>
-                    <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
-                        Total
-                    </div>
-                </div>
-                <div class="row" *ngIf="justDeletedProductName && justDeletedProductLink">
-                    <div class="col-xl-1 col-lg-1 col-md-1" ></div>
-                    <div class="col-xl-11 col-lg-11 col-md-11">
-                        You just deleted <a style="    color: #51ab13;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        max-width: 35ch;
-                        display: inline-block;
-                        overflow: hidden;
-                        vertical-align: bottom;" routerLink="/products/{{ justDeletedProductLink }}">{{ justDeletedProductName }}</a> from your cart.
-                    </div>
-                </div>
-                <div *ngIf="loading" class="loader-container">
-                    <img src="/assets/loading/{{loader}}"/>
-                </div>
-                <div style="text-align: center;" *ngIf="!loading && cartItems.length == 0" >
-                    <p style="font-family: 'drip';
-                    text-align: center;
-                    font-size: 25px;
-                    margin-top: 30px;">
-                        Omo, your cart is empty
-                    </p>
-                    <img style="width: 170px" src="/assets/images/misc_images/tees4drip_empty_cart.png" />
-                </div>
-                <div *ngIf="!loading && cartItems.length != 0" >
-                    <div class="row" *ngFor="let cartItem of cartItems; let i = index">
-                        <div class="col-xl-1 col-lg-1 col-md-1" style="    justify-content: center;
-                        display: flex;
-                        align-items: center; 
-                        ">
-                            <span style="cursor: pointer;" (click)="removeItem(i, cartItem.id, cartItem.name)">
-                                X
-                            </span>
+        <div class="container">
+            <div class="row relative-path">
+                <ul>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                        <span>Shopping Cart</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row main-content">
+                <div class="col-xl-9 col-lg-9 col-md-9 cart-content">
+                    <div class="row">
+                        <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6">
-                            <div class="row">
-                                <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url({{ cartItem.image }});">
-                                </div>
-                                <div class="col-xl-10 col-lg-10 col-md-10">
-                                    <div class="row">
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            {{ cartItem.name }}
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Color: Black
-                                        </div>
-                                        <div class="col-xl-12 col-lg-12 col-md-12">
-                                            Size: Small
+                            Item
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
+                            Price
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 secondary-column">
+                            Quantity
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
+                            Total
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="justDeletedProductName && justDeletedProductLink">
+                        <div class="col-xl-1 col-lg-1 col-md-1" ></div>
+                        <div class="col-xl-11 col-lg-11 col-md-11">
+                            You just deleted <a style="    color: #51ab13;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 35ch;
+                            display: inline-block;
+                            overflow: hidden;
+                            vertical-align: bottom;" routerLink="/products/{{ justDeletedProductLink }}">{{ justDeletedProductName }}</a> from your cart.
+                        </div>
+                    </div>
+                    <div *ngIf="loading" class="loader-container">
+                        <img src="/assets/loading/{{loader}}"/>
+                    </div>
+                    <div style="text-align: center;" *ngIf="!loading && cartItems.length == 0" >
+                        <p style="font-family: 'drip';
+                        text-align: center;
+                        font-size: 25px;
+                        margin-top: 30px;">
+                            Omo, your cart is empty
+                        </p>
+                        <img style="width: 170px" src="/assets/images/misc_images/tees4drip_empty_cart.png" />
+                    </div>
+                    <div *ngIf="!loading && cartItems.length != 0" >
+                        <div class="row" *ngFor="let cartItem of cartItems; let i = index">
+                            <div class="col-xl-1 col-lg-1 col-md-1" style="    justify-content: center;
+                            display: flex;
+                            align-items: center; 
+                            ">
+                                <span style="cursor: pointer;" (click)="removeItem(i, cartItem.id, cartItem.name)">
+                                    X
+                                </span>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-xl-2 col-lg-2 col-md-2 cart-item-image" style="background-image: url({{ cartItem.image }});">
+                                    </div>
+                                    <div class="col-xl-10 col-lg-10 col-md-10">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                {{ cartItem.name }}
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                Color: Black
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                Size: Small
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
-                            &#8358;{{ cartItem.price | currency:'NGN':'' }}
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
-                            {{ cartItem.quantity }}
-                        </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
-                            &#8358;{{ cartItem.price * cartItem.quantity | currency:'NGN':'' }}
+                            <div class="col-xl-2 col-lg-2 col-md-2 cart-item-price secondary-column">
+                                &#8358;{{ cartItem.price | currency:'NGN':'' }}
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 cart-item-quantity secondary-column">
+                                {{ cartItem.quantity }}
+                            </div>
+                            <div class="col-xl-1 col-lg-1 col-md-1 cart-item-total secondary-column">
+                                &#8358;{{ cartItem.price * cartItem.quantity | currency:'NGN':'' }}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-3">
-                <div class="row cart-summary">
-                    <div class="col-xl-12 col-lg-12 col-md-12 cart-total-header-wrapper">
-                        <h2 class="cart-total-header">
-                            Cart Total
-                        </h2>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 cart-sub-total-wrapper">
-                        <h2 class="cart-sub-total-header">
-                            Subtotal
-                        </h2>
-                        <h2>
-                            &#8358;{{ cartSubTotal | currency:'NGN':'' }}
-                        </h2>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 total-wrapper">
-                        <h2 class="total-header">
-                            TOTAL:
-                        </h2>
-                        <h2 class="total-header">
-                            &#8358;580.00
-                        </h2>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 proceed-to-checkout">
-                        <button [disabled]="cartItems.length <= 0" type="button" class="btn btn-dark place-order">
-                            <a href="/checkout" >
-                                <i class="fas fa-money-check"></i>
-                                Checkout
-                            </a>
-                        </button>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="row cart-summary">
+                        <div class="col-xl-12 col-lg-12 col-md-12 cart-total-header-wrapper">
+                            <h2 class="cart-total-header">
+                                Cart Total
+                            </h2>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 cart-sub-total-wrapper">
+                            <h2 class="cart-sub-total-header">
+                                Subtotal
+                            </h2>
+                            <h2>
+                                &#8358;{{ cartSubTotal | currency:'NGN':'' }}
+                            </h2>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 total-wrapper">
+                            <h2 class="total-header">
+                                TOTAL:
+                            </h2>
+                            <h2 class="total-header">
+                                &#8358;580.00
+                            </h2>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 proceed-to-checkout">
+                            <button [disabled]="cartItems.length <= 0" type="button" class="btn btn-dark place-order">
+                                <a href="/checkout" >
+                                    <i class="fas fa-money-check"></i>
+                                    Checkout
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="recommended-products">
-        <h6 style="margin-bottom: 20px;">
-            YOU MAY ALSO LIKE
-        </h6>
-        <swiper
-            [slidesPerView]="5"
-            [spaceBetween]="5"
-            [slidesPerGroup]="5"
-            [loop]="false"
-            [loopFillGroupWithBlank]="true"
-            [pagination]="{
-            clickable: true
-            }"
-            [navigation]="true"
-            class="mySwiper"
-        >
-            <ng-template swiperSlide *ngFor="let item of productSuggestions">
-                <div>
-                    <a [routerLink]="['/products', item.id]">
-                        <div style="background-image: url({{ item.productImages[0] }});">
-                        </div>
+        <div class="recommended-products">
+            <h6 style="margin-bottom: 20px;">
+                YOU MAY ALSO LIKE
+            </h6>
+            <swiper
+                [slidesPerView]="5"
+                [spaceBetween]="5"
+                [slidesPerGroup]="5"
+                [loop]="false"
+                [loopFillGroupWithBlank]="true"
+                [pagination]="{
+                clickable: true
+                }"
+                [navigation]="true"
+                class="mySwiper"
+            >
+                <ng-template swiperSlide *ngFor="let item of productSuggestions">
+                    <div>
                         <div>
-                            <div class="product-description-wrapper">
-                                <h5>{{ item.name | uppercase }}</h5>
-                                <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
-                            </div>
-                            <div class="add-to-cart-button-wrapper">
-                                <button>
-                                    ADD TO CART
-                                </button>
+                            <a [routerLink]="['/products', item.id]">
+                                <div style="background-image: url({{ item.productImages[0] }});">
+                                </div>
+                            </a>
+                            <div>
+                                <a [routerLink]="['/products', item.id]">
+                                    <div class="product-description-wrapper">
+                                        <h5>{{ item.name | uppercase }}</h5>
+                                        <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                    </div>
+                                </a>
+                                <div class="add-to-cart-button-wrapper" (click)="addToCart($event, item.id, item.ngn)">
+                                    <button>
+                                        ADD TO CART
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </ng-template>
-        </swiper>
+                    </div>
+                </ng-template>
+            </swiper>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>
+<div class="coming-soon">
+    <div class="col-lg-4 col-md-4 logo">
+        <img src="assets/images/home_images/tees4drip_redesign.png">
+    </div>
+    <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
+        Coming to mobile soon
     </div>
 </div>
-
-<app-footer></app-footer>

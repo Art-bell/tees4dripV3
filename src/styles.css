@@ -166,19 +166,19 @@ app-header-mobile {
     transition: 0.2s;
 }
 
-.swiper > div > div > div > a > div:first-child {
+.swiper > div > div > div > div > a > div:first-child {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     height: 260px;
 }
 
-.swiper > div > div > div > a > div:nth-child(2) {
+.swiper > div > div > div > div > div:nth-child(2) {
     transition: 0.4s;
     background-color: white;
 }
 
-.swiper > div > div:hover > div > a > div:nth-child(2) {
+.swiper > div > div:hover > div > div > div:nth-child(2) {
     transform: translateY(-100%);
 }
 
@@ -203,6 +203,19 @@ app-header-mobile {
     text-align: left;
     padding-left: 14px;
     font-size: 13px;
+}
+
+.coming-soon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.coming-soon .logo img {
+    width: 400px;
 }
 
 @media screen and (max-width: 768px) {

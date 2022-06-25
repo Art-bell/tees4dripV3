@@ -1,99 +1,110 @@
-<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
-<app-header class="desktop" #relativeHeader></app-header>
-<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
-<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="section-identifier">
-            <p>
-                PRODUCTS
-            </p>
+<div class="full-site">
+    <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+    <app-header class="desktop" #relativeHeader></app-header>
+    <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+    <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="section-identifier">
+                <p>
+                    PRODUCTS
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row relative-path">
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>
-                    <fa-icon [icon]="faChevronRight"></fa-icon>
-                    <span>Products</span>
-                </li>
-            </ul>
-        </div>
-        <div class="row main-content">
-            <div class="col-xl-3 col-lg-3 col-md-3 filter-wrapper">
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 filter-header-text">
-                        Filter
-                    </div>
-                    <div>
-                        <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
-                    </div>
-                    <div>
-                        <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
-                    </div>
-                    <div>
-                        <color-filter></color-filter>
-                    </div>
-                    <div class="col-xl-12 col-lg-12 col-md-12 filter-update-wrapper">
-                        <button type="button" [disabled]="loading" class="btn btn-outline-success btn-rounded" (click)="sendUpdateFilterRequest()">
-                            update
-                          </button>
+        <div class="container">
+            <div class="row relative-path">
+                <ul>
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                        <span>Products</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row main-content">
+                <div class="col-xl-3 col-lg-3 col-md-3 filter-wrapper">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 filter-header-text">
+                            Filter
+                        </div>
+                        <div>
+                            <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
+                        </div>
+                        <div>
+                            <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
+                        </div>
+                        <div>
+                            <color-filter [colors]="allColors"></color-filter>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 filter-update-wrapper">
+                            <button type="button" [disabled]="loading" class="btn btn-outline-success btn-rounded" (click)="sendUpdateFilterRequest()">
+                                update
+                              </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-9 col-lg-9 col-md-9 results-wrapper">
-                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 results-information">
-                        <div>
-                            Showing all results
+                <div class="col-xl-9 col-lg-9 col-md-9 results-wrapper">
+                     <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 results-information">
+                            <div>
+                                Showing all results
+                            </div>
+                            <div>
+                                <div mdbDropdown class="dropdown">
+                                    <button
+                                      class="btn btn-light dropdown-toggle active-sort-dropdown"
+                                      type="button"
+                                      id="dropdownMenuButton"
+                                      aria-expanded="false"
+                                      mdbDropdownToggle
+                                    >
+                                      {{activeSort}}
+                                    </button>
+                                    <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <li><a class="dropdown-item" (click)="setSortingMethod($event)" *ngFor="let item of sortingOptions" [attr.data-sort]="item">{{ item }}</a></li>                              
+                                    </ul>
+                                  </div>
+                            </div>
                         </div>
-                        <div>
-                            <div mdbDropdown class="dropdown">
-                                <button
-                                  class="btn btn-light dropdown-toggle active-sort-dropdown"
-                                  type="button"
-                                  id="dropdownMenuButton"
-                                  aria-expanded="false"
-                                  mdbDropdownToggle
-                                >
-                                  {{activeSort}}
-                                </button>
-                                <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  <li><a class="dropdown-item" (click)="setSortingMethod($event)" *ngFor="let item of sortingOptions" [attr.data-sort]="item">{{ item }}</a></li>                              
-                                </ul>
-                              </div>
+    
+                        <div *ngIf="loading" class="loader-container">
+                            <img src="/assets/loading/{{loader}}"/>
                         </div>
-                    </div>
-
-                    <div *ngIf="loading" class="loader-container">
-                        <img src="/assets/loading/{{loader}}"/>
-                    </div>
-                    <div class="row gx-3" *ngIf="!loading">
-                        <a class="col-xl-4 col-lg-4 col-md-4" (click)="navigateToProduct(item.id)" *ngFor="let item of productsToDisplay">
-                            <div class="product-cell" >
-                                <div class="product-image" style="background-image: url({{ item.productImages[0] }});"></div>
-                                <div class="product-information">
-                                    <p>{{ item.name }}</p>
-                                    <p>&#8358;{{ item.ngn | currency:'NGN':'' }}</p>
-                                    <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
-                                        <div class="cart-wrapper">
-                                            <fa-icon [icon]="faCartPlus"></fa-icon>
-                                            <span>
-                                                ADD TO CART
-                                            </span>
+                        <div class="row gx-3" *ngIf="!loading">
+                            <a class="col-xl-4 col-lg-4 col-md-4" (click)="navigateToProduct(item.id)" *ngFor="let item of productsToDisplay">
+                                <div class="product-cell" >
+                                    <div class="product-image" style="background-image: url({{ item.productImages[0] }});"></div>
+                                    <div class="product-information">
+                                        <p>{{ item.name }}</p>
+                                        <p>&#8358;{{ item.ngn | currency:'NGN':'' }}</p>
+                                        <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
+                                            <div class="cart-wrapper">
+                                                <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                <span>
+                                                    ADD TO CART
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                 </div>
+                            </a>
+                        </div>
+                     </div>
+                </div>
             </div>
         </div>
     </div>
+    <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
+
+<div class="coming-soon">
+    <div class="col-lg-4 col-md-4 logo">
+        <img src="assets/images/home_images/tees4drip_redesign.png">
+    </div>
+    <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
+        Coming to mobile soon
+    </div>
+</div>

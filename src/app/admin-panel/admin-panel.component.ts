@@ -10,6 +10,7 @@ export class AdminPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // Fetch all products from the db
   }
 
 }

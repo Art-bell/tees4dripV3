@@ -71,64 +71,68 @@
                 </div>
             </div>
             <hr>
-            <div class="shipping-info">
-                <p class="section-header">SHIPPING DETAILS</p>
-                <div class="md-form input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" aria-describedby="material-addon1">
-                </div>
-                <div class="md-form input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="material-addon1">
-                </div>
-                <div class="md-form input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Phone Number" aria-label="Phone" aria-describedby="material-addon1">
-                </div>
-                <div class="md-form input-group mb-3">
-                    <input type="text" aria-label="Street Address 1" class="form-control" placeholder="Street Address 1">
-                    <input type="text" aria-label="Street Address 2" class="form-control" placeholder="Street Address 2">
-                </div>
-                  <div class="md-form input-group mb-3">
-                    <input type="text" aria-label="City" class="form-control" placeholder="City">
-                    <input type="text" aria-label="State" class="form-control" placeholder="State">
-                  </div>
-                  <div class="md-form input-group mb-3">
-                    <input type="text" aria-label="Country" class="form-control" placeholder="Country">
-                    <input type="text" aria-label="Zip Code" class="form-control" placeholder="Zip Code">
-                  </div>
-            </div>
-            <hr>
-            <div class="billing-info">
-                <p class="section-header">BILLING DETAILS</p>
-                <div class="row justify-content-center payment-selection-row">
-                    <div class="col-5 payment-type">
-                        <a class="btn btn-primary" style="background-color: #9cff57; color: dimgrey" href="#" role="button"
-                        ><i class="fab fa-cc-visa payment-icon"></i>Card</a>       
+            <form [formGroup]="orderForm" style="    justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;">
+                <div class="shipping-info">
+                    <p class="section-header">SHIPPING DETAILS</p>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerFullName" type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" aria-describedby="material-addon1">
                     </div>
-                    <div class="col-5 payment-type">
-                        <a class="btn btn-primary" style="background-color: dimgrey;" href="#" role="button"
-                            ><i class="fab fa-paypal payment-icon"></i>PayPal</a> 
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerEmail" type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="material-addon1">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerPhoneNumber" type="text" class="form-control" placeholder="Phone Number" aria-label="Phone" aria-describedby="material-addon1">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerShippingStreetAddress1" type="text" aria-label="Street Address 1" class="form-control" placeholder="Street Address 1">
+                        <input formControlName="customerShippingStreetAddress2" type="text" aria-label="Street Address 2" class="form-control" placeholder="Street Address 2">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerShippingCity" type="text" aria-label="City" class="form-control" placeholder="City">
+                        <input formControlName="customerShippingState" type="text" aria-label="State" class="form-control" placeholder="State">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="customerShippingCountry" type="text" aria-label="Country" class="form-control" placeholder="Country">
+                        <input formControlName="customerShippingZipCode" type="text" aria-label="Zip Code" class="form-control" placeholder="Zip Code">
                     </div>
                 </div>
-                <div class="md-form input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" aria-describedby="material-addon1">
+                <hr>
+                <div class="billing-info">
+                    <p class="section-header">BILLING DETAILS</p>
+                    <div class="row justify-content-center payment-selection-row">
+                        <div class="col-5 payment-type">
+                            <a class="btn btn-primary" style="background-color: #9cff57; color: dimgrey" role="button"
+                            ><i class="fab fa-cc-visa payment-icon"></i>Card</a>       
+                        </div>
+                        <div class="col-5 payment-type">
+                            <a class="btn btn-primary" style="background-color: dimgrey;" role="button"
+                                ><i class="fab fa-paypal payment-icon"></i>PayPal</a> 
+                        </div>
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="creditCardFullName" type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" aria-describedby="material-addon1">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <input formControlName="creditCardNumber" type="text" class="form-control" placeholder="Valid card number" aria-label="Card Number" aria-describedby="material-addon1">
+                    </div>
+                    <div class="md-form input-group mb-3">
+                        <span class="input-group-text">Month</span>
+                        <input formControlName="creditCardMonth" type="text" aria-label="Month" class="form-control" placeholder="MM">
+                        <span class="input-group-text">Year</span>
+                        <input formControlName="creditCardYear" type="text" aria-label="Year" class="form-control" placeholder="YY">
+                        <input formControlName="creditCardCvv" type="text" aria-label="Cvv" class="form-control" placeholder="CVV">
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="button" class="btn btn-dark place-order" (click)="createOrder()">
+                            <i class="fas fa-money-check payment-icon"></i>
+                            Place Order
+                        </button>
+                    </div>
                 </div>
-                <div class="md-form input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Valid card number" aria-label="Email" aria-describedby="material-addon1">
-                </div>
-                <div class="md-form input-group mb-3">
-                    <span class="input-group-text">Month</span>
-                    <input type="text" aria-label="Street Address 1" class="form-control" placeholder="MM">
-                    <span class="input-group-text">Year</span>
-                    <input type="text" aria-label="Street Address 2" class="form-control" placeholder="YY">
-                    <input type="text" aria-label="Street Address 2" class="form-control" placeholder="CVV">
-                </div>
-                <div style="text-align: center;">
-                    <button type="button" class="btn btn-dark place-order">
-                        <i class="fas fa-money-check payment-icon"></i>
-                        Place Order
-                    </button>
-                </div>
-            </div>
-
+            </form>
         </div>
         
     </div>
