@@ -1,5 +1,8 @@
-<app-header #fixedHeader [fixed]="true"></app-header>
-<app-header #relativeHeader></app-header>
+<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+<app-header class="desktop" #relativeHeader></app-header>
+<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+
 <div class="container-fluid">
     <div class="row">
         <div class="section-identifier">
@@ -28,7 +31,7 @@
                 <p style="    margin-bottom: 0;
                 font-size: 25px;
                 font-weight: 300;">
-                    ORDER NUMBER
+                    ORDER NUMBER:
                 </p>
             </div>
             <div class="order-text">
@@ -36,12 +39,12 @@
                 color: #51ab13;
                 font-weight: 600;
                 font-size: 22px;">
-                    #43DVJDU6575
+                    {{ orderNumber }}
                 </p>
             </div>
             <div class="order-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet mattis vulputate enim nulla aliquet. Vitae congue eu consequat ac felis donec. Nunc sed velit dignissim sodales ut eu sem integer. Sit amet nisl suscipit adipiscing bibendum.
+                    Thank you for shopping with us. Your drip will be on the way to you soon. In the meantime, sit back and relax while we get it over to you.
                 </p>
             </div>
         </div>

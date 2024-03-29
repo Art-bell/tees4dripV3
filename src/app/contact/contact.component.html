@@ -1,0 +1,68 @@
+<app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+<app-header class="desktop" #relativeHeader></app-header>
+<app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+<app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+
+<div class="container-fluid full-site">
+    <div class="row">
+        <div class="section-identifier">
+            <p>
+                CONTACT US
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row main-content">
+            <div class="col-12 col-xl-7 col-l-7 image-side">
+                <div class="contact-us-image">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-xl-5 col-l-5 text-side">
+                <div class="contact-us-info">
+                    <div class="row">
+                        <img class="logo" src="assets/images/home_images/tees4drip_redesign.png" />
+                    </div>
+                    <div class="row contact-text">
+                        <p>
+                            TEES4DRIP STRIVES TO SERVE YOU WITH THE RAREST AND HIGH-END VINTAGE STEEZE TO KEEP YOU DRIPPING.
+                        </p>
+                        <p>
+                            FOR ANY QUESTIONS OR CONCERNS, PLEASE CONTACT US.
+                        </p>
+                    </div>
+                    <div class="row contact-info">
+                        <div class="col-6">
+                            <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                        </div>
+                        <div class="contact-content col-6">
+                            +234 8102975037
+                        </div>
+                    </div>
+                    <div class="row contact-info">
+                        <div class="col-6">
+                            <fa-icon [icon]="faAt"></fa-icon>
+                        </div>
+                        <div class="contact-content col-6">
+                            tees4drip@gmail.com
+                        </div>
+                    </div>
+                    <div class="row contact-info grouped">
+                        <div>
+                            <a href="https://www.instagram.com/tees4drip/?igshid=YmMyMTA2M2Y=" target="_blank">
+                                <fa-icon class="sm-icon" [icon]="faInstagram"></fa-icon>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://twitter.com/tees4drip?s=21" target="_blank">
+                                <fa-icon class="sm-icon" [icon]="faTwitter"></fa-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+

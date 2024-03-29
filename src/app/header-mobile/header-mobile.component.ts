@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding, Input, ViewChild, ElementRef } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-header-mobile',
@@ -6,6 +7,7 @@ import { Component, OnInit, HostBinding, Input, ViewChild, ElementRef } from '@a
   styleUrls: ['./header-mobile.component.css']
 })
 export class HeaderMobileComponent implements OnInit {
+  cartTotal = 0;
   @HostBinding("style.position") position: string = "";
   @HostBinding("style.display") display: string = "";
   @HostBinding("style.top") top: string = "";
@@ -15,7 +17,12 @@ export class HeaderMobileComponent implements OnInit {
   @HostBinding("style.background-color") backgroundColor: string = "white";
   @HostBinding("style.z-index") zIndex: string = "10";
   @Input() fixed: boolean = false;
-  constructor() { }
+  constructor(private readonly userService: UserService) { 
+    this.cartTotal = this.userService.getCartTotal();
+    this.userService.cartTotalSubject.subscribe((newTotal) => {
+      this.cartTotal = newTotal;
+    });
+  }
 
   ngOnInit(): void {
     if (this.fixed) {

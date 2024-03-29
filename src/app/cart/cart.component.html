@@ -26,7 +26,7 @@
             </div>
             <div class="row main-content">
                 <div class="col-xl-9 col-lg-9 col-md-9 cart-content">
-                    <div class="row">
+                    <div class="row" *ngIf="!isMobile">
                         <div class="col-xl-1 col-lg-1 col-md-1 secondary-column">
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6">
@@ -66,7 +66,7 @@
                         </p>
                         <img style="width: 170px" src="/assets/images/misc_images/tees4drip_empty_cart.png" />
                     </div>
-                    <div *ngIf="!loading && cartItems.length != 0" >
+                    <div *ngIf="!loading && cartItems.length != 0 && !isMobile" >
                         <div class="row" *ngFor="let cartItem of cartItems; let i = index">
                             <div class="col-xl-1 col-lg-1 col-md-1" style="    justify-content: center;
                             display: flex;
@@ -106,6 +106,39 @@
                             </div>
                         </div>
                     </div>
+                    <div *ngIf="!loading && cartItems.length != 0 && isMobile" >
+                        <div class="row" *ngFor="let cartItem of cartItems; let i = index" style="margin: 30px 0;">
+                            <div class="col-xl-1 col-lg-12 col-md-12" style="
+                            padding: 0 0 14px 0 !important;">
+                                <span style="cursor: pointer;     color: #ffa0a0;
+                                font-weight: 600;" (click)="removeItem(i, cartItem.id, cartItem.name)">
+                                    X
+                                </span>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="row">
+                                    <div class="col-4 col-xl-2 col-lg-2 col-md-4 cart-item-image" style="background-image: url({{ cartItem.image }});">
+                                    </div>
+                                    <div class="col-8 col-xl-10 col-lg-10 col-md-8">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                {{ cartItem.name }}
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                Color: Black
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12">
+                                                Size: Small
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12" style="font-weight: 600">
+                                                &#8358;{{ cartItem.price | currency:'NGN':'' }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3">
                     <div class="row cart-summary">
@@ -122,21 +155,29 @@
                                 &#8358;{{ cartSubTotal | currency:'NGN':'' }}
                             </h2>
                         </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 cart-sub-total-wrapper">
+                            <h2 class="cart-sub-total-header">
+                                Estimated Shipping
+                            </h2>
+                            <h2>
+                                &#8358;{{ estimatedShipping | currency:'NGN':'' }}
+                            </h2>
+                        </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 total-wrapper">
                             <h2 class="total-header">
                                 TOTAL:
                             </h2>
                             <h2 class="total-header">
-                                &#8358;580.00
+                                &#8358;{{ cartTotal | currency:'NGN':'' }}
                             </h2>
                         </div>
                         <div class="col-xl-12 col-lg-12 col-md-12 proceed-to-checkout">
-                            <button [disabled]="cartItems.length <= 0" type="button" class="btn btn-dark place-order">
-                                <a href="/checkout" >
-                                    <i class="fas fa-money-check"></i>
-                                    Checkout
-                                </a>
-                            </button>
+                            <a href="/checkout" >
+                                <button [disabled]="cartItems.length <= 0" type="button" class="btn btn-dark place-order">
+                                        <i class="fas fa-money-check"></i>
+                                        Checkout
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -147,9 +188,9 @@
                 YOU MAY ALSO LIKE
             </h6>
             <swiper
-                [slidesPerView]="5"
+                [slidesPerView]="groupSize"
                 [spaceBetween]="5"
-                [slidesPerGroup]="5"
+                [slidesPerGroup]="groupSize"
                 [loop]="false"
                 [loopFillGroupWithBlank]="true"
                 [pagination]="{

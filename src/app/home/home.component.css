@@ -77,13 +77,13 @@
 }
 
 .cat-1 {
-    background: url("/assets/images/home_images/tye_dye_poster.PNG") no-repeat center;
-    background-size: cover;
+    background: url("/assets/images/home_images/graphic_poster.PNG") no-repeat center;
+    background-size: contain;
 }
 
 .cat-2 {
-    background: url("/assets/images/home_images/graphic_poster.PNG") no-repeat center;
-    background-size: cover;
+    background: url("/assets/images/home_images/pants_poster.JPG") no-repeat center;
+    background-size: contain;
 }
 
 .new-arrivals {
@@ -307,10 +307,10 @@
 }
 
 .product-image {
-    height: 280px;
+    height: 260px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .product-cell {
@@ -329,6 +329,11 @@
 .product-cell:hover  .cart-outer-wrapper{
     opacity: 1;
 }
+
+.product-cell:hover  .cart-outer-wrapper-2{
+    opacity: 1;
+}
+
 .product-information > p:first-child {
     margin-top: 8px;
     font-family: 'Lato';
@@ -373,6 +378,16 @@
     opacity: 0;
 }
 
+.cart-outer-wrapper-2 {
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    margin: 0 18px;
+    margin-top: 5px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
 .cart-outer-wrapper:hover {
     background-color: #383838;
     border: 1px solid #383838;
@@ -382,18 +397,83 @@
     color: #fff;
 }
 
-@media screen and (min-width: 992px) {
-    .container-fluid {
-        padding: 0;
-    }
+mdb-carousel-item > div:first-child {
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+.soon-come {
+    font-family: 'drip';
+    font-size: 23px;
+    color: #006229;
+}
+
+.sold-out {
+    font-family: 'drip';
+    font-size: 30px;
+    text-align: center;
+    color: #f8a4a4;
+}
+
 @media screen and (max-width: 992px) {
+
+    .tee-category {
+        height: 312px;
+        margin-bottom: 40px;
+    }
+
+    .overlay {
+        opacity: 1;
+    }
+
+    .cat-1, .cat-2{
+        background-size: contain;
+        background-position: top;
+    }
+
+    .new-arrivals > div > div, .product-cell {
+        height: 360px;
+    }
+    
+    .product-cell:hover {
+        box-shadow: 0px 0px 0px #fff;
+    }
+    
+    .product-cell:hover  .cart-outer-wrapper{
+        opacity: 0;
+    }
+
+    .newsletter-image {
+        height: 300px;
+    }
+
+    .soon-come {
+        text-align: center;
+    }
+
+    mdb-carousel-item > div:first-child {
+        height: 300px;
+    }
+
     .subscription-button {
         justify-content: center;
     }
 
     .subscription-header,  .text-and-input{
         text-align: center;
+    }
+
+    .carousel-caption {
+        bottom: 60px;
+    }
+
+    .new-arrivals-header > h1 {
+        padding: 14px 0;
+        margin: 10px auto;
+        font-size: 22px;
+        width: 65%;
     }
 }
 
@@ -412,14 +492,11 @@
     }
 
     .carousel-caption h5 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .carousel-caption p {
         font-size: 14px;
     }
 
-    .carousel-caption {
-        bottom: 0;
-    }
 }

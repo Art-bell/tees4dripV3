@@ -1,0 +1,111 @@
+<form [formGroup]="orderForm" class="dialog-content">
+  <div class="order-details">
+    <p class="date no-margin-bottom">
+      {{ order.createdAt | dateFromDatetime }}
+    </p>
+    <div class="order-number-container">
+      <p class="order-number-label label no-margin-bottom">Order Number</p>
+      <p class="order-number">#{{ order.orderNumber }}</p>
+    </div>
+    <div class="customer-details">
+      <div class="customer-name-container">
+        <p class="customer-name-label label no-margin-bottom">Customer Name</p>
+        <p class="customer-name">
+          {{ order.customerFirstName }} {{ order.customerLastName }}
+        </p>
+      </div>
+      <div class="customer-email-container">
+        <p class="customer-email-label label no-margin-bottom">
+          Customer Email
+        </p>
+        <p class="customer-email">{{ order.customerEmail }}</p>
+      </div>
+      <div class="customer-phone-container">
+        <p class="customer-phone-label label no-margin-bottom">
+          Customer Phone
+        </p>
+        <p class="customer-phone">{{ order.customerPhoneNumber || "-" }}</p>
+      </div>
+    </div>
+    <div class="delivery-address-container">
+      <p class="delivery-address-label label no-margin-bottom">
+        Delivery Address
+      </p>
+      <p class="delivery-address">
+        {{ getCardDeliveryText(order) }}
+      </p>
+    </div>
+    <div class="total-billed-container">
+      <p class="total-billed-label label no-margin-bottom">Total Billed</p>
+      <p class="total-billed">
+        {{ getFormattedOrderTotalText(order.orderTotal) }}
+      </p>
+    </div>
+    <div class="order-status-container">
+      <p class="order-status-label label no-margin-bottom">Order Status</p>
+      <div class="order-status-inner-container">
+        <select
+          formControlName="orderStatus"
+          class="order-status"
+          (change)="mainSelectChanged($event)"
+        >
+          <option value="PROCESSING">PROCESSING</option>
+          <option value="SHIPPED">SHIPPED</option>
+          <option value="DELIVERED">DELIVERED</option>
+          <option value="CANCELLED">CANCELLED</option>
+          <option hidden value="multiple">(multiple)</option>
+        </select>
+        <i
+          class="far fa-question-circle"
+          mdbTooltip="Changing this will change all of the product statuses. To reset the product status, just close the dialog."
+        ></i>
+      </div>
+    </div>
+    <div class="save-button-container">
+      <button
+        type="button"
+        class="btn btn-primary save-button"
+        (click)="submitForm()"
+        [disabled]="!hasChanged"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+  <div formArrayName="products" class="product-details-container">
+    <div
+      *ngFor="let product of order.products; let i = index"
+      class="product-row"
+    >
+      <div class="product-image-container">
+        <img class="product-image" src="{{ product.productImages[0].url }}" />
+      </div>
+      <div class="product-details" [formGroupName]="i">
+        <p class="product-name no-margin-bottom">{{ product.name }}</p>
+        <p class="product-quantity no-margin-bottom">
+          <span>x</span> {{ product.orderProducts.quantity }}
+        </p>
+        <div class="subtotal-and-status-container">
+          <div class="subtotal-container">
+            <p class="subtotal-label no-margin-bottom">Subtotal</p>
+            <p class="subtotal no-margin-bottom">
+              {{ getFormattedOrderTotalText(product.orderProducts.subtotal) }}
+            </p>
+          </div>
+          <div class="status-container">
+            <select
+              formControlName="status"
+              class="order-status"
+              (change)="productSelectChanged()"
+            >
+              <option value="PROCESSING">PROCESSING</option>
+              <option value="SHIPPED">SHIPPED</option>
+              <option value="DELIVERED">DELIVERED</option>
+              <option value="CANCELLED">CANCELLED</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

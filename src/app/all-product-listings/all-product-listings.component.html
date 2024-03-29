@@ -27,23 +27,34 @@
             <div class="row main-content">
                 <div class="col-xl-3 col-lg-3 col-md-3 filter-wrapper">
                     <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 filter-header-text">
-                            Filter
-                        </div>
-                        <div>
-                            <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
-                        </div>
-                        <div>
-                            <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
-                        </div>
-                        <div>
-                            <color-filter [colors]="allColors"></color-filter>
-                        </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 filter-update-wrapper">
-                            <button type="button" [disabled]="loading" class="btn btn-outline-success btn-rounded" (click)="sendUpdateFilterRequest()">
-                                update
-                              </button>
-                        </div>
+                        <mdb-accordion [flush]="true" [multiple]="true">
+                            <mdb-accordion-item>
+                                <ng-template mdbAccordionItemHeader>
+                                  <span class="filter-header">
+                                    Filters
+                                  </span>
+                                  <span class="filter-expansion">
+                                    <fa-icon [icon]="faBars"></fa-icon>
+                                  </span>
+                                </ng-template>
+                              <ng-template mdbAccordionItemBody>
+                                <div>
+                                    <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
+                                </div>
+                                <div>
+                                    <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
+                                </div>
+                                <div>
+                                    <color-filter [colors]="allColors"></color-filter>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 filter-update-wrapper">
+                                    <button type="button" [disabled]="loading" class="btn btn-outline-success btn-rounded" (click)="sendUpdateFilterRequest()">
+                                        update
+                                      </button>
+                                </div>
+                              </ng-template>
+                            </mdb-accordion-item>
+                          </mdb-accordion>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-9 results-wrapper">
@@ -80,13 +91,16 @@
                                     <div class="product-information">
                                         <p>{{ item.name }}</p>
                                         <p>&#8358;{{ item.ngn | currency:'NGN':'' }}</p>
-                                        <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
+                                        <div *ngIf="item.quantityAvailable > 0" (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
                                             <div class="cart-wrapper">
                                                 <fa-icon [icon]="faCartPlus"></fa-icon>
                                                 <span>
                                                     ADD TO CART
                                                 </span>
                                             </div>
+                                        </div>
+                                        <div *ngIf="item.quantityAvailable <= 0" class="sold-out cart-outer-wrapper-2">
+                                            SOLD OUT
                                         </div>
                                     </div>
                                 </div>

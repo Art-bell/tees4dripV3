@@ -108,3 +108,12 @@
     text-align: center;
     padding: 60px 100px 100px 100px;
 }
+
+@media screen and (max-width: 992px) {
+    .main-content {
+        flex-direction: column-reverse;
+    }
+    .recommended-products {
+        padding: 0;
+    }
+}

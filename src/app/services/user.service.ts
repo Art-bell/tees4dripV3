@@ -12,6 +12,8 @@ export class UserService {
     cartTotal = 0;
     cartSizeSubject = new Subject<number>();
     cartSize = 0;
+    orderNumberSubject = new Subject<string>();
+    orderNumber = "";
 
     constructor() {
         // When we start out, read the local storage token info.
@@ -28,6 +30,9 @@ export class UserService {
         });
         this.cartSizeSubject.subscribe((newSize) => {
             this.cartSize = newSize;
+        });
+        this.orderNumberSubject.subscribe((newNumber) => {
+            this.orderNumber = newNumber;
         });
         console.log("reconstructing user service");
     }
@@ -63,6 +68,14 @@ export class UserService {
 
     getCartTotal() {
         return this.cartTotal;
+    }
+
+    setOrderNumber(orderNumber: string) {
+        this.orderNumberSubject.next(orderNumber);
+    }
+
+    getOrderNumer() {
+        return this.orderNumber;
     }
 
     makeid(length: number) {

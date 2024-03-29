@@ -1,7 +1,7 @@
 <div class="row header-wrapper">
     <div class="row top-header align-items-center">
         <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-            <div class="menu-icon">
+            <div class="menu-icon" (click)="basicCollapse.toggle()">
 
             </div>
         </div>
@@ -11,35 +11,35 @@
         <div  class="col-lg-4 col-md-4 col-sm-4 col-4 cart-and-login-wrapper">
             <div class="cart-icon"></div>
             <div style="text-align: center;" class="cart-amount">
-                $0.00
+                <a routerLink="/cart">&#8358;{{ cartTotal | currency:'NGN':'' }}
+                </a>
             </div>
         </div>
     </div>
-    <div class="row menu-wrapper">
-        <diV class="menu-items col-lg-6 col-md-12">
+    <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+        <diV class="menu-items">
             <ul>
                 <li>
-                    HOME
+                    <a routerLink="/">
+                        HOME
+                    </a>
                 </li>
                 <li>
-                    SHOP
+                    <a routerLink="/products">
+                        SHOP
+                    </a>
                 </li>
                 <li>
-                    LOOKBOOK
+                    <a routerLink="/lookbook">
+                        LOOKBOOK
+                    </a>
                 </li>
                 <li>
-                    ABOUT
-                </li>
-                <li>
-                    CONTACT
+                    <a routerLink="/contact-us">
+                        CONTACT US
+                    </a>
                 </li>
             </ul>
         </diV>
-        <div class="template-statement col-lg-6 col-md-12">
-            <div class="template-statement-diamond">
-
-            </div>
-            <p>LOREM IPSUM SOME TEXT</p>
-        </div>
-    </div>
+      </div>
 </div>

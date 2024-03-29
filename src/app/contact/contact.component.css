@@ -1,0 +1,84 @@
+.section-identifier {
+    background-image: url("/assets/images/background_images/product_background.png");    
+}
+
+.contact-us-image {
+    background-image: url("/assets/images/lookbook_images/lookbook4.PNG");
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-content {
+    padding: 100px;
+}
+
+.logo {
+    width: 400px;
+}
+
+.contact-info {
+    justify-content: flex-start;
+    align-items: baseline;
+    padding: 10px;
+}
+
+.contact-info fa-icon {
+    font-size: 26px;
+}
+
+.contact-info.row > div {
+    width: auto;
+}
+
+.contact-content {
+    font-size: 18px;
+    font-family: 'Lato';
+}
+
+.social-media-twitter {
+    background-color:  rgb(134, 133, 133);
+    -webkit-mask: url(/assets/images/icons/twitter.svg) no-repeat center;
+    mask: url(/assets/images/icons/twitter.svg) no-repeat center;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+.social-media-instagram {
+    background-color:  rgb(134, 133, 133);
+    -webkit-mask: url(/assets/images/icons/instagram.svg) no-repeat center;
+    mask: url(/assets/images/icons/instagram.svg) no-repeat center;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+.grouped {
+    justify-content: flex-start;
+}
+
+.sm-icon {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.sm-icon:hover {
+    color: #9cff57;
+}
+
+@media screen and (max-width: 992px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .contact-info {
+        gap: 15px;
+    }
+    .text-side {
+        margin-top: 35px;
+    }
+}

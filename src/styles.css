@@ -1,229 +1,257 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --swiper-theme-color: #51ab13 !important;
+  --swiper-theme-color: #51ab13 !important;
 }
 
 .row {
-    --bs-gutter-x: 0;
+  --bs-gutter-x: 0;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
 @import "~swiper/css/bundle";
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import '~@fortawesome/fontawesome-free/scss/solid.scss';
-@import '~@fortawesome/fontawesome-free/scss/regular.scss';
-@import '~@fortawesome/fontawesome-free/scss/brands.scss';
- 
-@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
-@font-face {
-    font-family: drip;
-    src: url("/assets/fonts/Drip.ttf")
-}
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+@font-face {
+  font-family: drip;
+  src: url("/assets/fonts/Drip.ttf");
+}
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:hover {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 app-header {
-    z-index: 20;
-    width: 100%;
+  z-index: 20;
+  width: 100%;
 }
 
 .relative-path > ul {
-    list-style: none;
-    padding: 10px 0;
-    font-family: 'Lato';
-    font-weight: 200;
+  list-style: none;
+  padding: 10px 0;
+  font-family: "Lato";
+  font-weight: 200;
 }
 
 .relative-path > ul > li {
-    display: inline-block;
+  display: inline-block;
 }
 
 .relative-path > ul > li > fa-icon {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .relative-path > ul > li:first-child {
-    margin: 0;
+  margin: 0;
 }
 
 .filter-header {
-    font-size: 18px;
-    font-family: 'Lato';
-    margin: 8px 0;
+  font-size: 18px;
+  font-family: "Lato";
+  margin: 8px 0;
 }
 
 .filter-expansion {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.form-check-input[type=checkbox]:checked {
-    background-color: #51ab13 !important;
+.form-check-input[type="checkbox"]:checked {
+  background-color: #51ab13 !important;
 }
 
 .form-check-input:checked {
-    border-color: #51ab13 !important;
+  border-color: #51ab13 !important;
 }
 
 .accordion-button {
-    background-color: transparent;
-    border: none;
-    width: 90%;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  width: 90%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .section-identifier {
-    height: 140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .section-identifier > p {
-    font-family: 'Drip';
-    font-size: 40px;    
-    color: #9cff57;
+  font-family: "Drip";
+  font-size: 40px;
+  color: #9cff57;
 }
 
 .mobile {
-    display: none;
+  display: none;
 }
 
 app-header-mobile {
-    width: 100%;
+  width: 100%;
 }
 
-.swiper-button-prev, .swiper-button-next {
-    color: black!important;
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
 }
 
 .add-to-cart-button-wrapper > button {
-    width: 100%;
-    height: 35px;
-    font-size: 13px;
-    border: none;
-    background-color: black;
-    color: white;
-    transition: 0.2s;
-    font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  border: none;
+  background-color: black;
+  color: white;
+  transition: 0.2s;
+  font-family: "Lato", sans-serif;
 }
 
 .add-to-cart-button-wrapper > button:hover {
-    background-color: #51ab13;
+  background-color: #51ab13;
 }
 
-
 .swiper {
-    width: 100%;
-    height: 100%;
-    padding: 60px 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
 }
 
 .swiper-pagination {
-    position: relative !important;
+  position: relative !important;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper > div > div > div {
-    height: 260px;
-    transition: 0.2s;
+  height: 260px;
+  transition: 0.2s;
 }
 
 .swiper > div > div > div > div > a > div:first-child {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 260px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 260px;
 }
 
 .swiper > div > div > div > div > div:nth-child(2) {
-    transition: 0.4s;
-    background-color: white;
+  transition: 0.4s;
+  background-color: white;
 }
 
 .swiper > div > div:hover > div > div > div:nth-child(2) {
-    transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .swiper > div > div {
-    overflow-y: hidden;
+  overflow-y: hidden;
+}
+
+.product-alt-image-holder {
+  display: flex;
+  margin: 10px 0;
 }
 
 .product-description-wrapper > h5 {
-    font-family: 'Lato';
-    font-size: 14px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 30ch;
-    text-align: left;
-    padding-left: 14px;
-    padding-right: 35px;
-    padding-top: 20px;
+  font-family: "Lato";
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 30ch;
+  text-align: left;
+  padding-left: 14px;
+  padding-right: 35px;
+  padding-top: 20px;
 }
 
 .product-description-wrapper > p {
-    text-align: left;
-    padding-left: 14px;
-    font-size: 13px;
+  text-align: left;
+  padding-left: 14px;
+  font-size: 13px;
 }
 
 .coming-soon {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    text-align: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .coming-soon .logo img {
-    width: 400px;
+  width: 400px;
 }
 
-@media screen and (max-width: 768px) {
-    .mobile {
-        display: block;
-    }
+.container-fluid {
+  padding: 0;
+}
 
-    .desktop {
-        display: none;
-    }
+.warning-snackbar {
+  background-color: #fa6d6d;
+  color: white;
+}
+
+.success-snackbar {
+  background-color: #a1fa6d;
+}
+
+@media screen and (max-width: 992px) {
+  .swiper > div > div:hover > div > div > div:nth-child(2) {
+    transform: translateY(0%);
+  }
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .swiper > div > div > div > div > a > div:first-child {
+    height: 120px;
+  }
+
+  .row {
+    --mdb-gutter-x: 0;
+  }
 }

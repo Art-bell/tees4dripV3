@@ -6,11 +6,9 @@
 
     <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
         <mdb-carousel-item>
-        <img
-            src="../assets/images/home_images/slide1.png"
-            class="d-block w-100"
-            alt="Sunset Over the City"
-        />
+        
+        <div style="    background-image: url(../assets/images/home_images/slide1.png);">
+            </div>
         <div class="carousel-caption d-md-block">
             <h5>A1 <span class="slime">APPAREL</span></h5>
             <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
@@ -18,26 +16,20 @@
         </mdb-carousel-item>
     
         <mdb-carousel-item>
-        <img
-            src="../assets/images/home_images/slide2.png"
-            class="d-block w-100"
-            alt="Canyon at Night"
-        />
+        <div style="background-image: url(../assets/images/home_images/slide2.png);">
+        </div>
         <div class="carousel-caption d-md-block">
-            <h5>Second <span class="slime">slide label</span></h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>DRIP <span class="slime">4 DAYS</span></h5>
+            <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
         </div>
         </mdb-carousel-item>
     
         <mdb-carousel-item>
-        <img
-            src="../assets/images/home_images/slide3.png"
-            class="d-block w-100"
-            alt="Cliff Above a Stormy Sea"
-        />
-        <div class="carousel-caption d-md-block">
-            <h5>Third <span class="slime">slide label</span></h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <div style="background-image: url(../assets/images/home_images/slide3.png);">
+        </div>
+        <div class="carousel-caption d-md-block" >
+            <h5>EXCLUSIVE <span class="slime">THREADS</span></h5>
+            <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
         </div>
         </mdb-carousel-item>
     </mdb-carousel>
@@ -45,25 +37,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="tee-category cat-1">
-                    <div class="overlay">
-                        <div>
-                            <div class="row">
-                                <h3>
-                                    TIE DYE TEES
-                                </h3>
-                            </div>
-                            <div class="row">
-                                <p>
-                                    SHOP NOW
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="tee-category cat-2">
-                    <div class="overlay">
+                    <div class="overlay" (click)="navTo('/products', 'T-Shirts')">
                         <div>
                             <div class="row">
                                 <h3>
@@ -79,43 +53,66 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row new-arrivals-wrapper">
-            <div class="row new-arrivals-header">
-                <h1>
-                    NEW ARRIVALS
-                </h1>
-            </div>
-            <div class="row new-arrivals new-arrivals-top">
-                <div class="col-xl-3 col-lg-4 col-md-6 new-product-wrapper" *ngFor="let item of newestItems">
-                    <div>
-                        <a (click)="navigateToProduct(item.id)">
-                            <div class="product-cell">
-                                <div class="product-image" style="background-image: url({{ item.productImages[0].url }});"></div>
-                                <div class="product-information">
-                                    <p>{{ item.name | uppercase }}</p>
-                                    <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
-                                    <div (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
-                                        <div class="cart-wrapper">
-                                            <fa-icon [icon]="faCartPlus"></fa-icon>
-                                            <span>
-                                                ADD TO CART
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="tee-category cat-2">
+                    <div class="overlay" (click)="navTo('/products', 'Pants')">
+                        <div>
+                            <div class="row">
+                                <h3>
+                                    PANTS
+                                </h3>
                             </div>
-                        </a>
+                            <div class="row">
+                                <p>
+                                    SHOP NOW
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row new-arrivals-button">
-                <a routerLink="/products">
-                    <!-- Add the filter in the url for ordering by newest -->
-                    <button>
-                        VIEW MORE
-                    </button>
-                </a>
+        </div>
+        <div class="row new-arrivals-wrapper">
+            <div class="col-12">
+                <div class="new-arrivals-header">
+                    <h1>
+                        NEW ARRIVALS
+                    </h1>
+                </div>
+                <div class="row new-arrivals new-arrivals-top">
+                    <div class="col-xl-3 col-lg-4 col-md-6 new-product-wrapper" *ngFor="let item of newestItems">
+                        <div>
+                            <a (click)="navigateToProduct(item.id)">
+                                <div class="product-cell">
+                                    <div class="product-image" style="background-image: url({{ item.productImages[0].url }});"></div>
+                                    <div class="product-information">
+                                        <p>{{ item.name | uppercase }}</p>
+                                        <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                        <div *ngIf="item.quantityAvailable > 0" (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
+                                            <div class="cart-wrapper">
+                                                <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                <span>
+                                                    ADD TO CART
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div *ngIf="item.quantityAvailable <= 0" class="sold-out cart-outer-wrapper-2">
+                                            SOLD OUT
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-arrivals-button">
+                    <a routerLink="/products">
+                        <!-- Add the filter in the url for ordering by newest -->
+                        <button>
+                            VIEW MORE
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -164,7 +161,10 @@
                         <div class="row subscription-header">
                             <p>SUBSCRIBE TO OUR NEWSLETTER</p>
                         </div>
-                        <form>
+                        <div class="soon-come">
+                            Coming Soon
+                        </div>
+                        <form *ngIf="false">
                             <div class="row text-and-input">
                                 <p>
                                     Sign up now for lorem ipsum

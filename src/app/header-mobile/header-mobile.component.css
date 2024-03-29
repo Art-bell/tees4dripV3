@@ -1,5 +1,5 @@
 .logo > img {
-    width: 124px;
+    width: 155px;
 }
 
 .menu-icon {
@@ -18,4 +18,18 @@
 
 .top-header {
     padding-right: 0px;
+}
+
+.menu-items > ul 
+{
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+ul > li {
+    padding: 10px;
+    font-weight: 700;
 }

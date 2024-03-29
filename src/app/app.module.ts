@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -44,23 +46,32 @@ import { LookbookComponent } from './lookbook/lookbook.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AllProductsComponent } from './admin-panel/inner-admin-components/all-products/all-products.component';
 import { AdminOrdersComponent } from './admin-panel/inner-admin-components/admin-orders/admin-orders.component';
+import { AdminOrderDialog } from './admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component';
 import { AdminAddProductsComponent } from './admin-panel/inner-admin-components/admin-add-products/admin-add-products.component';
+import { DateFromDatetimePipe } from './transformers/data-from-datetime.pipe';
 import { TurnIntoIdentifierPipe } from './transformers/turn-to-identifier.pipe';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'products/:productId', component: ItemPageComponent},
-  {path: 'products', component: AllProductListingsComponent},
+  { path: '', component: HomeComponent },
+  { path: 'products/:productId', component: ItemPageComponent },
+  { path: 'products', component: AllProductListingsComponent },
   // {path: 'login', component: LoginComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'checkout', component: CheckoutComponent},
-  // {path: 'order-complete', component: OrderCompleteComponent},
-  {path: 'lookbook', component: LookbookComponent},
-  // {path: 'admin', component: AdminPanelComponent, children: [
-  //   {path: '', component: AllProductsComponent},
-  //   {path: 'addProduct', component: AdminAddProductsComponent}
-  // ]},
-]
+  { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'contact-us', component: ContactComponent },
+  { path: 'order-complete', component: OrderCompleteComponent },
+  { path: 'lookbook', component: LookbookComponent },
+  {
+    path: 'admin',
+    component: AdminPanelComponent,
+    children: [
+      { path: '', component: AllProductsComponent },
+      { path: 'addProduct', component: AdminAddProductsComponent },
+      { path: 'orders', component: AdminOrdersComponent },
+    ],
+  },
+];
 
 @NgModule({
   declarations: [
@@ -83,7 +94,10 @@ const appRoutes: Routes = [
     AllProductsComponent,
     AdminOrdersComponent,
     AdminAddProductsComponent,
+    DateFromDatetimePipe,
     TurnIntoIdentifierPipe,
+    ContactComponent,
+    AdminOrderDialog,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -92,6 +106,8 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,
+    MatDialogModule,
+    MatSnackBarModule,
     MatCarouselModule.forRoot(),
     MdbAccordionModule,
     MdbCarouselModule,
@@ -109,10 +125,10 @@ const appRoutes: Routes = [
     MdbTooltipModule,
     MdbValidationModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
-    SwiperModule
+    RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'top' }),
+    SwiperModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

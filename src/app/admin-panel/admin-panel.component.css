@@ -1,87 +1,86 @@
 :root {
-    --minimum-height: 300px
+  --minimum-height: 300px;
 }
 
 .navigation {
-    background-color: white;
-    min-height: 100vh;
-    width: 240px;
-    float: left;
-    border-right: 2px solid;
-    position: fixed;
+  background-color: white;
+  min-height: 100vh;
+  width: 240px;
+  float: left;
+  border-right: 2px solid;
+  position: fixed;
 }
 
 .main-content {
-    background-color: #E0EFDE;
-    min-height: 100vh;
-    width: 100%;
+  background-color: #e0efde;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .content-holder .row {
-    display: block !important;
-    font-family: 'Lato';
+  display: block !important;
+  font-family: "Lato";
 }
 
 .sections {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .logo-holder img {
-    width: 175px;
+  width: 175px;
 }
 
 .page-navigation {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .page-navigation ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
 .page-navigation ul li {
-    text-align: center;
-    padding: 6px 0;
-    margin: 18px auto;
-    border-bottom: 1px solid #dedede;
-    width: 80%;
-    transition: 0.2s;
-    cursor: pointer;
-    font-weight: 200;
+  text-align: center;
+  padding: 6px 0;
+  margin: 18px auto;
+  border-bottom: 1px solid #dedede;
+  width: 80%;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: 200;
 }
 
 .page-navigation li:hover {
-    color: #51AB13;
-    transform: translate(0, -3px);
+  color: #51ab13;
+  transform: translate(0, -3px);
 }
 
 .top-header {
-    background-color: white;
-    height: 50px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    font-family: 'Lato';
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    font-weight: 100;
-    font-size: 27px;
-    border-bottom: 1px solid;
-    margin-left: 225px;
+  background-color: white;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-family: "Lato";
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+  font-size: 27px;
+  border-bottom: 1px solid;
+  margin-left: 225px;
 }
 
 .inner-comp-holder {
-    display: flex;
-    padding: 70px;
-    margin-left: 240px;
-
+  display: flex;
+  padding: 70px;
+  margin-left: 240px;
 }
 
 .inner-comp-holder > *:nth-child(2) {
-    width: 100%;
+  width: 100%;
 }

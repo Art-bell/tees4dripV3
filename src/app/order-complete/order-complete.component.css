@@ -37,5 +37,10 @@
 
  .order-text {
     text-align: center;
+ }
 
+ @media screen and (max-width: 992px) {
+     .order-text p {
+        width: 90%;
+     }
  }

@@ -1,27 +1,19 @@
 <div>
-    <app-header #fixedHeader [fixed]="true"></app-header>
-    <app-header #relativeHeader></app-header>
+    <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+    <app-header class="desktop" #relativeHeader></app-header>
+    <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+    <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+    
     <div class="content-wrapper">
         <div class="container">
             <div class="row relative-path">
                 <ul>
-                    <li>
-                        Home
-                    </li>
-                    <li>
-                        <fa-icon [icon]="faChevronRight"></fa-icon>
-                        <span>Drip Tees</span>
-                    </li>
-                    <li>
-                        <fa-icon [icon]="faChevronRight"></fa-icon>
-                        <span>Purple Reign Tee</span>
-                    </li>
                 </ul>
             </div>
             <div class="row product-content">
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                    <div class="row">
-                        <div class="col-md-3 col-lg-3 col-xl-3">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+                    <div class="row image-slide-container">
+                        <div class="col-md-3 col-lg-3 col-xl-3 alt-image-holder">
                             <div *ngFor="let image of currentProduct.productImages; let i = index" (click)="clickedProductImage($event)" class="alt-image" [ngClass]="{'active-product-image': i == 0}">
                                 <img src="{{ image.url }}" />
                             </div>
@@ -33,22 +25,26 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6 product-description">
                     <div class="row">
+                        <div class="error" *ngIf="showError" style="    font-size: 22px;
+                        color: #fc8181;">
+                            {{ errorMessage }}
+                        </div>
                         <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
                             <span class="product-name">
                                 {{ currentProduct.name | uppercase }}
                             </span>
                         </div>
-                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column pad-less">
                             <span class="product-price">
                                 &#8358;{{ currentProduct.ngn | currency:'NGN':'' }}
                             </span>
                         </div>
-                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
+                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less">
                             <span>
                                 {{ currentProduct.description }} 
                             </span>
                         </div>
-                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column">
+                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less">
                             <span *ngIf="currentProduct?.sizes?.length" style="border-right: 3px solid black;
                             margin-right: 10px;
                             padding-right: 9px;">
@@ -60,7 +56,7 @@
                         </div>
                         <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
                             <div class="row">
-                                <div class="col-md-3 col-lg-3 col-xl-3 product-quantity">
+                                <div *ngIf="currentProduct.quantityAvailable > 0" class="col-md-3 col-lg-3 col-xl-3 product-quantity">
                                     <div class="product-quantity-box">
                                         <div class="product-quantity-change quantity-decrease">
                                             <span>
@@ -77,11 +73,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div (click)="addToCart($event, currentProduct.id, currentProduct.ngn)" class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
+                                <div *ngIf="currentProduct.quantityAvailable > 0" (click)="addToCart($event, currentProduct.id, currentProduct.ngn)" class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
                                     <button>
                                         <fa-icon [icon]="faCartPlus"></fa-icon>
                                         <span>ADD TO CART</span>
                                     </button>
+                                </div>
+                                <div *ngIf="currentProduct.quantityAvailable <= 0" class="sold-out">
+                                    SOLD OUT
                                 </div>
                                 <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
                                     <hr>
@@ -130,9 +129,9 @@
                 YOU MAY ALSO LIKE
             </h6>
             <swiper
-                [slidesPerView]="5"
+                [slidesPerView]="groupSize"
                 [spaceBetween]="5"
-                [slidesPerGroup]="5"
+                [slidesPerGroup]="groupSize"
                 [loop]="false"
                 [loopFillGroupWithBlank]="true"
                 [pagination]="{

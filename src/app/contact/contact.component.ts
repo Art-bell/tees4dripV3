@@ -1,12 +1,19 @@
 import { Component, OnInit,ViewChild,HostListener,ElementRef } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { faPhoneAlt, faAt } from '@fortawesome/free-solid-svg-icons';
+import {faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 @Component({
-  selector: 'app-lookbook',
-  templateUrl: './lookbook.component.html',
-  styleUrls: ['./lookbook.component.css']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class LookbookComponent implements OnInit {
+export class ContactComponent implements OnInit {
+  faPhoneAlt = faPhoneAlt;
+  faAt = faAt;
+  faTwitter = faTwitter;
+  faInstagram = faInstagram;
+
   @ViewChild('relativeHeader', {static: true}) relativeHeader?: HeaderComponent;
   @ViewChild('fixedHeader', {static: true}) fixedHeader?: HeaderComponent;
   @ViewChild('imageRef', {static: true}) imageRef!: ElementRef<HTMLImageElement>;
