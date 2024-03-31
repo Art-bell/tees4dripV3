@@ -1,88 +1,182 @@
 <div>
-    <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
-    <app-header class="desktop" #relativeHeader></app-header>
-    <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
-    <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
-    
-    <div class="content-wrapper">
-        <div class="container">
-            <div class="row relative-path">
-                <ul>
-                </ul>
+  <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  <app-header class="desktop" #relativeHeader></app-header>
+  <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  <app-header-mobile
+    class="mobile"
+    #fixedHeaderMobile
+    [fixed]="true"
+  ></app-header-mobile>
+
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="row relative-path">
+        <ul></ul>
+      </div>
+      <div class="row product-content">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-6">
+          <div class="row image-slide-container">
+            <div class="col-md-3 col-lg-3 col-xl-3 alt-image-holder">
+              <div
+                *ngFor="
+                  let image of currentProduct.productImages;
+                  let i = index
+                "
+                (click)="clickedProductImage($event)"
+                class="alt-image"
+                [ngClass]="{ 'active-product-image': i == 0 }"
+              >
+                <img src="{{ image.url }}" />
+              </div>
             </div>
-            <div class="row product-content">
-                <div class="col-12 col-md-12 col-lg-12 col-xl-6">
-                    <div class="row image-slide-container">
-                        <div class="col-md-3 col-lg-3 col-xl-3 alt-image-holder">
-                            <div *ngFor="let image of currentProduct.productImages; let i = index" (click)="clickedProductImage($event)" class="alt-image" [ngClass]="{'active-product-image': i == 0}">
-                                <img src="{{ image.url }}" />
-                            </div>
-                        </div>
-                        <div class="col-md-9 col-lg-9 col-xl-9 main-image">
-                            <img #imageRef [src]="getDefaultImage()" />
-                        </div>
-                    </div>
+            <div class="col-md-9 col-lg-9 col-xl-9 main-image">
+              <img #imageRef [src]="getDefaultImage()" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-6 product-description">
+          <div class="row">
+            <div
+              class="error"
+              *ngIf="showError"
+              style="font-size: 22px; color: #fc8181"
+            >
+              {{ errorMessage }}
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+              <span class="product-name">
+                {{ currentProduct.name | uppercase }}
+              </span>
+            </div>
+            <div
+              class="col-md-12 col-lg-12 col-xl-12 product-full-column pad-less"
+            >
+              <span class="product-price">
+                ${{ currentProduct.usd | currency : "USD" : "" }}
+              </span>
+            </div>
+            <div
+              class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less"
+            >
+              <div [innerHTML]="currentProduct.description"></div>
+            </div>
+            <div
+              class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less"
+            >
+              <span
+                *ngIf="currentProduct?.sizes?.length"
+                style="
+                  border-right: 3px solid black;
+                  margin-right: 10px;
+                  padding-right: 9px;
+                "
+              >
+                Size: {{ currentProduct.sizes[0]["name"] | uppercase }}
+              </span>
+              <span *ngIf="currentProduct?.colors?.length">
+                Color: {{ currentProduct.colors[0]["name"] }}
+              </span>
+            </div>
+            <div
+              class="col-md-12 col-lg-12 col-xl-12 product-full-column additional-info-section"
+            >
+              <div
+                *ngIf="currentProduct.shippingDetails"
+                class="row additional-info-row"
+              >
+                <div (click)="shippingDetailsCollapse.toggle()">
+                  <div class="info-section-text">
+                    <span>Shipping Details</span>
+                    <fa-icon
+                      [icon]="
+                        shippingDetailsCollapse.collapsed
+                          ? faChevronDown
+                          : faChevronUp
+                      "
+                    ></fa-icon>
+                  </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-6 product-description">
-                    <div class="row">
-                        <div class="error" *ngIf="showError" style="    font-size: 22px;
-                        color: #fc8181;">
-                            {{ errorMessage }}
-                        </div>
-                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
-                            <span class="product-name">
-                                {{ currentProduct.name | uppercase }}
-                            </span>
-                        </div>
-                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column pad-less">
-                            <span class="product-price">
-                                &#8358;{{ currentProduct.ngn | currency:'NGN':'' }}
-                            </span>
-                        </div>
-                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less">
-                            <span>
-                                {{ currentProduct.description }} 
-                            </span>
-                        </div>
-                        <div class="col-md-11 col-lg-11 col-xl-11 product-full-column pad-less">
-                            <span *ngIf="currentProduct?.sizes?.length" style="border-right: 3px solid black;
-                            margin-right: 10px;
-                            padding-right: 9px;">
-                                Size: {{ currentProduct.sizes[0]['name'] | uppercase }}
-                            </span>
-                            <span *ngIf="currentProduct?.colors?.length">
-                                Color: {{ currentProduct.colors[0]['name'] }} 
-                            </span>
-                        </div>
-                        <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
-                            <div class="row">
-                                <div *ngIf="currentProduct.quantityAvailable > 0" class="col-md-3 col-lg-3 col-xl-3 product-quantity">
-                                    <div class="product-quantity-box">
-                                        <div class="product-quantity-change quantity-decrease">
-                                            <span>
-                                                <fa-icon [icon]="faMinus"></fa-icon>
-                                            </span>
-                                        </div>
-                                        <div class="product-quantity-input-box">
-                                            <input value="1" type="text" maxlength="1"/>
-                                        </div>
-                                        <div class="product-quantity-change quantity-increase">
-                                            <span>
-                                                <fa-icon [icon]="faPlus"></fa-icon>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div *ngIf="currentProduct.quantityAvailable > 0" (click)="addToCart($event, currentProduct.id, currentProduct.ngn)" class="col-md-9 col-lg-9 col-xl-9 add-to-cart">
-                                    <button>
-                                        <fa-icon [icon]="faCartPlus"></fa-icon>
-                                        <span>ADD TO CART</span>
-                                    </button>
-                                </div>
-                                <div *ngIf="currentProduct.quantityAvailable <= 0" class="sold-out">
-                                    SOLD OUT
-                                </div>
-                                <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
+                <div
+                  class="mt-3"
+                  mdbCollapse
+                  #shippingDetailsCollapse="mdbCollapse"
+                  [innerHTML]="currentProduct.shippingDetails"
+                ></div>
+              </div>
+              <div
+                *ngIf="currentProduct.careInstructions"
+                class="row additional-info-row"
+              >
+                <div (click)="careInstructionsCollapse.toggle()">
+                  <div class="info-section-text">
+                    <span>Care Instructions</span>
+                    <fa-icon
+                      [icon]="
+                        careInstructionsCollapse.collapsed
+                          ? faChevronDown
+                          : faChevronUp
+                      "
+                    ></fa-icon>
+                  </div>
+                </div>
+                <div
+                  class="mt-3"
+                  mdbCollapse
+                  #careInstructionsCollapse="mdbCollapse"
+                  [innerHTML]="currentProduct.careInstructions"
+                ></div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-12 product-full-column">
+              <div class="row">
+                <div
+                  *ngIf="currentProduct.quantityAvailable > 0"
+                  class="col-md-3 col-lg-3 col-xl-3 product-quantity"
+                >
+                  <div class="product-quantity-box">
+                    <div class="product-quantity-change quantity-decrease">
+                      <span>
+                        <fa-icon
+                          [icon]="faMinus"
+                          (click)="decrementQuantity()"
+                        ></fa-icon>
+                      </span>
+                    </div>
+                    <div class="product-quantity-input-box">
+                      <input
+                        [(ngModel)]="selectedQuantity"
+                        type="text"
+                        [maxlength]="currentProduct.quantityAvailable"
+                      />
+                    </div>
+                    <div class="product-quantity-change quantity-increase">
+                      <span>
+                        <fa-icon
+                          [icon]="faPlus"
+                          (click)="incrementQuantity()"
+                        ></fa-icon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  *ngIf="currentProduct.quantityAvailable > 0"
+                  (click)="addToCart($event, currentProduct.id)"
+                  class="col-md-9 col-lg-9 col-xl-9 add-to-cart"
+                >
+                  <button>
+                    <fa-icon [icon]="faCartPlus"></fa-icon>
+                    <span>ADD TO CART</span>
+                  </button>
+                </div>
+                <div
+                  *ngIf="currentProduct.quantityAvailable <= 0"
+                  class="sold-out"
+                >
+                  SOLD OUT
+                </div>
+                <!-- <div class="col-md-12 col-lg-12 col-xl-12 separator">
                                     <hr>
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-xl-12 share-product">
@@ -94,86 +188,91 @@
                                         <fa-icon [icon]="faInstagram"></fa-icon>
                                     </div>
                                 </div> -->
-                                <div class="col-md-12 col-lg-12 col-xl-12 secured-checkout">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
-                                            <hr>
-                                        </div>
-                                        <div class="col-md-4 col-lg-4 col-xl-4 secure-checkout-text">
-                                            <span>Secure Checkout</span>
-                                        </div>
-                                        <div class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-lg-12 col-xl-12">
-                                    <div class="checkout-cards">
-                                        <fa-icon [icon]="faMasterCard"></fa-icon>
-                                        <fa-icon [icon]="faDiscover"></fa-icon>
-                                        <fa-icon [icon]="faVisa"></fa-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-12 col-lg-12 col-xl-12 secured-checkout">
+                  <div class="row justify-content-center">
+                    <div
+                      class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break"
+                    >
+                      <hr />
                     </div>
+                    <div
+                      class="col-md-4 col-lg-4 col-xl-4 secure-checkout-text"
+                    >
+                      <span>Secure Checkout</span>
+                    </div>
+                    <div
+                      class="col-md-2 col-lg-2 col-xl-2 secure-checkout-break"
+                    >
+                      <hr />
+                    </div>
+                  </div>
                 </div>
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                  <div class="checkout-cards">
+                    <fa-icon [icon]="faMasterCard"></fa-icon>
+                    <fa-icon [icon]="faDiscover"></fa-icon>
+                    <fa-icon [icon]="faVisa"></fa-icon>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="separator">
-                <hr>
-            </div>
-            
+          </div>
         </div>
-        <div class="recommended-products">
-            <h6>
-                YOU MAY ALSO LIKE
-            </h6>
-            <swiper
-                [slidesPerView]="groupSize"
-                [spaceBetween]="5"
-                [slidesPerGroup]="groupSize"
-                [loop]="false"
-                [loopFillGroupWithBlank]="true"
-                [pagination]="{
-                clickable: true
-                }"
-                [navigation]="true"
-                class="mySwiper"
-            >
-                <ng-template swiperSlide *ngFor="let item of productSuggestions">
-                    <div>
-                        <div>
-                            <a [routerLink]="['/products', item.id]">
-                                <div style="background-image: url({{ item.productImages[0] }});">
-                                </div>
-                            </a>
-                            <div>
-                                <a [routerLink]="['/products', item.id]">
-                                    <div class="product-description-wrapper">
-                                        <h5>{{ item.name | uppercase }}</h5>
-                                        <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
-                                    </div>
-                                </a>
-                                <div class="add-to-cart-button-wrapper" (click)="addToCart($event, item.id, item.ngn)">
-                                    <button>
-                                        ADD TO CART
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-            </swiper>
-        </div>
+      </div>
+      <div class="separator">
+        <hr />
+      </div>
     </div>
-    <app-footer></app-footer>
+    <div class="recommended-products">
+      <h6>YOU MAY ALSO LIKE</h6>
+      <swiper
+        [slidesPerView]="groupSize"
+        [spaceBetween]="5"
+        [slidesPerGroup]="groupSize"
+        [loop]="false"
+        [loopFillGroupWithBlank]="true"
+        [pagination]="{
+          clickable: true
+        }"
+        [navigation]="true"
+        class="mySwiper"
+      >
+        <ng-template swiperSlide *ngFor="let item of productSuggestions">
+          <div>
+            <div>
+              <a [routerLink]="['/products', item.id]">
+                <div
+                  style="background-image: url({{ item.productImages[0] }});"
+                ></div>
+              </a>
+              <div>
+                <a [routerLink]="['/products', item.id]">
+                  <div class="product-description-wrapper">
+                    <h5>{{ item.name | uppercase }}</h5>
+                    <p>${{ item.usd | currency : "USD" : "" }}</p>
+                  </div>
+                </a>
+                <div
+                  class="add-to-cart-button-wrapper"
+                  (click)="addToCart($event, item.id)"
+                >
+                  <button>ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+  <app-footer></app-footer>
 </div>
 
 <div class="coming-soon">
-    <div class="col-lg-4 col-md-4 logo">
-        <img src="assets/images/home_images/tees4drip_redesign.png">
-    </div>
-    <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
-        Coming to mobile soon
-    </div>
+  <div class="col-lg-4 col-md-4 logo">
+    <img src="assets/images/home_images/tees4drip_redesign.png" />
+  </div>
+  <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
+    Coming to mobile soon
+  </div>
 </div>

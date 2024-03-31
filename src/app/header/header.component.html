@@ -1,84 +1,88 @@
 <div class="header-wrapper">
-    <div #topHeader class="row top-header">
-        <div class="col-lg-6 col-md-6 phone-wrapper">
-            <div class="phone-call-icon"></div>
-            <div class="phone-number"> Call: +234 8102975037</div>
-        </div>
-        <div class="col-lg-6 col-md-6 social-media-links-wrapper">
-            <a href="https://www.instagram.com/tees4drip/?igshid=YmMyMTA2M2Y=" class="float-right-content" style="margin: 0 5px;" target="_blank">
-                <div class=" social-media-instagram"></div>
-            </a>
-            <a href="https://twitter.com/tees4drip?s=21" class="float-right-content" style="margin: 0 5px;" target="_blank">
-                <div class=" social-media-twitter"></div>
-            </a>
-            <!-- Temporarily disabled -->
-            <!-- <div class="float-right-content login-content">
+  <div #topHeader class="row top-header">
+    <div class="col-lg-6 col-md-6 phone-wrapper">
+      <div class="phone-call-icon"></div>
+      <div class="phone-number">Call: +234 8102975037</div>
+    </div>
+    <div class="col-lg-6 col-md-6 social-media-links-wrapper">
+      <a
+        href="https://www.instagram.com/tees4drip/?igshid=YmMyMTA2M2Y="
+        class="float-right-content"
+        style="margin: 0 5px"
+        target="_blank"
+      >
+        <div class="social-media-instagram"></div>
+      </a>
+      <a
+        href="https://twitter.com/tees4drip?s=21"
+        class="float-right-content"
+        style="margin: 0 5px"
+        target="_blank"
+      >
+        <div class="social-media-twitter"></div>
+      </a>
+      <!-- Temporarily disabled -->
+      <!-- <div class="float-right-content login-content">
                 <div class="user-icon"></div>
                 <div>
                     <span>Login</span>
                 </div>
             </div> -->
-        </div>
     </div>
-    <div class="row mid-header">
-        <div class="col-lg-4 col-md-4 search-bar-wrapper">
-            <!-- <div class="search-icon"></div>
+  </div>
+  <div class="row mid-header">
+    <div class="col-lg-4 col-md-4 search-bar-wrapper">
+      <!-- <div class="search-icon"></div>
             <div class="search-bar">
                 <input type="text" placeholder="Search...">
             </div> -->
-        </div>
-        <div class="col-lg-4 col-md-4 logo">
-            <img src="assets/images/home_images/tees4drip_redesign.png">
-        </div>
-
-        <div class="col-lg-4 col-md-4 cart-content">
-            <a routerLink="/cart">
-                <div class="cart-wrapper">
-                    <div class="cart-container">
-                        <span>
-                            {{ cartSize }}
-                        </span>
-                        <div class="cart-icon"></div>
-                    </div>
-                    <div class="cart-amount">
-                        &#8358;{{ cartTotal | currency:'NGN':'' }}
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
-    <div class="row bottom-header">
-        <diV class="menu-items col-lg-6 col-md-12">
-            <ul>
-                <li>
-                    <a routerLink="/">
-                        <fa-icon [icon]="faHome"></fa-icon>
-                        HOME
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/products">
-                        <fa-icon [icon]="faTags"></fa-icon>
-                        SHOP
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/lookbook">
-                        LOOKBOOK
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/contact-us">
-                        CONTACT US
-                    </a>
-                </li>
-            </ul>
-        </diV>
-        <div class="template-statement col-lg-6 col-md-12">
-            <div class="template-statement-diamond">
-
-            </div>
-            <p>RESTOCK NOW AVAILABLE</p>
-        </div>
+    <div class="col-lg-4 col-md-4 logo">
+      <img src="assets/images/home_images/tees4drip_redesign.png" />
     </div>
+
+    <div class="col-lg-4 col-md-4 cart-content">
+      <a routerLink="/cart">
+        <div class="cart-wrapper">
+          <div class="cart-container">
+            <span>
+              {{ cartSize }}
+            </span>
+            <div class="cart-icon"></div>
+          </div>
+          <div class="cart-amount">
+            ${{ cartTotal | currency : "USD" : "" }}
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row bottom-header">
+    <diV class="menu-items col-lg-6 col-md-12">
+      <ul>
+        <li>
+          <a routerLink="/">
+            <fa-icon [icon]="faHome"></fa-icon>
+            HOME
+          </a>
+        </li>
+        <li>
+          <a routerLink="/products">
+            <fa-icon [icon]="faTags"></fa-icon>
+            SHOP
+          </a>
+        </li>
+        <li>
+          <a routerLink="/lookbook"> LOOKBOOK </a>
+        </li>
+        <li>
+          <a routerLink="/contact-us"> CONTACT US </a>
+        </li>
+      </ul>
+    </diV>
+    <div class="template-statement col-lg-6 col-md-12">
+      <div class="template-statement-diamond"></div>
+      <p>RESTOCK NOW AVAILABLE</p>
+    </div>
+  </div>
 </div>

@@ -3,10 +3,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { MatCarouselModule } from '@ngbmodule/material-carousel';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,17 +52,18 @@ import { AdminAddProductsComponent } from './admin-panel/inner-admin-components/
 import { DateFromDatetimePipe } from './transformers/data-from-datetime.pipe';
 import { TurnIntoIdentifierPipe } from './transformers/turn-to-identifier.pipe';
 import { ContactComponent } from './contact/contact.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products/:productId', component: ItemPageComponent },
   { path: 'products', component: AllProductListingsComponent },
-  // {path: 'login', component: LoginComponent},
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'contact-us', component: ContactComponent },
   { path: 'order-complete', component: OrderCompleteComponent },
   { path: 'lookbook', component: LookbookComponent },
+  { path: 'admin-login', component: AdminLoginComponent },
   {
     path: 'admin',
     component: AdminPanelComponent,
@@ -98,17 +100,19 @@ const appRoutes: Routes = [
     TurnIntoIdentifierPipe,
     ContactComponent,
     AdminOrderDialog,
+    AdminLoginComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    CommonModule,
+    EditorModule,
     FormsModule,
     FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatCarouselModule.forRoot(),
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,

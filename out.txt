@@ -1,0 +1,2632 @@
+Your global Angular CLI version (14.2.6) is greater than your local version (13.3.11). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+Error: src/app/admin-panel/admin-panel.component.html:36:9 - error NG8001: 'router-outlet' is not a known element:
+1. If 'router-outlet' is an Angular component, then verify that it is part of this module.
+2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+36         <router-outlet> </router-outlet>
+           ~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/admin-panel.component.ts:5:16
+    5   templateUrl: './admin-panel.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminPanelComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/admin-add-products/admin-add-products.component.html:11:38 - error NG8002: Can't bind to 'formGroup' since it isn't a known property of 'form'.
+
+11       <form class="new-product-form" [formGroup]="productForm">
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/admin-add-products/admin-add-products.component.ts:11:16
+    11   templateUrl: './admin-add-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminAddProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.html:1:7 - error NG8002: Can't bind to 'formGroup' since it isn't a known property of 'form'.
+
+1 <form [formGroup]="orderForm" class="dialog-content">
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.ts:23:16
+    23   templateUrl: './admin-order-dialog.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminOrderDialog.
+
+
+Error: src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.html:4:28 - error NG8004: No pipe found with name 'dateFromDatetime'.
+
+4       {{ order.createdAt | dateFromDatetime }}
+                             ~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.ts:23:16
+    23   templateUrl: './admin-order-dialog.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminOrderDialog.
+
+
+Error: src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.html:83:36 - error NG8002: Can't bind to 'formGroupName' since it isn't a known property of 'div'.
+
+83       <div class="product-details" [formGroupName]="i">
+                                      ~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/admin-orders/admin-order-dialog/admin-order-dialog.component.ts:23:16
+    23   templateUrl: './admin-order-dialog.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminOrderDialog.
+
+
+Error: src/app/admin-panel/inner-admin-components/admin-orders/admin-orders.component.html:9:33 - error NG8004: No pipe found with name 'dateFromDatetime'.
+
+9         <p>{{ order.createdAt | dateFromDatetime }}</p>
+                                  ~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/admin-orders/admin-orders.component.ts:13:16
+    13   templateUrl: './admin-orders.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AdminOrdersComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:12:13 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+12             [(ngModel)]="productFilter"
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:12:26 - error TS2322: Type 'Event' is not assignable to type 'string'.
+
+12             [(ngModel)]="productFilter"
+                            ~~~~~~~~~~~~~~
+13             (ngModelChange)="onSearch($event)"
+   ~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:41:31 - error NG8003: No directive found with exportAs 'ngForm'.
+
+41           <form #productForm="ngForm" class="update-product-form">
+                                 ~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:42:37 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+42             <input hidden name="id" [ngModel]="product.id" />
+                                       ~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:44:46 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+44               <input type="text" name="name" [ngModel]="product.productName" />
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:46:17 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+46                 [(ngModel)]="product.images[0]"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:52:17 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+52                 [(ngModel)]="product.images[1]"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:58:17 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+58                 [(ngModel)]="product.images[2]"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:68:17 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+68                 [ngModel]="product.quantityAvailable"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:74:38 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+74               <input name="priceNgn" [ngModel]="product.ngn" type="text" />
+                                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:78:38 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+78               <input name="priceUsd" [ngModel]="product.usd" type="text" />
+                                        ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:82:44 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'textarea'.
+
+82               <textarea name="description" [ngModel]="product.description">
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:89:17 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'select'.
+
+89                 [ngModel]="product.category.toLowerCase()"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:107:21 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+107                     [ngModel]="isChecked(color.name, product.colors)"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:109:45 - error NG8004: No pipe found with name 'turnIntoIdentifier'.
+
+109                       product.productName | turnIntoIdentifier
+                                                ~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:116:45 - error NG8004: No pipe found with name 'turnIntoIdentifier'.
+
+116                       product.productName | turnIntoIdentifier
+                                                ~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:133:21 - error NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'.
+
+133                     [ngModel]="isChecked(size.name, product.sizes)"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:135:45 - error NG8004: No pipe found with name 'turnIntoIdentifier'.
+
+135                       product.productName | turnIntoIdentifier
+                                                ~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/admin-panel/inner-admin-components/all-products/all-products.component.html:142:45 - error NG8004: No pipe found with name 'turnIntoIdentifier'.
+
+142                       product.productName | turnIntoIdentifier
+                                                ~~~~~~~~~~~~~~~~~~
+
+  src/app/admin-panel/inner-admin-components/all-products/all-products.component.ts:21:16
+    21   templateUrl: './all-products.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:2:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:2:46 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                               ~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:3:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3     <app-header class="desktop" #relativeHeader></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:4:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4     <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:5:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:5:58 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                           ~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:22:25 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+22                         <fa-icon [icon]="faChevronRight"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:22:34 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22                         <fa-icon [icon]="faChevronRight"></fa-icon>
+                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:30:25 - error NG8001: 'mdb-accordion' is not a known element:
+1. If 'mdb-accordion' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+30                         <mdb-accordion [flush]="true" [multiple]="true">
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:m16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:30:40 - error NG8002: Can't bind to 'flush' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'flush' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30                         <mdb-accordion [flush]="true" [multiple]="true">
+                                          ~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:30:55 - error NG8002: Can't bind to 'multiple' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'multiple' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+30                         <mdb-accordion [flush]="true" [multiple]="true">
+                                                         ~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:31:29 - error NG8001: 'mdb-accordion-item' is not a known element:
+1. If 'mdb-accordion-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+31                             <mdb-accordion-item>
+                               ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:37:37 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+37                                     <fa-icon [icon]="faBars"></fa-icon>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+      [0m                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:37:46 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+37                                     <fa-icon [icon]="faBars"></fa-icon>
+                                                ~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:42:37 - error NG8001: 'category-filter' is not a known element:
+1. If 'category-filter' is an Angular component, then verify that it is part of this module.
+2. If 'category-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+42                                     <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:42:76 - error NG8002: Can't bind to 'dataValues' since it isn't a known property of 'category-filter'.
+1. If 'category-filter' is an Angular component and it has 'dataValues' input, then verify that it is part of this module.
+2. If 'category-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+42                                     <category-filter filterName="Category" [dataValues]="allCategories"></category-filter>
+                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:45:37 - error NG8001: 'category-filter' is not a known element:
+1. If 'category-filter' is an Angular component, then verify that it is part of this module.
+2. If 'category-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+45                                     <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:45:72 - error NG8002: Can't bind to 'dataValues' since it isn't a known property of 'category-filter'.
+1. If 'category-filter' is an Angular component and it has 'dataValues' input, then verify that it is part of this module.
+2. If 'category-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+45                                     <category-filter filterName="Size" [dataValues]="allSizes"></category-filter>
+                                                                          ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:48:37 - error NG8001: 'color-filter' is not a known element:
+1. If 'color-filter' is an Angular component, then verify that it is part of this module.
+2. If 'color-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+48                                     <color-filter [colors]="allColors"></color-filter>
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:48:51 - error NG8002: Can't bind to 'colors' since it isn't a known property of 'color-filter'.
+1. If 'color-filter' is an Angular component and it has 'colors' input, then verify that it is part of this module.
+2. If 'color-filter' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+48                                     <color-filter [colors]="allColors"></color-filter>
+                                                     ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:93:65 - error NG8004: No pipe found with name 'currency'.
+
+93                                         <p>&#8358;{{ item.ngn | currency:'NGN':'' }}</p>
+                                                                   ~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:96:49 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+96                                                 <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:96:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+96                                                 <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/all-product-listings/all-product-listings.component.html:114:5 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+114     <app-footer></app-footer>
+        ~~~~~~~~~~~~
+
+  src/app/all-product-listings/all-product-listings.component.ts:14:16
+    14   templateUrl: './all-product-listings.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AllProductListingsComponent.
+
+
+Error: src/app/app.component.html:1:1 - error NG8001: 'router-outlet' is not a known element:
+1. If 'router-outlet' is an Angular component, then verify that it is part of this module.
+2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <router-outlet></router-outlet>
+  ~~~~~~~~~~~~~~~
+
+  src/app/app.component.ts:5:16
+    5   templateUrl: './app.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component AppComponent.
+
+
+Error: src/app/app.module.ts:101:12 - error NG1010: Value at position 8 in the NgModule.imports of AppModule is not a reference
+  Value could not be determined statically.
+
+101   imports: [
+               ~
+102     BrowserAnimationsModule,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+128     SwiperModule,
+    ~~~~~~~~~~~~~~~~~
+129   ],
+    ~~~
+
+  src/app/app.module.ts:110:5
+    110     MatCarouselModule.forRoot(),
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Unable to evaluate this expression statically.
+  src/app/app.module.ts:110:5
+    110     MatCarouselModule.forRoot(),
+            ~~~~~~~~~~~~~~~~~
+    Unknown reference.
+
+
+Error: src/app/app.module.ts:110:5 - error TS2552: Cannot find name 'MatCarouselModule'. Did you mean 'MdbCarouselModule'?
+
+110     MatCarouselModule.forRoot(),
+        ~~~~~~~~~~~~~~~~~
+
+
+Error: src/app/cart/cart.component.html:2:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:2:46 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                               ~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:3:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3     <app-header class="desktop" #relativeHeader></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:4:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4     <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:5:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:5:58 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                           ~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:22:25 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+22                         <fa-icon [icon]="faChevronRight"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:22:34 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+22                         <fa-icon [icon]="faChevronRight"></fa-icon>
+                                    ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:54:54 - error NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'.
+
+54                             vertical-align: bottom;" routerLink="/products/{{ justDeletedProductLink }}">{{ justDeletedProductName }}</a> from your cart.
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:99:60 - error NG8004: No pipe found with name 'currency'.
+
+99                                 &#8358;{{ cartItem.price | currency:'NGN':'' }}
+                                                              ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:105:80 - error NG8004: No pipe found with name 'currency'.
+
+105                                 &#8358;{{ cartItem.price * cartItem.quantity | currency:'NGN':'' }}
+                                                                                   ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:134:76 - error NG8004: No pipe found with name 'currency'.
+
+134                                                 &#8358;{{ cartItem.price | currency:'NGN':'' }}
+                                                                               ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:155:58 - error NG8004: No pipe found with name 'currency'.
+
+155                                 &#8358;{{ cartSubTotal | currency:'NGN':'' }}
+                                                             ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:163:63 - error NG8004: No pipe found with name 'currency'.
+
+163                                 &#8358;{{ estimatedShipping | currency:'NGN':'' }}
+                                                                  ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:171:55 - error NG8004: No pipe found with name 'currency'.
+
+171                                 &#8358;{{ cartTotal | currency:'NGN':'' }}
+                                                          ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:190:13 - error NG8001: [0m'swiper' is not a known element:
+1. If 'swiper' is an Angular component, then verify that it is part of this module.
+2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+190             <swiper
+                ~~~~~~~
+191                 [slidesPerView]="groupSize"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+200                 class="mySwiper"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+201             >
+    ~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:191:17 - error NG8002: Can't bind to 'slidesPerView' since it isn't a known property of 'swiper'.
+
+191                 [slidesPerView]="groupSize"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:192:17 - error NG8002: Can't bind to 'spaceBetween' since it isn't a known property of 'swiper'.
+
+192                 [spaceBetween]="5"
+                    ~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:193:17 - error NG8002: Can't bind to 'slidesPerGroup' since it isn't a known property of 'swiper'.
+
+193                 [slidesPerGroup]="groupSize"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:194:17 - error NG8002: Can't bind to 'loop' since it isn't a known property of 'swiper'.
+
+194                 [loop]="false"
+                    ~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:195:17 - error NG8002: Can't bind to 'loopFillGroupWithBlank' since it isn't a known property of 'swiper'.
+
+195                 [loopFillGroupWithBlank]="true"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:196:17 - error NG8002: Can't bind to 'pagination' since it isn't a known property of 'swiper'.
+
+196                 [pagination]="{
+                    ~~~~~~~~~~~~~~~
+197                 clickable: true
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+198                 }"
+    ~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:199:17 - error NG8002: Can't bind to 'navigation' since it isn't a known property of 'swiper'.
+
+199                 [navigation]="true"
+                    ~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:205:32 - error NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'.
+
+205                             <a [routerLink]="['/products', item.id]">
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:210:36 - error NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'.
+
+210                                 <a [routerLink]="['/products', item.id]">
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:212:60 - error NG8004: No pipe found with name 'uppercase'.
+
+212                                         <h5>{{ item.name | uppercase }}</h5>
+                                                               ~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:213:66 - error NG8004: No pipe found with name 'currency'.
+
+213                                         <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                                                     ~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/cart/cart.component.html:229:5 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+229     <app-footer></app-footer>
+        ~~~~~~~~~~~~
+
+  src/app/cart/cart.component.ts:13:16
+    13   templateUrl: './cart.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CartComponent.
+
+
+Error: src/app/checkout/checkout.component.html:1:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:1:42 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                           ~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:2:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2 <app-header class="desktop" #relativeHeader></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:3:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3 <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:4:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:4:54 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                       ~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:25:21 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+25                     <fa-icon [icon]="faChevronRight"></fa-icon>
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:25:30 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+25                     <fa-icon [icon]="faChevronRight"></fa-icon>
+                                ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:63:56 - error NG8004: No pipe found with name 'currency'.
+
+63                             &#8358;{{ cartItem.price | currency:'NGN':'' }}
+                                                          ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:69:61 - error NG8004: No pipe found with name 'currency'.
+
+69                         Sub Total: &#8358;{{ cartSubTotal | currency:'NGN':'' }}
+                                                               ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:72:75 - error NG8004: No pipe found with name 'currency'.
+
+72                         Estimated Shipping: &#8358;{{ estimatedShipping | currency:'NGN':'' }}
+                                                                             ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:75:54 - error NG8004: No pipe found with name 'currency'.
+
+75                         Total: &#8358;{{ cartTotal | currency:'NGN':'' }}
+                                                        ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:81:19 - error NG8002: Can't bind to 'formGroup' since it isn't a known property of 'form'.
+
+81             <form [formGroup]="orderForm" style="    justify-content: center;
+                     ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:115:65 - error NG8004: No pipe found with name 'currency'.
+
+115                             Sub Total: &#8358;{{ cartSubTotal | currency:'NGN':'' }}
+                                                                    ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:118:79 - error NG8004: No pipe found with name 'currency'.
+
+118                             Estimated Shipping: &#8358;{{ estimatedShipping | currency:'NGN':'' }}
+                                                                                  ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:121:58 - error NG8004: No pipe found with name 'currency'.
+
+121                             Total: &#8358;{{ cartTotal | currency:'NGN':'' }}
+                                                             ~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/checkout/checkout.component.html:165:1 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+165 <app-footer></app-footer>
+    ~~~~~~~~~~~~
+
+  src/app/checkout/checkout.component.ts:15:16
+    15   templateUrl: './checkout.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CheckoutComponent.
+
+
+Error: src/app/contact/contact.component.html:1:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:1:42 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                           ~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:2:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2 <app-header class="desktop" #relativeHeader></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:3:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3 <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:4:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:4:54 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                       ~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:36:29 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+36                             <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:36:38 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+36                             <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                                        ~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:44:29 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+44                             <fa-icon [icon]="faAt"></fa-icon>
+                               ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:44:38 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+44                             <fa-icon [icon]="faAt"></fa-icon>
+                                        ~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:53:33 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+53                                 <fa-icon class="sm-icon" [icon]="faInstagram"></fa-icon>
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:53:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+53                                 <fa-icon class="sm-icon" [icon]="faInstagram"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:58:33 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+58                                 <fa-icon class="sm-icon" [icon]="faTwitter"></fa-icon>
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:58:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+58                                 <fa-icon class="sm-icon" [icon]="faTwitter"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/contact/contact.component.html:67:1 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+67 <app-footer></app-footer>
+   ~~~~~~~~~~~~
+
+  src/app/contact/contact.component.ts:8:16
+    8   templateUrl: './contact.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ContactComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:2:5 - error NG8001: 'mdb-accordion' is not a known element:
+1. If 'mdb-accordion' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:2:20 - error NG8002: Can't bind to 'flush' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'flush' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+                     ~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:2:35 - error NG8002: Can't bind to 'multiple' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'multiple' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+                                    ~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:3:9 - error NG8001: 'mdb-accordion-item' is not a known element:
+1. If 'mdb-accordion-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3         <mdb-accordion-item>
+          ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:9:17 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+9                 <fa-icon [icon]="faChevronDown"></fa-icon>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/category/category.component.html:9:26 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+9                 <fa-icon [icon]="faChevronDown"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/category/category.component.ts:7:16
+    7   templateUrl: './category.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component CategoryComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:2:5 - error NG8001: 'mdb-accordion' is not a known element:
+1. If 'mdb-accordion' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:2:20 - error NG8002: Can't bind to 'flush' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'flush' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+                     ~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:2:35 - error NG8002: Can't bind to 'multiple' since it isn't a known property of 'mdb-accordion'.
+1. If 'mdb-accordion' is an Angular component and it has 'multiple' input, then verify that it is part of this module.
+2. If 'mdb-accordion' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <mdb-accordion [flush]="true" [multiple]="true">
+                                    ~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:3:9 - error NG8001: 'mdb-accordion-item' is not a known element:
+1. If 'mdb-accordion-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-accordion-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3         <mdb-accordion-item>
+          ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:9:17 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+9                 <fa-icon [icon]="faChevronDown"></fa-icon>
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:9:26 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+9                 <fa-icon [icon]="faChevronDown"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/filter-components/color/color.component.html:17:51 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'div'.
+
+17                         <div class="color-circle" [ngClass]="{'invert': item==='black'}" [style.backgroundColor]="item">
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/filter-components/color/color.component.ts:7:16
+    7   templateUrl: './color.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ColorComponent.
+
+
+Error: src/app/header-mobile/header-mobile.component.html:14:61 - error NG8004: No pipe found with name 'currency'.
+
+14                 <a routerLink="/cart">&#8358;{{ cartTotal | currency:'NGN':'' }}
+                                                               ~~~~~~~~
+
+  src/app/header-mobile/header-mobile.component.ts:6:16
+    6   templateUrl: './header-mobile.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderMobileComponent.
+
+
+Error: src/app/header-mobile/header-mobile.component.html:19:72 - error NG8003: No directive found with exportAs 'mdbCollapse'.
+
+19     <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+                                                                          ~~~~~~~~~~~
+
+  src/app/header-mobile/header-mobile.component.ts:6:16
+    6   templateUrl: './header-mobile.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderMobileComponent.
+
+
+Error: src/app/header/header.component.html:44[0m:47 - error NG8004: No pipe found with name 'currency'.
+
+44                         &#8358;{{ cartTotal | currency:'NGN':'' }}
+                                                 ~~~~~~~~
+
+  src/app/header/header.component.ts:7:16
+    7   templateUrl: './header.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderComponent.
+
+
+Error: src/app/header/header.component.html:55:25 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+55                         <fa-icon [icon]="faHome"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/header/header.component.ts:7:16
+    7   templateUrl: './header.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderComponent.
+
+
+Error: src/app/header/header.component.html:55:34 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+55                         <fa-icon [icon]="faHome"></fa-icon>
+                                    ~~~~~~~~~~~~~~~
+
+  src/app/header/header.component.ts:7:16
+    [7m7   templateUrl: './header.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderComponent.
+
+
+Error: src/app/header/header.component.html:61:25 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+61                         <fa-icon [icon]="faTags"></fa-icon>
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/header/header.component.ts:7:16
+    7   templateUrl: './header.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderComponent.
+
+
+Error: src/app/header/header.component.html:61:34 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+61                         <fa-icon [icon]="faTags"></fa-icon>
+                                    ~~~~~~~~~~~~~~~
+
+  src/app/header/header.component.ts:7:16
+    7   templateUrl: './header.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HeaderComponent.
+
+
+Error: src/app/home/home.component.html:2:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:2:46 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                               ~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:3:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3     <app-header class="desktop" #relativeHeader></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:4:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4     <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:5:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:5:58 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                           ~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:7:5 - error NG8001: 'mdb-carousel' is not a known element:
+1. If 'mdb-carousel' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-carousel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+7     <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:7:19 - error NG8002: Can't bind to 'controls' since it isn't a known property of 'mdb-carousel'.
+1. If 'mdb-carousel' is an Angular component and it has 'controls' input, then verify that it is part of this module.
+2. If 'mdb-carousel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+7     <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+                    ~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:7:37 - error NG8002: Can't bind to 'indicators' since it isn't a known property of 'mdb-carousel'.
+1. If 'mdb-carousel' is an Angular component and it has 'indicators' input, then verify that it is part of this module.
+2. If 'mdb-carousel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+7     <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+                                      ~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:7:57 - error NG8002: Can't bind to 'animation' since it isn't a known property of 'mdb-carousel'.
+1. If 'mdb-carousel' is an Angular component and it has 'animation' input, then verify that it is part of this module.
+2. If 'mdb-carousel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+7     <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+                                                          ~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:8:9 - error NG8001: 'mdb-carousel-item' is not a known element:
+1. If 'mdb-carousel-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-carousel-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+8         <mdb-carousel-item>
+          ~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:18:9 - error NG8001: 'mdb-carousel-item' is not a known element:
+1. If 'mdb-carousel-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-carousel-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+18         <mdb-carousel-item>
+           ~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:27:9 - error NG8001: 'mdb-carousel-item' is not a known element:
+1. If 'mdb-carousel-item' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-carousel-item' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+27         <mdb-carousel-item>
+           ~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:89:59 - error NG8004: No pipe found with name 'uppercase'.
+
+89                                         <p>{{ item.name | uppercase }}</p>
+                                                             ~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:90:66 - error NG8004: No pipe found with name 'currency'.
+
+90                                         <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                                                    ~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:93:49 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+93                                                 <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:93:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+93                                                 <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/home/home.component.html:189:5 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+189     <app-footer></app-footer>
+        ~~~~~~~~~~~~
+
+  src/app/home/home.component.ts:11:16
+    11   templateUrl: './home.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component HomeComponent.
+
+
+Error: src/app/item-page/item-page.component.html:2:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:2:46 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+2     <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                               ~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:3:5 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3     <app-header class="desktop" #relativeHeader></app-header>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:4:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4     <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:5:5 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:5:58 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+5     <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                           ~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:17:156 - error NG8002: Can't bind to 'ngClass' since it isn't a known property of 'div'.
+
+17                             <div *ngFor="let image of currentProduct.productImages; let i = index" (click)="clickedProductImage($event)" class="alt-image" [ngClass]="{'active-product-image': i == 0}">
+                                                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:34:58 - error NG8004: No pipe found with name 'uppercase'.
+
+34                                 {{ currentProduct.name | uppercase }}
+                                                            ~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:39:64 - error NG8004: No pipe found with name 'currency'.
+
+39                                 &#8358;{{ currentProduct.ngn | currency:'NGN':'' }}
+                                                                  ~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:51:76m - error NG8004: No pipe found with name 'uppercase'.
+
+51                                 Size: {{ currentProduct.sizes[0]['name'] | uppercase }}
+                                                                              ~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:63:49 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+63                                                 <fa-icon [icon]="faMinus"></fa-icon>
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:63:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+63                                                 <fa-icon [icon]="faMinus"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:71:49 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+71                                                 <fa-icon [icon]="faPlus"></fa-icon>
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:71:58 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+71                                                 <fa-icon [icon]="faPlus"></fa-icon>
+                                                            ~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:[93m16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:78:41 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+78                                         <fa-icon [icon]="faCartPlus"></fa-icon>
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:78:50 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+78                                         <fa-icon [icon]="faCartPlus"></fa-icon>
+                                                    ~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:112:41 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+112                                         <fa-icon [icon]="faMasterCard"></fa-icon>
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:112:50 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+112                                         <fa-icon [icon]="faMasterCard"></fa-icon>
+                                                     ~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:113:41 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+113                                         <fa-icon [icon]="faDiscover"></fa-icon>
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:113:50 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+113                                         <fa-icon [icon]="faDiscover"></fa-icon>
+                                                     ~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:114:41 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+114                                         <fa-icon [icon]="faVisa"></fa-icon>
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:114:50 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+114                                         <fa-icon [icon]="faVisa"></fa-icon>
+                                                     ~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:131:13 - error NG8001: 'swiper' is not a known element:
+1. If 'swiper' is an Angular component, then verify that it is part of this module.
+2. To allow any element add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+131             <swiper
+                ~~~~~~~
+132                 [slidesPerView]="groupSize"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+141[0m                 class="mySwiper"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+142             >
+    ~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:132:17 - error NG8002: Can't bind to 'slidesPerView' since it isn't a known property of 'swiper'.
+
+132                 [slidesPerView]="groupSize"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:133:17 - error NG8002: Can't bind to 'spaceBetween' since it isn't a known property of 'swiper'.
+
+133                 [spaceBetween]="5"
+                    ~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:134:17 - error NG8002: Can't bind to 'slidesPerGroup' since it isn't a known property of 'swiper'.
+
+134                 [slidesPerGroup]="groupSize"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:135:17 - error NG8002: Can't bind to 'loop' since it isn't a known property of 'swiper'.
+
+135                 [loop]="false"
+                    ~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:136:17 - error NG8002: Can't bind to 'loopFillGroupWithBlank' since it isn't a known property of 'swiper'.
+
+136                 [loopFillGroupWithBlank]="true"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:137:17 - error NG8002: Can't bind to 'pagination' since it isn't a known property of 'swiper'.
+
+137                 [pagination]="{
+                    ~~~~~~~~~~~~~~~
+138                 clickable: true
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+139                 }"
+    ~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:140:17 - error NG8002: Can't bind to 'navigation' since it isn't a known property of 'swiper'.
+
+140                 [navigation]="true"
+                    ~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:146:32 - error NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'.
+
+146                             <a [routerLink]="['/products', item.id]">
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:151:36 - error NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'.
+
+151                                 <a [routerLink]="['/products', item.id]">
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:153:60 - error NG8004: No pipe found with name 'uppercase'.
+
+153                                         <h5>{{ item.name | uppercase }}</h5>
+                                                               ~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:154:66 - error NG8004: No pipe found with name 'currency'.
+
+154                                         <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
+                                                                     ~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/item-page/item-page.component.html:169:5 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+169     <app-footer></app-footer>
+        ~~~~~~~~~~~~
+
+  src/app/item-page/item-page.component.ts:15:16
+    15   templateUrl: './item-page.component.html',
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component ItemPageComponent.
+
+
+Error: src/app/login/login.component.html:1:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-header #fixedHeader [fixed]="true"></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/login/login.component.html:1:26 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+1 <app-header #fixedHeader [fixed]="true"></app-header>
+                           ~~~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/login/login.component.html:2:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2 <app-header #relativeHeader></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/login/login.component.html:16:17 - error NG8001: 'mdb-form-control' is not a known element:
+1. If 'mdb-form-control' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-form-control' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+16                 <mdb-form-control class="user-auth-group">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/login/login.component.html:23:17 - error NG8001: 'mdb-form-control' is not a known element:
+1. If 'mdb-form-control' is an Angular component, then verify that it is part of this module.
+2. If 'mdb-form-control' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+23                 <mdb-form-control class="user-auth-group">
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/login/login.component.html:47:1 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+47 <app-footer></app-footer>
+   ~~~~~~~~~~~~
+
+  src/app/login/login.component.ts:5:16
+    5   templateUrl: './login.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LoginComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:1:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:1:42 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                           ~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:2:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2 <app-header class="desktop" #relativeHeader></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:3:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3 <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:4:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:4:54 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                       ~~~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/lookbook/lookbook.component.html:82:1 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+82 <app-footer></app-footer>
+   ~~~~~~~~~~~~
+
+  src/app/lookbook/lookbook.component.ts:6:16
+    6   templateUrl: './lookbook.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component LookbookComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:1:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:1:42 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header'.
+1. If 'app-header' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+1 <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+                                           ~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:2:1 - error NG8001: 'app-header' is not a known element:
+1. If 'app-header' is an Angular component, then verify that it is part of this module.
+2. If 'app-header' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+2 <app-header class="desktop" #relativeHeader></app-header>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:3:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+3 <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:4:1 - error NG8001: 'app-header-mobile' is not a known element:
+1. If 'app-header-mobile' is an Angular component, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:4:54 - error NG8002: Can't bind to 'fixed' since it isn't a known property of 'app-header-mobile'.
+1. If 'app-header-mobile' is an Angular component and it has 'fixed' input, then verify that it is part of this module.
+2. If 'app-header-mobile' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+4 <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+                                                       ~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:21:21 - error NG8001: 'fa-icon' is not a known element:
+1. If 'fa-icon' is an Angular component, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+21                     <fa-icon [icon]="faChevronRight"></fa-icon>
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:21:30 - error NG8002: Can't bind to 'icon' since it isn't a known property of 'fa-icon'.
+1. If 'fa-icon' is an Angular component and it has 'icon' input, then verify that it is part of this module.
+2. If 'fa-icon' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+3. To allow any property add 'NO_ERRORS_SCHEMA' to the '@NgModule.schemas' of this component.
+
+21                     <fa-icon [icon]="faChevronRight"></fa-icon>
+                                ~~~~~~~~~~~~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+Error: src/app/order-complete/order-complete.component.html:54:1 - error NG8001: 'app-footer' is not a known element:
+1. If 'app-footer' is an Angular component, then verify that it is part of this module.
+2. If 'app-footer' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
+
+54 <app-footer></app-footer>
+   ~~~~~~~~~~~~
+
+  src/app/order-complete/order-complete.component.ts:8:16
+    8   templateUrl: './order-complete.component.html',
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Error occurs in the template of component OrderCompleteComponent.
+
+
+

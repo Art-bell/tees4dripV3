@@ -29,7 +29,8 @@ export class CheckoutComponent implements OnInit {
   showError = false;
   errorMessage = '';
   underMaintenance = false;
-  estimatedShipping = 2500;
+  cartSubTotal = 0;
+  estimatedShipping = 15;
   orderForm = new FormGroup({
     customerFullName: new FormControl('', [
       Validators.required,
@@ -64,34 +65,26 @@ export class CheckoutComponent implements OnInit {
     private router: Router,
     private http: HttpClient,
     private userService: UserService
-  ) {}
+  ) {
+    this.userService.getCartTotalSubject().subscribe((total) => {
+      this.cartSubTotal = total;
+    });
+    this.userService.getCartItemsSubject().subscribe((items) => {
+      this.cartItems = items;
+      if (this.cartItems.length == 0) {
+        this.router.navigate(['/cart']);
+      }
+      this.productIdsToCheckout = this.cartItems.map((ci) => ci.id);
+      setTimeout(() => {
+        this.loading = false;
+      }, 2000);
+    });
+  }
 
   ngOnInit(): void {
     this.loader = this.loaderOptions[getRandomInt(this.loaderOptions.length)];
     this.loading = true;
-    this.http
-      .get('/api/carts', {
-        params: {
-          userToken: this.userService.getUserToken(),
-          someExtra: '500',
-        },
-      })
-      .subscribe((res: any) => {
-        this.cartItems = res;
-        if (this.cartItems.length == 0) {
-          this.router.navigate(['/cart']);
-        }
-        this.productIdsToCheckout = this.cartItems.map((ci) => ci.id);
-        this.userService.setCartSize(this.cartItems.length);
-        this.userService.setCartTotal(
-          this.cartItems
-            .map((ci) => ci.price)
-            .reduce((prev, next) => prev + next, 0)
-        );
-        setTimeout(() => {
-          this.loading = false;
-        }, 2000);
-      });
+    this.userService.fetchCartData();
   }
 
   createOrder() {
@@ -112,19 +105,15 @@ export class CheckoutComponent implements OnInit {
       customerFullName: this.orderForm.controls['customerFullName'].value,
       customerEmail: this.orderForm.controls['customerEmail'].value,
       customerPhoneNumber: this.orderForm.controls['customerPhoneNumber'].value,
-      customerShippingStreetAddress1:
+      customerStreetAddress1:
         this.orderForm.controls['customerShippingStreetAddress1'].value,
-      customerShippingStreetAddress2:
+      customerStreetAddress2:
         this.orderForm.controls['customerShippingStreetAddress2'].value,
-      customerShippingCity:
-        this.orderForm.controls['customerShippingCity'].value,
-      customerShippingState:
-        this.orderForm.controls['customerShippingState'].value,
-      customerShippingZipCode:
-        this.orderForm.controls['customerShippingZipCode'].value,
-      customerShippingCountry:
-        this.orderForm.controls['customerShippingCountry'].value,
-      products: this.productIdsToCheckout,
+      customerCity: this.orderForm.controls['customerShippingCity'].value,
+      customerState: this.orderForm.controls['customerShippingState'].value,
+      customerZipCode: this.orderForm.controls['customerShippingZipCode'].value,
+      customerCountry: this.orderForm.controls['customerShippingCountry'].value,
+      products: this.cartItems,
       orderTotal: this.cartTotal,
     };
     this.showError = false;
@@ -141,41 +130,52 @@ export class CheckoutComponent implements OnInit {
       fullAddress += `, ${this.orderForm.controls['customerShippingZipCode'].value}`;
     }
 
-    let handler = PaystackPop.setup({
-      key: 'pk_live_70a3301f21dfbb1e275e3970eded23debf12071d', // Replace with your public key
-      email: this.orderForm.controls['customerEmail'].value,
-      amount: this.cartTotal * 100, // This is in kobo
-      ref: orderNumber,
-      onClose: function () {},
-      callback: (response: any) => {
-        this.http
-          .post('/api/mailGunAdmin', {
-            orderNumber: orderNumber,
-            number: this.orderForm.controls['customerPhoneNumber'].value,
-            total: this.cartTotal,
-            address: fullAddress,
-            name: this.orderForm.controls['customerFullName'].value,
-            email: this.orderForm.controls['customerEmail'].value,
-            productIds: this.productIdsToCheckout,
-          })
-          .subscribe((data: any) => {});
-        // FOR NOW, THIS WILL JUST DECREMENT THE PRODUCT COUNT!
-        // SIKE
-        this.http
-          .post('/api/orders/createNewOrder', { order: order })
-          .subscribe((data: any) => {
-            if (data?.error) {
-              this.errorMessage = data?.message;
-              this.showError = true;
-              console.log('Error, not opening Iframe');
-            } else {
-              localStorage.setItem('orderNumber', orderNumber);
-              window.location.replace('/order-complete');
-            }
-          });
-      },
-    });
-    handler.openIframe();
+    this.http
+      .post('/api/orders/createNewOrder', { order: order })
+      .subscribe((data: any) => {
+        if (data?.error) {
+          this.errorMessage = data?.message;
+          this.showError = true;
+          console.log('Error, not opening Iframe');
+        } else {
+          localStorage.setItem('orderNumber', orderNumber);
+          window.location.replace('/order-complete');
+        }
+      });
+
+    // let handler = PaystackPop.setup({
+    //   key: 'pk_live_70a3301f21dfbb1e275e3970eded23debf12071d', // Replace with your public key
+    //   email: this.orderForm.controls['customerEmail'].value,
+    //   amount: this.cartTotal * 100, // This is in kobo
+    //   ref: orderNumber,
+    //   onClose: function () {},
+    //   callback: (response: any) => {
+    //     this.http
+    //       .post('/api/mailGunAdmin', {
+    //         orderNumber: orderNumber,
+    //         number: this.orderForm.controls['customerPhoneNumber'].value,
+    //         total: this.cartTotal,
+    //         address: fullAddress,
+    //         name: this.orderForm.controls['customerFullName'].value,
+    //         email: this.orderForm.controls['customerEmail'].value,
+    //         productIds: this.productIdsToCheckout,
+    //       })
+    //       .subscribe((data: any) => {});
+    //     this.http
+    //       .post('/api/orders/createNewOrder', { order: order })
+    //       .subscribe((data: any) => {
+    //         if (data?.error) {
+    //           this.errorMessage = data?.message;
+    //           this.showError = true;
+    //           console.log('Error, not opening Iframe');
+    //         } else {
+    //           localStorage.setItem('orderNumber', orderNumber);
+    //           window.location.replace('/order-complete');
+    //         }
+    //       });
+    //   },
+    // });
+    // handler.openIframe();
 
     // return;
 
@@ -186,36 +186,10 @@ export class CheckoutComponent implements OnInit {
     if (!this.orderForm.controls['customerShippingCountry'].value) {
       return;
     }
-    const cleanedCountryInput = this.orderForm.controls[
-      'customerShippingCountry'
-    ].value
-      .trim()
-      .toLowerCase();
-    if (cleanedCountryInput !== 'ng' && cleanedCountryInput !== 'nigeria') {
-      this.estimatedShipping = 30000;
-      return;
-    } else {
-      this.estimatedShipping = 2500; //base;
-    }
+    this.estimatedShipping = 15; //base;
 
     if (!this.orderForm.controls['customerShippingState'].value) {
       return;
-    }
-    const cleanedStateInput = this.orderForm.controls[
-      'customerShippingState'
-    ].value
-      .trim()
-      .toLowerCase();
-
-    if (
-      cleanedStateInput !== 'lg' &&
-      cleanedStateInput !== 'lagos' &&
-      cleanedStateInput !== 'lag'
-    ) {
-      this.estimatedShipping = 4000;
-      return;
-    } else {
-      this.estimatedShipping = 2500; //base;
     }
   }
 
@@ -295,12 +269,10 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
-  get cartTotal() {
-    return this.userService.getCartTotal() + this.estimatedShipping;
-  }
-
-  get cartSubTotal() {
-    return this.userService.getCartTotal();
+  public get cartTotal() {
+    return (
+      this.cartSubTotal + (this.cartSubTotal > 0 ? this.estimatedShipping : 0)
+    );
   }
 }
 

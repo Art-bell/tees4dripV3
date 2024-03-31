@@ -1,198 +1,189 @@
 <div class="full-site">
-    <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
-    <app-header class="desktop" #relativeHeader></app-header>
-    <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
-    <app-header-mobile class="mobile" #fixedHeaderMobile [fixed]="true"></app-header-mobile>
+  <app-header class="desktop" #fixedHeader [fixed]="true"></app-header>
+  <app-header class="desktop" #relativeHeader></app-header>
+  <app-header-mobile class="mobile" #relativeHeaderMobile></app-header-mobile>
+  <app-header-mobile
+    class="mobile"
+    #fixedHeaderMobile
+    [fixed]="true"
+  ></app-header-mobile>
 
-    <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
-        <mdb-carousel-item>
-        
-        <div style="    background-image: url(../assets/images/home_images/slide1.png);">
+  <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+    <mdb-carousel-item>
+      <div
+        style="background-image: url(../assets/images/home_images/slide1.png)"
+      ></div>
+      <div class="carousel-caption d-md-block">
+        <h5>A1 <span class="slime">APPAREL</span></h5>
+        <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
+      </div>
+    </mdb-carousel-item>
+
+    <mdb-carousel-item>
+      <div
+        style="background-image: url(../assets/images/home_images/slide2.png)"
+      ></div>
+      <div class="carousel-caption d-md-block">
+        <h5>DRIP <span class="slime">4 DAYS</span></h5>
+        <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
+      </div>
+    </mdb-carousel-item>
+
+    <mdb-carousel-item>
+      <div
+        style="background-image: url(../assets/images/home_images/slide3.png)"
+      ></div>
+      <div class="carousel-caption d-md-block">
+        <h5>EXCLUSIVE <span class="slime">THREADS</span></h5>
+        <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+  <div class="container main-content">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="tee-category cat-1">
+          <div class="overlay" (click)="navTo('/products', 'T-Shirts')">
+            <div>
+              <div class="row">
+                <h3>GRAPHIC TEES</h3>
+              </div>
+              <div class="row">
+                <p>SHOP NOW</p>
+              </div>
             </div>
-        <div class="carousel-caption d-md-block">
-            <h5>A1 <span class="slime">APPAREL</span></h5>
-            <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
+          </div>
         </div>
-        </mdb-carousel-item>
-    
-        <mdb-carousel-item>
-        <div style="background-image: url(../assets/images/home_images/slide2.png);">
-        </div>
-        <div class="carousel-caption d-md-block">
-            <h5>DRIP <span class="slime">4 DAYS</span></h5>
-            <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
-        </div>
-        </mdb-carousel-item>
-    
-        <mdb-carousel-item>
-        <div style="background-image: url(../assets/images/home_images/slide3.png);">
-        </div>
-        <div class="carousel-caption d-md-block" >
-            <h5>EXCLUSIVE <span class="slime">THREADS</span></h5>
-            <p>TOP TIER EXCLUSIVE & AUTHENTIC DRIP</p>
-        </div>
-        </mdb-carousel-item>
-    </mdb-carousel>
-    <div class="container main-content">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="tee-category cat-1">
-                    <div class="overlay" (click)="navTo('/products', 'T-Shirts')">
-                        <div>
-                            <div class="row">
-                                <h3>
-                                    GRAPHIC TEES
-                                </h3>
-                            </div>
-                            <div class="row">
-                                <p>
-                                    SHOP NOW
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="tee-category cat-2">
+          <div class="overlay" (click)="navTo('/products', 'Pants')">
+            <div>
+              <div class="row">
+                <h3>PANTS</h3>
+              </div>
+              <div class="row">
+                <p>SHOP NOW</p>
+              </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="tee-category cat-2">
-                    <div class="overlay" (click)="navTo('/products', 'Pants')">
-                        <div>
-                            <div class="row">
-                                <h3>
-                                    PANTS
-                                </h3>
-                            </div>
-                            <div class="row">
-                                <p>
-                                    SHOP NOW
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="row new-arrivals-wrapper">
-            <div class="col-12">
-                <div class="new-arrivals-header">
-                    <h1>
-                        NEW ARRIVALS
-                    </h1>
-                </div>
-                <div class="row new-arrivals new-arrivals-top">
-                    <div class="col-xl-3 col-lg-4 col-md-6 new-product-wrapper" *ngFor="let item of newestItems">
-                        <div>
-                            <a (click)="navigateToProduct(item.id)">
-                                <div class="product-cell">
-                                    <div class="product-image" style="background-image: url({{ item.productImages[0].url }});"></div>
-                                    <div class="product-information">
-                                        <p>{{ item.name | uppercase }}</p>
-                                        <p>&#x20a6;{{ item.ngn | currency:'NGN':'' }}</p>
-                                        <div *ngIf="item.quantityAvailable > 0" (click)="addToCart($event, item.id, item.ngn)" class="cart-outer-wrapper">
-                                            <div class="cart-wrapper">
-                                                <fa-icon [icon]="faCartPlus"></fa-icon>
-                                                <span>
-                                                    ADD TO CART
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div *ngIf="item.quantityAvailable <= 0" class="sold-out cart-outer-wrapper-2">
-                                            SOLD OUT
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-arrivals-button">
-                    <a routerLink="/products">
-                        <!-- Add the filter in the url for ordering by newest -->
-                        <button>
-                            VIEW MORE
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="container-fluid">
-        <div class="row no-gutters page-split-wrapper">
-            <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
-                <div class="page-split delivery-message">
-                    <img src="/assets/images/icons/truck.svg">
-                    <h6>
-                        Delivery
-                    </h6>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
-                <div class="page-split security-message">
-                    <img src="/assets/images/icons/lock.svg">
-                    <h6>
-                        Secure Payment
-                    </h6>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 page-split-parent">
-                <div class="page-split quality-message">
-                    <img src="/assets/images/icons/quality.svg">
-                    <h6>
-                        Quality Guaranteed
-                    </h6>
-                </div>
-            </div>
+    <div class="row new-arrivals-wrapper">
+      <div class="col-12">
+        <div class="new-arrivals-header">
+          <h1>NEW ARRIVALS</h1>
         </div>
-        <div class="row no-gutters drip">
-            <img src="/assets/images/home_images/drip.png">
-        </div>
-
-        <div class="container">
-            <div class="row newsletter-wrapper">
-                <div class="col-lg-6 col-mg-6">
-                    <div class="newsletter-image">
-                        <div class="newsletter-image-overlay">
-
-                        </div>
-                    </div> 
-                </div>
-                <div class="col-lg-6 col-mg-6 newsletter-text">
-                    <div>
-                        <div class="row subscription-header">
-                            <p>SUBSCRIBE TO OUR NEWSLETTER</p>
-                        </div>
-                        <div class="soon-come">
-                            Coming Soon
-                        </div>
-                        <form *ngIf="false">
-                            <div class="row text-and-input">
-                                <p>
-                                    Sign up now for lorem ipsum
-                                </p>
-                                <input placeholder="Email Address">
-                            </div>
-                            <div class="row subscription-button">
-                                <button>
-                                    SUBSCRIBE
-                                </button>
-                            </div>
-                        </form>
+        <div class="row new-arrivals new-arrivals-top">
+          <div
+            class="col-xl-3 col-lg-4 col-md-6 new-product-wrapper"
+            *ngFor="let item of newestItems"
+          >
+            <div>
+              <a (click)="navigateToProduct(item.id)">
+                <div class="product-cell">
+                  <div
+                    class="product-image"
+                    style="background-image: url({{
+                      item.productImages[0].url
+                    }});"
+                  ></div>
+                  <div class="product-information">
+                    <p>{{ item.name | uppercase }}</p>
+                    <p>&#x20a6;{{ item.ngn | currency : "NGN" : "" }}</p>
+                    <div
+                      *ngIf="item.quantityAvailable > 0"
+                      (click)="addToCart($event, item.id)"
+                      class="cart-outer-wrapper"
+                    >
+                      <div class="cart-wrapper">
+                        <fa-icon [icon]="faCartPlus"></fa-icon>
+                        <span> ADD TO CART </span>
+                      </div>
                     </div>
+                    <div
+                      *ngIf="item.quantityAvailable <= 0"
+                      class="sold-out cart-outer-wrapper-2"
+                    >
+                      SOLD OUT
+                    </div>
+                  </div>
                 </div>
+              </a>
             </div>
-            <div class="row lookbook-wrapper">
-                
-            </div>
+          </div>
         </div>
+        <div class="new-arrivals-button">
+          <a routerLink="/products">
+            <!-- Add the filter in the url for ordering by newest -->
+            <button>VIEW MORE</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row no-gutters page-split-wrapper">
+      <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
+        <div class="page-split delivery-message">
+          <img src="/assets/images/icons/truck.svg" />
+          <h6>Delivery</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 page-split-parent">
+        <div class="page-split security-message">
+          <img src="/assets/images/icons/lock.svg" />
+          <h6>Secure Payment</h6>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 page-split-parent">
+        <div class="page-split quality-message">
+          <img src="/assets/images/icons/quality.svg" />
+          <h6>Quality Guaranteed</h6>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters drip">
+      <img src="/assets/images/home_images/drip.png" />
     </div>
 
-    <app-footer></app-footer>
+    <div class="container">
+      <div class="row newsletter-wrapper">
+        <div class="col-lg-6 col-mg-6">
+          <div class="newsletter-image">
+            <div class="newsletter-image-overlay"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-mg-6 newsletter-text">
+          <div>
+            <div class="row subscription-header">
+              <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+            </div>
+            <div class="soon-come">Coming Soon</div>
+            <form *ngIf="false">
+              <div class="row text-and-input">
+                <p>Sign up now for lorem ipsum</p>
+                <input placeholder="Email Address" />
+              </div>
+              <div class="row subscription-button">
+                <button>SUBSCRIBE</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row lookbook-wrapper"></div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
 </div>
 <div class="coming-soon">
-    <div class="col-lg-4 col-md-4 logo">
-        <img src="assets/images/home_images/tees4drip_redesign.png">
-    </div>
-    <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
-        Coming to mobile soon
-    </div>
+  <div class="col-lg-4 col-md-4 logo">
+    <img src="assets/images/home_images/tees4drip_redesign.png" />
+  </div>
+  <div class="col-lg-4 col-md-4" style="font-family: 'Drip'; font-size: 18px">
+    Coming to mobile soon
+  </div>
 </div>

@@ -9,7 +9,6 @@ export interface AdminProduct {
   description: string;
   productName: string;
   quantityAvailable: number;
-  ngn: number;
   usd: number;
   sizes: string[];
   colors: string[];
